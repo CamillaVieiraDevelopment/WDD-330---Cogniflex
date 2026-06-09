@@ -17,10 +17,42 @@ export async function renderHeaderFooter() {
         const headerContainer = document.getElementById('main-header');
         const footerContainer = document.getElementById('main-footer');
 
-        if (headerContainer) headerContainer.innerHTML = headerHtml;
-        if (footerContainer) footerContainer.innerHTML = footerHtml;
+        if (headerContainer) {
+            headerContainer.innerHTML = headerHtml;
+            // ATENÇÃO: Ativa os comportamentos de clique do menu hambúrguer assim que ele nasce no DOM
+            setupMenuEvents();
+        }
+        if (footerContainer) {
+            footerContainer.innerHTML = footerHtml;
+        }
 
     } catch (error) {
         console.error('Falha na renderização modular:', error);
+    }
+}
+
+// Função gerenciadora dos eventos do Menu Lateral
+function setupMenuEvents() {
+    const menuBtn = document.querySelector('.menu-btn');
+    const closeBtn = document.getElementById('close-menu-btn');
+    const sideMenu = document.getElementById('side-menu');
+    const overlay = document.getElementById('menu-overlay');
+
+    if (menuBtn && sideMenu && overlay) {
+        // Evento: Abrir menu ao clicar no ícone hambúrguer
+        menuBtn.addEventListener('click', () => {
+            sideMenu.classList.add('open');
+            overlay.classList.add('show');
+        });
+
+        // Função interna reutilizável para fechar o menu
+        const closeMenu = () => {
+            sideMenu.classList.remove('open');
+            overlay.classList.remove('show');
+        };
+
+        // Eventos: Fechar ao clicar no 'X' ou na máscara escura de fundo
+        if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
     }
 }
