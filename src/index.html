@@ -1,75 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cogniflex | Welcome Home</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css" />
-  <script src="/js/main.js" type="module"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cogniflex - Início</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <header id="main-header"></header>
+  <div id="main-header"></div>
 
-  <main class="home-container">
-    <section class="welcome-hero">
-      <div class="logo-box">
-        <span class="app-icon" role="img" aria-label="Stylized Brain">🧠✨</span>
+  <main class="container">
+    <section class="welcome-section">
+
+      <div class="intro-box">
+        <h1>Sobre o Cogniflex</h1>
+        <p>
+          O <strong>Cogniflex</strong> é uma plataforma interativa focada em estimular e desenvolver a
+          flexibilidade cognitiva e as habilidades de adaptação social para indivíduos no Espectro Autista (TEA).
+        </p>
+
+        <h2>Como funciona?</h2>
+        <p>
+          Oferecemos um ambiente seguro, lúdico e controlado onde é possível vivenciar simulações de situações
+          cotidianas reais.
+          Diante de cada cenário, você tomará decisões por meio de ramificações de escolha e poderá observar as
+          consequências práticas,
+          sociais e emocionais de suas abordagens.
+        </p>
+        <p>
+          Nossas histórias contam com múltiplas alternativas que vão além do conceito rígido de "certo ou errado",
+          incentivando a percepção de nuances e tons de cinza nas interações humanas.
+        </p>
       </div>
-      <h1>Welcome to Cogniflex</h1>
-      <p class="subtitle">A safe space to explore choices, understand social interactions, and build cognitive
-        flexibility at your own pace.</p>
-    </section>
 
-    <section class="profile-summary-card">
-      <h2>Your Progress Summary</h2>
-      <div class="profile-stats">
-        <div class="stat-item">
-          <span class="stat-label">User:</span>
-          <span id="user-name" class="stat-value">Loading...</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-label">Flexibility Points:</span>
-          <span id="user-points" class="stat-value">0</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-label">Medals Earned:</span>
-          <span id="user-medals" class="stat-value">🏅 0</span>
-        </div>
+      <div class="action-menu-container">
+        <a href="simulation.html" class="btn-hero flex-sim">
+          <span class="btn-icon">🎮</span>
+          <div class="btn-text-group">
+            <span class="btn-title">Iniciar Simulações</span>
+            <span class="btn-subtitle">Vivencie histórias e explore suas decisões</span>
+          </div>
+        </a>
+
+        <a href="dashboard.html" class="btn-hero flex-dash">
+          <span class="btn-icon">📊</span>
+          <div class="btn-text-group">
+            <span class="btn-title">Acessar Dashboard</span>
+            <span class="btn-subtitle">Acompanhe seus relatórios, evolução e medalhas</span>
+          </div>
+        </a>
       </div>
-      <button class="btn-secondary" onclick="window.location.href='/dashboard.html'">View Full Dashboard</button>
-    </section>
 
-    <section class="scenario-selection">
-      <h2>Choose a Daily Scenario to Explore</h2>
-      <div class="scenarios-grid">
-        <div class="scenario-card">
-          <div class="card-badge">School Routine</div>
-          <h3>The Change of Plans</h3>
-          <p>Your regular teacher is sick, and a substitute teacher arrives with a completely different lesson plan.</p>
-          <button class="btn-primary" onclick="window.location.href='/simulation.html?scenario=school-change'">Start
-            Simulation</button>
-        </div>
-
-        <div class="scenario-card">
-          <div class="card-badge">Community</div>
-          <h3>The Crowded Cafeteria</h3>
-          <p>Your favorite quiet table in the cafeteria is taken by a noisy group of people. Let's find alternatives.
-          </p>
-          <button class="btn-primary" onclick="window.location.href='/simulation.html?scenario=cafeteria-crowd'">Start
-            Simulation</button>
-        </div>
-      </div>
     </section>
   </main>
 
-  <footer id="main-footer"></footer>
+  <div id="main-footer"></div>
 
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

@@ -2,9 +2,9 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 export default defineConfig({
-    root: "src", // Define the folder src as the development root
+    root: "src",
     build: {
-        outDir: "../dist", // Folder where the final build will be generated
+        outDir: "../dist",
         rollupOptions: {
             input: {
                 main: resolve(__dirname, "src/index.html"),

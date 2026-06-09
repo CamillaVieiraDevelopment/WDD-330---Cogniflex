@@ -1,24 +1,26 @@
-export function qs(selector, parent = document) {
-    return parent.querySelector(selector);
-}
+// src/js/utils.mjs
 
-export function getParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
-}
+export async function renderHeaderFooter() {
+    try {
+        // Busca os conteúdos HTML dos arquivos parciais
+        const headerResponse = await fetch('./partials/header.html');
+        const footerResponse = await fetch('./partials/footer.html');
 
-export async function loadTemplate(path) {
-    const res = await fetch(path);
-    return await res.text();
-}
+        if (!headerResponse.ok || !footerResponse.ok) {
+            throw new Error('Erro ao carregar os componentes de cabeçalho ou rodapé.');
+        }
 
-export async function loadHeaderFooter() {
-    const headerTemplate = await loadTemplate("/partials/header.html");
-    const footerTemplate = await loadTemplate("/partials/footer.html");
+        const headerHtml = await headerResponse.text();
+        const footerHtml = await footerResponse.text();
 
-    const headerElement = qs("#main-header");
-    const footerElement = qs("#main-footer");
+        // Procura os contêineres nas páginas e injeta o conteúdo
+        const headerContainer = document.getElementById('main-header');
+        const footerContainer = document.getElementById('main-footer');
 
-    if (headerElement) headerElement.innerHTML = headerTemplate;
-    if (footerElement) footerElement.innerHTML = footerTemplate;
+        if (headerContainer) headerContainer.innerHTML = headerHtml;
+        if (footerContainer) footerContainer.innerHTML = footerHtml;
+
+    } catch (error) {
+        console.error('Falha na renderização modular:', error);
+    }
 }
