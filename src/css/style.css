@@ -1,0 +1,250 @@
+/* ==========================================================================
+   Cogniflex Graphic Identity Design System & Animations 
+   ========================================================================== */
+
+:root {
+    --bg-soft-purple: #f8f5ff;
+    --main-purple: #684ec1;
+    --dark-purple: #28136f;
+    --white: #ffffff;
+    --gray-border: #e2dff0;
+
+    --sans-font: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-soft-purple);
+    color: var(--dark-purple);
+    font-family: var(--sans-font);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Header Component Styling */
+.header-content {
+    background-color: var(--white);
+    border-bottom: 2px solid var(--gray-border);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--main-purple);
+}
+
+.header-navigation .nav-link {
+    color: var(--dark-purple);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.header-navigation .nav-link:hover,
+.header-navigation .nav-link.active {
+    color: var(--main-purple);
+}
+
+/* Main Layout Wrapper */
+main {
+    flex-grow: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 2rem 1rem;
+}
+
+/* Home Welcome Styles */
+.welcome-hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.app-icon {
+    font-size: 4rem;
+}
+
+.welcome-hero h1 {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+    color: var(--dark-purple);
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    color: var(--main-purple);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Profile Summary Widget Layout */
+.profile-summary-card {
+    background-color: var(--white);
+    border: 1px solid var(--gray-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 6px rgba(104, 78, 193, 0.05);
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 1.5rem 0;
+    background-color: var(--bg-soft-purple);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.stat-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--main-purple);
+}
+
+/* Scenarios Grid Component Layout */
+.scenarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.scenario-card {
+    background-color: var(--white);
+    border: 1px solid var(--gray-border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.card-badge {
+    background-color: var(--main-purple);
+    color: var(--white);
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    align-self: flex-start;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.scenario-card p {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Reusable Button Styling Elements */
+button,
+.btn-primary,
+.btn-secondary {
+    font-family: var(--sans-font);
+    border-radius: 6px;
+    padding: 0.75rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary {
+    background-color: var(--main-purple);
+    color: var(--white);
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #533aa6;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--main-purple);
+    color: var(--main-purple);
+    margin: 0 auto;
+    display: block;
+}
+
+.btn-secondary:hover {
+    background-color: var(--main-purple);
+    color: var(--white);
+}
+
+/* Footer Component Styling */
+.footer-content {
+    background-color: var(--dark-purple);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+.footer-content p {
+    margin: 0.25rem 0;
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   Advanced CSS Features: Interaction & Simulation Components 
+   ========================================================================== */
+
+/* Advanced transform transition for decision cards  */
+.card-option {
+    background-color: var(--white);
+    border: 2px solid var(--main-purple);
+    border-radius: 8px;
+    padding: 1.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.card-option:hover {
+    box-shadow: 0 8px 15px rgba(104, 78, 193, 0.2);
+}
+
+/* Smooth opacity and scaling keyframe animation for API media feedback  */
+.fade-in-animation {
+    animation: smoothIn 0.6s forwards ease-in-out;
+    max-height: 250px;
+    border-radius: 12px;
+}
+
+@keyframes smoothIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
