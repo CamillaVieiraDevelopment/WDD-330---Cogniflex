@@ -2,9 +2,9 @@
 
 export async function renderHeaderFooter() {
     try {
-        // Busca os conteúdos HTML dos arquivos parciais
-        const headerResponse = await fetch('./partials/header.html');
-        const footerResponse = await fetch('./partials/footer.html');
+        // CORREÇÃO: Usando caminhos absolutos a partir da raiz do servidor do Vite (/ significa src/)
+        const headerResponse = await fetch('/partials/header.html');
+        const footerResponse = await fetch('/partials/footer.html');
 
         if (!headerResponse.ok || !footerResponse.ok) {
             throw new Error('Erro ao carregar os componentes de cabeçalho ou rodapé.');
@@ -19,7 +19,7 @@ export async function renderHeaderFooter() {
 
         if (headerContainer) {
             headerContainer.innerHTML = headerHtml;
-            // ATENÇÃO: Ativa os comportamentos de clique do menu hambúrguer assim que ele nasce no DOM
+            // Ativa os comportamentos de clique do menu hambúrguer
             setupMenuEvents();
         }
         if (footerContainer) {
@@ -39,19 +39,16 @@ function setupMenuEvents() {
     const overlay = document.getElementById('menu-overlay');
 
     if (menuBtn && sideMenu && overlay) {
-        // Evento: Abrir menu ao clicar no ícone hambúrguer
         menuBtn.addEventListener('click', () => {
             sideMenu.classList.add('open');
             overlay.classList.add('show');
         });
 
-        // Função interna reutilizável para fechar o menu
         const closeMenu = () => {
             sideMenu.classList.remove('open');
             overlay.classList.remove('show');
         };
 
-        // Eventos: Fechar ao clicar no 'X' ou na máscara escura de fundo
         if (closeBtn) closeBtn.addEventListener('click', closeMenu);
         overlay.addEventListener('click', closeMenu);
     }

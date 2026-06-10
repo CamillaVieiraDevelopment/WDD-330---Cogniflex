@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cogniflex - Início</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Cogniflex - Home</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -16,41 +16,52 @@
     <section class="welcome-section">
 
       <div class="intro-box">
-        <h1>Sobre o Cogniflex</h1>
+        <h1>About Cogniflex</h1>
         <p>
-          O <strong>Cogniflex</strong> é uma plataforma interativa focada em estimular e desenvolver a
-          flexibilidade cognitiva e as habilidades de adaptação social para indivíduos no Espectro Autista (TEA).
+          <strong>Cogniflex</strong> is an interactive platform focused on stimulating and developing
+          cognitive flexibility and social adaptation skills for individuals on the Autism Spectrum (ASD).
         </p>
 
-        <h2>Como funciona?</h2>
+        <h2>How does it work?</h2>
         <p>
-          Oferecemos um ambiente seguro, lúdico e controlado onde é possível vivenciar simulações de situações
-          cotidianas reais.
-          Diante de cada cenário, você tomará decisões por meio de ramificações de escolha e poderá observar as
-          consequências práticas,
-          sociais e emocionais de suas abordagens.
+          We offer a safe, playful, and controlled environment where you can experience simulations of real
+          everyday situations.
+          In each scenario, you will make decisions through choice branches and will be able to observe the
+          practical, social, and emotional consequences of your approaches.
         </p>
         <p>
-          Nossas histórias contam com múltiplas alternativas que vão além do conceito rígido de "certo ou errado",
-          incentivando a percepção de nuances e tons de cinza nas interações humanas.
+          Our stories feature multiple alternatives that go beyond the rigid concept of "right or wrong,"
+          encouraging the perception of nuances and shades of gray in human interactions.
         </p>
       </div>
 
-      <div class="action-menu-container">
-        <a href="simulation.html" class="btn-hero flex-sim">
-          <span class="btn-icon">🎮</span>
-          <div class="btn-text-group">
-            <span class="btn-title">Iniciar Simulações</span>
-            <span class="btn-subtitle">Vivencie histórias e explore suas decisões</span>
-          </div>
-        </a>
+      <div class="profile-selection-area">
+        <h2 class="selection-title">Select your profile to begin:</h2>
 
-        <a href="dashboard.html" class="btn-hero flex-dash">
-          <span class="btn-icon">📊</span>
-          <div class="btn-text-group">
-            <span class="btn-title">Acessar Dashboard</span>
-            <span class="btn-subtitle">Acompanhe seus relatórios, evolução e medalhas</span>
-          </div>
+        <div class="profile-cards-container">
+          <button class="profile-card" data-profile="child">
+            <span class="profile-icon">🧸</span>
+            <span class="profile-name">Children</span>
+            <span class="profile-age">8 to 12 years old</span>
+          </button>
+
+          <button class="profile-card" data-profile="teen">
+            <span class="profile-icon">📱</span>
+            <span class="profile-name">Teens</span>
+            <span class="profile-age">13 to 18 years old</span>
+          </button>
+
+          <button class="profile-card" data-profile="adult">
+            <span class="profile-icon">💼</span>
+            <span class="profile-name">Adults</span>
+            <span class="profile-age">18+ years old</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="secondary-action">
+        <a href="dashboard.html" class="btn-secondary">
+          📊 Access my Dashboard and History
         </a>
       </div>
 
@@ -59,7 +70,7 @@
 
   <div id="main-footer"></div>
 
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="/js/main.js"></script>
 </body>
 
 </html>
