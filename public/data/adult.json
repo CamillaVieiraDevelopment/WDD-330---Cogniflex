@@ -1,6 +1,6 @@
 [
     {
-        "id": "AD041",
+        "id": "A01",
         "area": "work",
         "category": "career",
         "targetAgeGroup": "adult",
@@ -18,28 +18,28 @@
         "choices": {
             "ideal": {
                 "text": "I listen carefully and try to understand what practical actions I can take.",
-                "immediateConsequence": "You gain useful insights.",
-                "laterConsequence": "You increase your development opportunities."
+                "immediateConsequence": "You gain useful information.",
+                "laterConsequence": "It increases your development opportunities."
             },
             "intermediary": {
                 "text": "I feel uncomfortable, but I reflect on the feedback later.",
                 "immediateConsequence": "The criticism still bothers you.",
-                "laterConsequence": "Some of the suggestions can still be utilized."
+                "laterConsequence": "Part of the suggestions can be used."
             },
             "impulsive": {
                 "text": "I interpret the feedback as a personal devaluation.",
                 "immediateConsequence": "You become defensive.",
-                "laterConsequence": "You may lose out on growth opportunities."
+                "laterConsequence": "You might lose growth opportunities."
             }
         }
     },
     {
-        "id": "AD042",
+        "id": "A02",
         "area": "work",
         "category": "career",
         "targetAgeGroup": "adult",
-        "title": "Changing Priorities",
-        "situationText": "After weeks of working on a project, leadership changes the organization's priorities.",
+        "title": "Everything Changed Again",
+        "situationText": "After weeks working on a project, leadership changes the organization's priorities.",
         "giphySearchTerm": "business meeting",
         "difficultyLevel": 5,
         "xpPointsValue": 100,
@@ -58,12 +58,1304 @@
             "intermediary": {
                 "text": "I feel frustrated, but I follow the new guidelines.",
                 "immediateConsequence": "The discomfort remains temporarily.",
-                "laterConsequence": "You continue to contribute to the project."
+                "laterConsequence": "You continue contributing to the project."
             },
             "impulsive": {
-                "text": "I conclude that my previous work was completely useless.",
+                "text": "I conclude that the previous work was completely useless.",
                 "immediateConsequence": "Your motivation drops.",
-                "laterConsequence": "It may increase your resistance to future changes."
+                "laterConsequence": "It might increase resistance to future changes."
+            }
+        }
+    },
+    {
+        "id": "A03",
+        "area": "work",
+        "category": "career",
+        "targetAgeGroup": "adult",
+        "title": "Two Versions of the Same Story",
+        "situationText": "Two colleagues present very different interpretations of a team problem and ask for your opinion.",
+        "giphySearchTerm": "office disagreement",
+        "difficultyLevel": 5,
+        "xpPointsValue": 100,
+        "executiveFunction": "perspective_shifting",
+        "socialSkill": "mediation",
+        "learningObjective": "multiple_perspectives",
+        "sensoryChallenge": false,
+        "emotionalDemand": 4,
+        "uncertaintyLevel": 5,
+        "choices": {
+            "ideal": {
+                "text": "I try to understand the facts and listen to the different points of view.",
+                "immediateConsequence": "You get more information.",
+                "laterConsequence": "You manage to form a more balanced opinion."
+            },
+            "intermediary": {
+                "text": "I avoid taking a position until I understand the situation better.",
+                "immediateConsequence": "You reduce the risk of making hasty judgments.",
+                "laterConsequence": "You can contribute later with more clarity."
+            },
+            "impulsive": {
+                "text": "I immediately support the first version I heard.",
+                "immediateConsequence": "You take a position quickly.",
+                "laterConsequence": "You might find out that information was missing."
+            }
+        }
+    },
+    {
+        "id": "A04",
+        "area": "work",
+        "category": "career",
+        "targetAgeGroup": "adult",
+        "title": "Many Demands",
+        "situationText": "You realize that you received more activities than you can complete with quality within the available time.",
+        "giphySearchTerm": "busy office worker",
+        "difficultyLevel": 5,
+        "xpPointsValue": 95,
+        "executiveFunction": "planning",
+        "socialSkill": "assertive_communication",
+        "learningObjective": "workload_management",
+        "sensoryChallenge": false,
+        "emotionalDemand": 4,
+        "uncertaintyLevel": 3,
+        "choices": {
+            "ideal": {
+                "text": "I prioritize activities and communicate limitations professionally.",
+                "immediateConsequence": "Expectations become clearer.",
+                "laterConsequence": "The chances of delivering quality work increase."
+            },
+            "intermediary": {
+                "text": "I try to do everything, even knowing it will be difficult.",
+                "immediateConsequence": "You keep your commitment to the tasks.",
+                "laterConsequence": "The risk of being overwhelmed remains."
+            },
+            "impulsive": {
+                "text": "I accept all demands without any planning.",
+                "immediateConsequence": "You avoid a difficult conversation.",
+                "laterConsequence": "It might compromise results and well-being."
+            }
+        }
+    },
+    {
+        "id": "A05",
+        "area": "work",
+        "category": "career",
+        "targetAgeGroup": "adult",
+        "title": "A Different Choice Was Made",
+        "situationText": "A promotion opportunity was offered to someone else on the team.",
+        "giphySearchTerm": "office disappointment",
+        "difficultyLevel": 5,
+        "xpPointsValue": 100,
+        "executiveFunction": "resilience",
+        "socialSkill": "self_reflection",
+        "learningObjective": "career_resilience",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 4,
+        "choices": {
+            "ideal": {
+                "text": "I try to understand the decision criteria and identify development opportunities.",
+                "immediateConsequence": "You get useful information.",
+                "laterConsequence": "You build a clearer growth plan."
+            },
+            "intermediary": {
+                "text": "I feel disappointed, but I keep performing my duties.",
+                "immediateConsequence": "The frustration remains temporarily.",
+                "laterConsequence": "You maintain professional stability."
+            },
+            "impulsive": {
+                "text": "I immediately conclude that my effort will never be recognized.",
+                "immediateConsequence": "Your motivation drops.",
+                "laterConsequence": "It might affect your future performance."
+            }
+        }
+    },
+    {
+        "id": "A06",
+        "area": "work",
+        "category": "career",
+        "targetAgeGroup": "adult",
+        "title": "Something Went Wrong",
+        "situationText": "You realize that you made a mistake that could impact other people on the team.",
+        "giphySearchTerm": "office mistake",
+        "difficultyLevel": 5,
+        "xpPointsValue": 100,
+        "executiveFunction": "accountability",
+        "socialSkill": "professional_integrity",
+        "learningObjective": "ownership",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 3,
+        "choices": {
+            "ideal": {
+                "text": "I communicate the problem and try to collaborate on the solution.",
+                "immediateConsequence": "The error can be addressed more quickly.",
+                "laterConsequence": "You strengthen professional trust."
+            },
+            "intermediary": {
+                "text": "I analyze possible solutions first before informing others.",
+                "immediateConsequence": "You try to better understand the impact.",
+                "laterConsequence": "You can still act responsibly."
+            },
+            "impulsive": {
+                "text": "I hope no one notices the mistake.",
+                "immediateConsequence": "You avoid immediate discomfort.",
+                "laterConsequence": "The impact might increase."
+            }
+        }
+    },
+    {
+        "id": "A07",
+        "area": "work",
+        "category": "career",
+        "targetAgeGroup": "adult",
+        "title": "Learning Again",
+        "situationText": "Your organization has implemented a new tool that requires changes in the way you work.",
+        "giphySearchTerm": "learning software office",
+        "difficultyLevel": 4,
+        "xpPointsValue": 90,
+        "executiveFunction": "cognitive_flexibility",
+        "socialSkill": "adaptability",
+        "learningObjective": "continuous_learning",
+        "sensoryChallenge": false,
+        "emotionalDemand": 3,
+        "uncertaintyLevel": 4,
+        "choices": {
+            "ideal": {
+                "text": "I try to learn the new tool gradually.",
+                "immediateConsequence": "You increase your familiarity with the change.",
+                "laterConsequence": "You expand your professional skills."
+            },
+            "intermediary": {
+                "text": "I only use the basic features until I gain confidence.",
+                "immediateConsequence": "Adaptation happens gradually.",
+                "laterConsequence": "Learning continues to happen."
+            },
+            "impulsive": {
+                "text": "I resist the change because I prefer the old way of working.",
+                "immediateConsequence": "You avoid initial discomfort.",
+                "laterConsequence": "You might have a harder time keeping up with the team."
+            }
+        }
+    },
+    {
+        "id": "A08",
+        "area": "work",
+        "category": "career",
+        "targetAgeGroup": "adult",
+        "title": "Not Everything is Simple",
+        "situationText": "You notice a professional situation that raises ethical doubts and could affect different people.",
+        "giphySearchTerm": "business ethics",
+        "difficultyLevel": 5,
+        "xpPointsValue": 110,
+        "executiveFunction": "ethical_reasoning",
+        "socialSkill": "professional_judgment",
+        "learningObjective": "ethical_decision_making",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 5,
+        "choices": {
+            "ideal": {
+                "text": "I look for information, evaluate impacts, and consider ethical principles before acting.",
+                "immediateConsequence": "You make a more informed decision.",
+                "laterConsequence": "You reduce risks and strengthen your integrity."
+            },
+            "intermediary": {
+                "text": "I seek guidance from experienced people before deciding.",
+                "immediateConsequence": "You broaden your understanding of the problem.",
+                "laterConsequence": "You get support for a more conscious decision."
+            },
+            "impulsive": {
+                "text": "I make an immediate decision without evaluating broader consequences.",
+                "immediateConsequence": "The problem seems to be solved quickly.",
+                "laterConsequence": "Important impacts might have been ignored."
+            }
+        }
+    },
+    {
+        "id": "A09",
+        "area": "relationships",
+        "category": "interpersonal",
+        "targetAgeGroup": "adult",
+        "title": "I Thought It Was Obvious",
+        "situationText": "You are frustrated because a close person didn't do something you expected, but you realize you never clearly discussed this expectation.",
+        "giphySearchTerm": "couple talking",
+        "difficultyLevel": 4,
+        "xpPointsValue": 95,
+        "executiveFunction": "perspective_shifting",
+        "socialSkill": "communication",
+        "learningObjective": "clarifying_expectations",
+        "sensoryChallenge": false,
+        "emotionalDemand": 4,
+        "uncertaintyLevel": 4,
+        "choices": {
+            "ideal": {
+                "text": "I talk about my expectations clearly and respectfully.",
+                "immediateConsequence": "The situation becomes more understandable for both.",
+                "laterConsequence": "It reduces future misunderstandings."
+            },
+            "intermediary": {
+                "text": "I give some hints about my dissatisfaction.",
+                "immediateConsequence": "The other person notices something is wrong.",
+                "laterConsequence": "The cause of the problem might remain unclear."
+            },
+            "impulsive": {
+                "text": "I become resentful without explaining why.",
+                "immediateConsequence": "You avoid a difficult conversation.",
+                "laterConsequence": "The frustration tends to increase."
+            }
+        }
+    },
+    {
+        "id": "A10",
+        "area": "relationships",
+        "category": "interpersonal",
+        "targetAgeGroup": "adult",
+        "title": "We Disagree A Lot",
+        "situationText": "You and someone important have very different opinions on a relevant subject.",
+        "giphySearchTerm": "adult discussion",
+        "difficultyLevel": 5,
+        "xpPointsValue": 100,
+        "executiveFunction": "cognitive_flexibility",
+        "socialSkill": "respectful_dialogue",
+        "learningObjective": "managing_disagreement",
+        "sensoryChallenge": false,
+        "emotionalDemand": 4,
+        "uncertaintyLevel": 3,
+        "choices": {
+            "ideal": {
+                "text": "I try to understand the other person's perspective even without agreeing.",
+                "immediateConsequence": "The dialogue remains productive.",
+                "laterConsequence": "The relationship tends to remain healthy."
+            },
+            "intermediary": {
+                "text": "I agree to disagree and end the discussion.",
+                "immediateConsequence": "The conflict diminishes.",
+                "laterConsequence": "The issue might remain unresolved."
+            },
+            "impulsive": {
+                "text": "I try to convince the person that they are wrong at any cost.",
+                "immediateConsequence": "The tension increases.",
+                "laterConsequence": "The relationship might be damaged."
+            }
+        }
+    },
+    {
+        "id": "A11",
+        "area": "relationships",
+        "category": "boundaries",
+        "targetAgeGroup": "adult",
+        "title": "I Need Space",
+        "situationText": "A close person makes frequent requests that are starting to overwhelm you.",
+        "giphySearchTerm": "setting boundaries",
+        "difficultyLevel": 5,
+        "xpPointsValue": 100,
+        "executiveFunction": "self_monitoring",
+        "socialSkill": "assertiveness",
+        "learningObjective": "healthy_boundaries",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 4,
+        "choices": {
+            "ideal": {
+                "text": "I express my boundaries respectfully and clearly.",
+                "immediateConsequence": "Expectations become more defined.",
+                "laterConsequence": "The relationship tends to become more balanced."
+            },
+            "intermediary": {
+                "text": "I gradually reduce my availability.",
+                "immediateConsequence": "You reduce the feeling of being overwhelmed.",
+                "laterConsequence": "The other person may not fully understand the change."
+            },
+            "impulsive": {
+                "text": "I accumulate annoyance until I react abruptly.",
+                "immediateConsequence": "Tension increases rapidly.",
+                "laterConsequence": "It may generate unnecessary conflicts."
+            }
+        }
+    },
+    {
+        "id": "A12",
+        "area": "relationships",
+        "category": "repair",
+        "targetAgeGroup": "adult",
+        "title": "A Delicate Conversation",
+        "situationText": "You realize that your actions contributed to a major misunderstanding.",
+        "giphySearchTerm": "apology conversation",
+        "difficultyLevel": 4,
+        "xpPointsValue": 95,
+        "executiveFunction": "self_reflection",
+        "socialSkill": "accountability",
+        "learningObjective": "relationship_repair",
+        "sensoryChallenge": false,
+        "emotionalDemand": 4,
+        "uncertaintyLevel": 2,
+        "choices": {
+            "ideal": {
+                "text": "I acknowledge my part and try to repair the impact caused.",
+                "immediateConsequence": "The dialogue becomes more constructive.",
+                "laterConsequence": "Trust can be strengthened."
+            },
+            "intermediary": {
+                "text": "I acknowledge part of the problem, but still justify some of my actions.",
+                "immediateConsequence": "There is some progress in the conversation.",
+                "laterConsequence": "Unresolved issues may remain."
+            },
+            "impulsive": {
+                "text": "I just try to explain why it wasn't my fault.",
+                "immediateConsequence": "You protect yourself emotionally.",
+                "laterConsequence": "Reconciliation may become more difficult."
+            }
+        }
+    },
+    {
+        "id": "A13",
+        "area": "relationships",
+        "category": "expectations",
+        "targetAgeGroup": "adult",
+        "title": "No One Noticed",
+        "situationText": "You put a lot of effort into helping other people, but didn't receive the recognition you expected.",
+        "giphySearchTerm": "feeling overlooked",
+        "difficultyLevel": 5,
+        "xpPointsValue": 95,
+        "executiveFunction": "emotional_regulation",
+        "socialSkill": "self_awareness",
+        "learningObjective": "managing_expectations",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 4,
+        "choices": {
+            "ideal": {
+                "text": "I acknowledge my frustration without letting it define the value of my contribution.",
+                "immediateConsequence": "You process the emotion in a balanced way.",
+                "laterConsequence": "You maintain your motivation in a healthy way."
+            },
+            "intermediary": {
+                "text": "I feel disappointed, but continue normally.",
+                "immediateConsequence": "The disappointment remains for a while.",
+                "laterConsequence": "The impact tends to decrease."
+            },
+            "impulsive": {
+                "text": "I decide to never help anyone again.",
+                "immediateConsequence": "You reduce the feeling of vulnerability.",
+                "laterConsequence": "It may damage important relationships."
+            }
+        }
+    },
+    {
+        "id": "A14",
+        "area": "relationships",
+        "category": "adaptation",
+        "targetAgeGroup": "adult",
+        "title": "Life Took Different Paths",
+        "situationText": "You notice that an old friendship has changed a lot over the years.",
+        "giphySearchTerm": "old friends",
+        "difficultyLevel": 5,
+        "xpPointsValue": 100,
+        "executiveFunction": "cognitive_flexibility",
+        "socialSkill": "adaptability",
+        "learningObjective": "accepting_relationship_change",
+        "sensoryChallenge": false,
+        "emotionalDemand": 4,
+        "uncertaintyLevel": 5,
+        "choices": {
+            "ideal": {
+                "text": "I accept that relationships evolve and try to find new ways to connect.",
+                "immediateConsequence": "You reduce resistance to change.",
+                "laterConsequence": "You maintain more flexible bonds."
+            },
+            "intermediary": {
+                "text": "I miss the old relationship, but continue to value the bond.",
+                "immediateConsequence": "You acknowledge your emotions.",
+                "laterConsequence": "The friendship can continue in a different way."
+            },
+            "impulsive": {
+                "text": "I conclude that the friendship has completely lost its value.",
+                "immediateConsequence": "You distance yourself quickly.",
+                "laterConsequence": "You may lose meaningful connections."
+            }
+        }
+    },
+    {
+        "id": "A15",
+        "area": "relationships",
+        "category": "communication",
+        "targetAgeGroup": "adult",
+        "title": "Something Needs to Be Said",
+        "situationText": "You need to bring up a sensitive topic with someone important to you.",
+        "giphySearchTerm": "serious conversation adults",
+        "difficultyLevel": 5,
+        "xpPointsValue": 100,
+        "executiveFunction": "planning",
+        "socialSkill": "assertive_communication",
+        "learningObjective": "difficult_conversations",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 4,
+        "choices": {
+            "ideal": {
+                "text": "I plan a respectful and direct conversation.",
+                "immediateConsequence": "Communication becomes clearer.",
+                "laterConsequence": "The chances of resolution increase."
+            },
+            "intermediary": {
+                "text": "I approach the topic gradually.",
+                "immediateConsequence": "The conversation happens in a less intense way.",
+                "laterConsequence": "It may take more time to resolve the issue."
+            },
+            "impulsive": {
+                "text": "I avoid the subject indefinitely.",
+                "immediateConsequence": "You avoid momentary discomfort.",
+                "laterConsequence": "The problem tends to remain."
+            }
+        }
+    },
+    {
+        "id": "A16",
+        "area": "relationships",
+        "category": "relationship_management",
+        "targetAgeGroup": "adult",
+        "title": "We Don't Always Want the Same Things",
+        "situationText": "You realize that an important person has different priorities from yours at this moment in life.",
+        "giphySearchTerm": "adult couple discussion",
+        "difficultyLevel": 5,
+        "xpPointsValue": 105,
+        "executiveFunction": "perspective_shifting",
+        "socialSkill": "negotiation",
+        "learningObjective": "managing_different_goals",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 5,
+        "choices": {
+            "ideal": {
+                "text": "I try to understand both of our needs and look for possibilities to find a balance.",
+                "immediateConsequence": "The dialogue becomes more collaborative.",
+                "laterConsequence": "The chances of sustainable decisions increase."
+            },
+            "intermediary": {
+                "text": "I partially accept the differences while evaluating the situation.",
+                "immediateConsequence": "The conflict decreases temporarily.",
+                "laterConsequence": "New conversations may be necessary."
+            },
+            "impulsive": {
+                "text": "I conclude that one person simply needs to give in.",
+                "immediateConsequence": "The solution seems simple.",
+                "laterConsequence": "It may generate future resentments."
+            }
+        }
+    },
+    {
+        "id": "A17",
+        "area": "family",
+        "category": "household",
+        "targetAgeGroup": "adult",
+        "title": "The House Doesn't Clean Itself",
+        "situationText": "You notice that you are taking on more household chores than you would like and begin to feel overwhelmed.",
+        "giphySearchTerm": "house cleaning",
+        "difficultyLevel": 4,
+        "xpPointsValue": 95,
+        "executiveFunction": "problem_solving",
+        "socialSkill": "assertive_communication",
+        "learningObjective": "shared_responsibility",
+        "sensoryChallenge": false,
+        "emotionalDemand": 4,
+        "uncertaintyLevel": 3,
+        "choices": {
+            "ideal": {
+                "text": "I talk about the division of responsibilities and try to build more balanced agreements.",
+                "immediateConsequence": "Expectations become clearer.",
+                "laterConsequence": "Living together tends to become fairer."
+            },
+            "intermediary": {
+                "text": "I continue doing the chores while observing if the situation improves.",
+                "immediateConsequence": "The functioning of the house is maintained.",
+                "laterConsequence": "The feeling of being overwhelmed may remain."
+            },
+            "impulsive": {
+                "text": "I stop doing my chores without telling anyone.",
+                "immediateConsequence": "The problem becomes visible quickly.",
+                "laterConsequence": "Conflicts may escalate."
+            }
+        }
+    },
+    {
+        "id": "A18",
+        "area": "family",
+        "category": "family_relationships",
+        "targetAgeGroup": "adult",
+        "title": "We Think Differently",
+        "situationText": "During a family gathering, a topic arises on which different generations have very distinct opinions.",
+        "giphySearchTerm": "family discussion",
+        "difficultyLevel": 5,
+        "xpPointsValue": 100,
+        "executiveFunction": "perspective_shifting",
+        "socialSkill": "respectful_dialogue",
+        "learningObjective": "intergenerational_understanding",
+        "sensoryChallenge": false,
+        "emotionalDemand": 4,
+        "uncertaintyLevel": 4,
+        "choices": {
+            "ideal": {
+                "text": "I try to understand the experiences that influence each perspective.",
+                "immediateConsequence": "The dialogue becomes more respectful.",
+                "laterConsequence": "Family relationships tend to grow stronger."
+            },
+            "intermediary": {
+                "text": "I avoid discussing the topic to maintain harmony.",
+                "immediateConsequence": "The conflict diminishes temporarily.",
+                "laterConsequence": "The differences remain unexplored."
+            },
+            "impulsive": {
+                "text": "I insist that only my view makes sense.",
+                "immediateConsequence": "The discussion intensifies.",
+                "laterConsequence": "It can lead to emotional detachment."
+            }
+        }
+    },
+    {
+        "id": "A19",
+        "area": "family",
+        "category": "caregiving",
+        "targetAgeGroup": "adult",
+        "title": "A Major Disappointment",
+        "situationText": "A child or close family member is very frustrated after not achieving something they wanted.",
+        "giphySearchTerm": "family support",
+        "difficultyLevel": 4,
+        "xpPointsValue": 95,
+        "executiveFunction": "emotional_regulation",
+        "socialSkill": "empathy",
+        "learningObjective": "supportive_listening",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 2,
+        "choices": {
+            "ideal": {
+                "text": "I listen to the person and validate their feelings before offering suggestions.",
+                "immediateConsequence": "They feel understood.",
+                "laterConsequence": "Trust in the relationship increases."
+            },
+            "intermediary": {
+                "text": "I try to cheer them up quickly so they won't be sad.",
+                "immediateConsequence": "You show concern.",
+                "laterConsequence": "Some emotions may not be fully processed."
+            },
+            "impulsive": {
+                "text": "I minimize the problem by saying it's nothing important.",
+                "immediateConsequence": "The conversation ends quickly.",
+                "laterConsequence": "The person may feel misunderstood."
+            }
+        }
+    },
+    {
+        "id": "A20",
+        "area": "family",
+        "category": "eldercare",
+        "targetAgeGroup": "adult",
+        "title": "New Needs",
+        "situationText": "You notice that an elderly family member is starting to need more support with day-to-day activities.",
+        "giphySearchTerm": "elder care family",
+        "difficultyLevel": 5,
+        "xpPointsValue": 110,
+        "executiveFunction": "planning",
+        "socialSkill": "collaboration",
+        "learningObjective": "caregiving_decisions",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 5,
+        "choices": {
+            "ideal": {
+                "text": "I talk to those involved to plan sustainable forms of support.",
+                "immediateConsequence": "The needs become clearer.",
+                "laterConsequence": "The family is able to organize themselves better."
+            },
+            "intermediary": {
+                "text": "I try to help whenever possible without changing my routine too much.",
+                "immediateConsequence": "Some support is provided.",
+                "laterConsequence": "New adjustments may be necessary."
+            },
+            "impulsive": {
+                "text": "I ignore the signs because I don't want to deal with the issue.",
+                "immediateConsequence": "You avoid a difficult conversation.",
+                "laterConsequence": "The needs tend to increase."
+            }
+        }
+    },
+    {
+        "id": "A21",
+        "area": "family",
+        "category": "financial_management",
+        "targetAgeGroup": "adult",
+        "title": "We Need to Decide",
+        "situationText": "The family has limited resources and needs to choose between different financial priorities.",
+        "giphySearchTerm": "family budget",
+        "difficultyLevel": 5,
+        "xpPointsValue": 105,
+        "executiveFunction": "prioritization",
+        "socialSkill": "negotiation",
+        "learningObjective": "shared_decision_making",
+        "sensoryChallenge": false,
+        "emotionalDemand": 4,
+        "uncertaintyLevel": 4,
+        "choices": {
+            "ideal": {
+                "text": "I evaluate needs, goals, and impacts before making a decision.",
+                "immediateConsequence": "The decision becomes more structured.",
+                "laterConsequence": "Resources tend to be better utilized."
+            },
+            "intermediary": {
+                "text": "I give preference to what seems most urgent at that moment.",
+                "immediateConsequence": "A need is met quickly.",
+                "laterConsequence": "Other priorities may need to be reviewed."
+            },
+            "impulsive": {
+                "text": "I choose based solely on the emotion of the moment.",
+                "immediateConsequence": "The decision seems simple.",
+                "laterConsequence": "Financial consequences may arise later."
+            }
+        }
+    },
+    {
+        "id": "A22",
+        "area": "family",
+        "category": "shared_decisions",
+        "targetAgeGroup": "adult",
+        "title": "Not Everyone Wants the Same Thing",
+        "situationText": "Family members have very different ideas about how to spend the next vacation.",
+        "giphySearchTerm": "family vacation planning",
+        "difficultyLevel": 4,
+        "xpPointsValue": 90,
+        "executiveFunction": "flexible_thinking",
+        "socialSkill": "compromise",
+        "learningObjective": "balancing_needs",
+        "sensoryChallenge": false,
+        "emotionalDemand": 3,
+        "uncertaintyLevel": 3,
+        "choices": {
+            "ideal": {
+                "text": "I look for alternatives that accommodate part of everyone's interests.",
+                "immediateConsequence": "The discussion becomes more collaborative.",
+                "laterConsequence": "Collective satisfaction tends to increase."
+            },
+            "intermediary": {
+                "text": "I accept the option chosen by the majority.",
+                "immediateConsequence": "The decision is made quickly.",
+                "laterConsequence": "Some preferences are left unmet."
+            },
+            "impulsive": {
+                "text": "I insist only on the option I prefer.",
+                "immediateConsequence": "The conflict escalates.",
+                "laterConsequence": "It may generate resentments."
+            }
+        }
+    },
+    {
+        "id": "A23",
+        "area": "family",
+        "category": "adaptation",
+        "targetAgeGroup": "adult",
+        "title": "We Need to Reorganize",
+        "situationText": "A major change requires the family to adapt schedules, responsibilities, and habits.",
+        "giphySearchTerm": "family planning",
+        "difficultyLevel": 5,
+        "xpPointsValue": 100,
+        "executiveFunction": "cognitive_flexibility",
+        "socialSkill": "adaptability",
+        "learningObjective": "family_adjustment",
+        "sensoryChallenge": false,
+        "emotionalDemand": 4,
+        "uncertaintyLevel": 5,
+        "choices": {
+            "ideal": {
+                "text": "I try to collaborate in building a new routine.",
+                "immediateConsequence": "Adaptation begins earlier.",
+                "laterConsequence": "The transition tends to be smoother."
+            },
+            "intermediary": {
+                "text": "I accept the change, but I take a while to adjust my habits.",
+                "immediateConsequence": "Adaptation occurs gradually.",
+                "laterConsequence": "The routine eventually stabilizes."
+            },
+            "impulsive": {
+                "text": "I resist any alteration because I prefer everything the way it was before.",
+                "immediateConsequence": "You preserve the old routine temporarily.",
+                "laterConsequence": "Adaptation can become more difficult."
+            }
+        }
+    },
+    {
+        "id": "A24",
+        "area": "family",
+        "category": "self_care",
+        "targetAgeGroup": "adult",
+        "title": "Balancing Needs",
+        "situationText": "You feel the need to set aside time for yourself, but you also have various family responsibilities.",
+        "giphySearchTerm": "self care adult",
+        "difficultyLevel": 5,
+        "xpPointsValue": 100,
+        "executiveFunction": "self_management",
+        "socialSkill": "boundary_setting",
+        "learningObjective": "healthy_balance",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 4,
+        "choices": {
+            "ideal": {
+                "text": "I try to balance my personal needs with my responsibilities.",
+                "immediateConsequence": "You reduce the feeling of being overwhelmed.",
+                "laterConsequence": "It increases the sustainability of your well-being."
+            },
+            "intermediary": {
+                "text": "I set aside small moments for myself whenever possible.",
+                "immediateConsequence": "Some relief is obtained.",
+                "laterConsequence": "The balance partially improves."
+            },
+            "impulsive": {
+                "text": "I completely ignore my needs or abandon my responsibilities.",
+                "immediateConsequence": "You only solve part of the problem.",
+                "laterConsequence": "The imbalance tends to increase."
+            }
+        }
+    },
+    {
+        "id": "A25",
+        "area": "planning",
+        "category": "decision_making",
+        "targetAgeGroup": "adult",
+        "title": "Not Everything Fits in the Schedule",
+        "situationText": "Two important opportunities arose at the same time, but you cannot commit to both with quality.",
+        "giphySearchTerm": "business decision",
+        "difficultyLevel": 5,
+        "xpPointsValue": 105,
+        "executiveFunction": "prioritization",
+        "socialSkill": "decision_making",
+        "learningObjective": "evaluating_tradeoffs",
+        "sensoryChallenge": false,
+        "emotionalDemand": 4,
+        "uncertaintyLevel": 5,
+        "choices": {
+            "ideal": {
+                "text": "I evaluate impacts, priorities, and consequences before choosing.",
+                "immediateConsequence": "The decision becomes more conscious.",
+                "laterConsequence": "It increases consistency with your goals."
+            },
+            "intermediary": {
+                "text": "I choose the opportunity that seems most interesting at the moment.",
+                "immediateConsequence": "The decision is made quickly.",
+                "laterConsequence": "You may discover new factors later."
+            },
+            "impulsive": {
+                "text": "I accept both without evaluating my actual capacity.",
+                "immediateConsequence": "You avoid giving up opportunities.",
+                "laterConsequence": "The risk of burnout increases."
+            }
+        }
+    },
+    {
+        "id": "A26",
+        "area": "planning",
+        "category": "financial_planning",
+        "targetAgeGroup": "adult",
+        "title": "Use Now or Save?",
+        "situationText": "You received some extra money and are torn between using it immediately or setting it aside for future goals.",
+        "giphySearchTerm": "money planning",
+        "difficultyLevel": 4,
+        "xpPointsValue": 95,
+        "executiveFunction": "future_thinking",
+        "socialSkill": "self_management",
+        "learningObjective": "delayed_gratification",
+        "sensoryChallenge": false,
+        "emotionalDemand": 3,
+        "uncertaintyLevel": 3,
+        "choices": {
+            "ideal": {
+                "text": "I analyze current and future needs before making a decision.",
+                "immediateConsequence": "You better understand your priorities.",
+                "laterConsequence": "It increases your financial security."
+            },
+            "intermediary": {
+                "text": "I use part of the amount and save the rest.",
+                "immediateConsequence": "There is a balance between present and future.",
+                "laterConsequence": "You maintain some flexibility."
+            },
+            "impulsive": {
+                "text": "I spend it all quickly because the opportunity seems unique.",
+                "immediateConsequence": "You get immediate satisfaction.",
+                "laterConsequence": "You may lack resources for future needs."
+            }
+        }
+    },
+    {
+        "id": "A27",
+        "area": "planning",
+        "category": "health_management",
+        "targetAgeGroup": "adult",
+        "title": "I'll Look into That Later",
+        "situationText": "Your routine is very busy, and you realize you have been putting off important health care.",
+        "giphySearchTerm": "busy adult",
+        "difficultyLevel": 5,
+        "xpPointsValue": 100,
+        "executiveFunction": "self_monitoring",
+        "socialSkill": "self_care",
+        "learningObjective": "preventive_planning",
+        "sensoryChallenge": false,
+        "emotionalDemand": 4,
+        "uncertaintyLevel": 4,
+        "choices": {
+            "ideal": {
+                "text": "I re-evaluate my priorities to include essential care.",
+                "immediateConsequence": "You create space for self-care.",
+                "laterConsequence": "It promotes long-term health and well-being."
+            },
+            "intermediary": {
+                "text": "I make small adjustments while looking for a better time.",
+                "immediateConsequence": "Some progress happens.",
+                "laterConsequence": "The benefits tend to be gradual."
+            },
+            "impulsive": {
+                "text": "I keep postponing it indefinitely.",
+                "immediateConsequence": "You maintain your current routine.",
+                "laterConsequence": "Important issues may accumulate."
+            }
+        }
+    },
+    {
+        "id": "A28",
+        "area": "planning",
+        "category": "time_management",
+        "targetAgeGroup": "adult",
+        "title": "The Clock Is Ticking",
+        "situationText": "You realize that an important deadline is approaching faster than you expected.",
+        "giphySearchTerm": "deadline stress",
+        "difficultyLevel": 4,
+        "xpPointsValue": 95,
+        "executiveFunction": "organization",
+        "socialSkill": "self_management",
+        "learningObjective": "time_planning",
+        "sensoryChallenge": false,
+        "emotionalDemand": 4,
+        "uncertaintyLevel": 2,
+        "choices": {
+            "ideal": {
+                "text": "I reorganize priorities and create a realistic plan.",
+                "immediateConsequence": "You gain clarity on the next steps.",
+                "laterConsequence": "The chance of meeting the deadline increases."
+            },
+            "intermediary": {
+                "text": "I dedicate more time to the project in the next few days.",
+                "immediateConsequence": "You speed up the progress.",
+                "laterConsequence": "You might manage to finish on time."
+            },
+            "impulsive": {
+                "text": "I avoid thinking about the deadline because it causes anxiety.",
+                "immediateConsequence": "The discomfort decreases temporarily.",
+                "laterConsequence": "The risk of delay increases."
+            }
+        }
+    },
+    {
+        "id": "A29",
+        "area": "planning",
+        "category": "adaptability",
+        "targetAgeGroup": "adult",
+        "title": "Nothing Went as Planned",
+        "situationText": "An unexpected event requires you to change plans that have been in the making for a long time.",
+        "giphySearchTerm": "changing plans",
+        "difficultyLevel": 5,
+        "xpPointsValue": 105,
+        "executiveFunction": "cognitive_flexibility",
+        "socialSkill": "adaptability",
+        "learningObjective": "adjusting_to_change",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 5,
+        "choices": {
+            "ideal": {
+                "text": "I acknowledge the frustration and look for viable alternatives.",
+                "immediateConsequence": "You regain some control over the situation.",
+                "laterConsequence": "You develop greater flexibility."
+            },
+            "intermediary": {
+                "text": "I need time to accept the change before reorganizing the plans.",
+                "immediateConsequence": "You process the disappointment.",
+                "laterConsequence": "Adaptation occurs gradually."
+            },
+            "impulsive": {
+                "text": "I completely abandon any future planning.",
+                "immediateConsequence": "You stop the reorganization effort.",
+                "laterConsequence": "You may lose important opportunities."
+            }
+        }
+    },
+    {
+        "id": "A30",
+        "area": "planning",
+        "category": "life_balance",
+        "targetAgeGroup": "adult",
+        "title": "Everything Needs Me",
+        "situationText": "You are trying to juggle work, family, studies, and personal commitments all at once.",
+        "giphySearchTerm": "busy multitasking adult",
+        "difficultyLevel": 5,
+        "xpPointsValue": 105,
+        "executiveFunction": "planning",
+        "socialSkill": "boundary_setting",
+        "learningObjective": "role_management",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 4,
+        "choices": {
+            "ideal": {
+                "text": "I set priorities and accept that not everything can receive the same attention.",
+                "immediateConsequence": "You reduce the feeling of chaos.",
+                "laterConsequence": "The routine becomes more sustainable."
+            },
+            "intermediary": {
+                "text": "I try to balance everything as best as possible.",
+                "immediateConsequence": "You continue meeting multiple demands.",
+                "laterConsequence": "The balance may vary over time."
+            },
+            "impulsive": {
+                "text": "I take on new responsibilities without reviewing current ones.",
+                "immediateConsequence": "You avoid saying no.",
+                "laterConsequence": "The risk of overload increases."
+            }
+        }
+    },
+    {
+        "id": "A31",
+        "area": "planning",
+        "category": "uncertainty",
+        "targetAgeGroup": "adult",
+        "title": "Not All Answers Are Available",
+        "situationText": "You need to make an important decision without having all the information you would like.",
+        "giphySearchTerm": "thinking decision",
+        "difficultyLevel": 5,
+        "xpPointsValue": 110,
+        "executiveFunction": "decision_making",
+        "socialSkill": "risk_assessment",
+        "learningObjective": "decision_under_uncertainty",
+        "sensoryChallenge": false,
+        "emotionalDemand": 4,
+        "uncertaintyLevel": 5,
+        "choices": {
+            "ideal": {
+                "text": "I seek relevant information and decide based on the best available knowledge.",
+                "immediateConsequence": "You reduce part of the uncertainty.",
+                "laterConsequence": "The decision becomes more informed."
+            },
+            "intermediary": {
+                "text": "I ask for additional opinions before deciding.",
+                "immediateConsequence": "You broaden your perspectives.",
+                "laterConsequence": "You get more elements for analysis."
+            },
+            "impulsive": {
+                "text": "I choose quickly just to end the doubt.",
+                "immediateConsequence": "The uncertainty disappears momentarily.",
+                "laterConsequence": "Important aspects may have been ignored."
+            }
+        }
+    },
+    {
+        "id": "A32",
+        "area": "planning",
+        "category": "goal_setting",
+        "targetAgeGroup": "adult",
+        "title": "Building the Future",
+        "situationText": "You have an important goal that will require consistent effort over several months or years.",
+        "giphySearchTerm": "long term goals",
+        "difficultyLevel": 4,
+        "xpPointsValue": 100,
+        "executiveFunction": "future_thinking",
+        "socialSkill": "self_discipline",
+        "learningObjective": "long_term_planning",
+        "sensoryChallenge": false,
+        "emotionalDemand": 3,
+        "uncertaintyLevel": 4,
+        "choices": {
+            "ideal": {
+                "text": "I break the goal down into smaller steps and track my progress.",
+                "immediateConsequence": "The challenge seems more manageable.",
+                "laterConsequence": "It increases the probability of achieving the goal."
+            },
+            "intermediary": {
+                "text": "I keep the goal in mind and move forward when possible.",
+                "immediateConsequence": "Some progress happens.",
+                "laterConsequence": "The pace may vary over time."
+            },
+            "impulsive": {
+                "text": "I give up because the results don't appear quickly.",
+                "immediateConsequence": "You reduce momentary frustration.",
+                "laterConsequence": "You might abandon important goals prematurely."
+            }
+        }
+    },
+    {
+        "id": "A33",
+        "area": "emotional_regulation",
+        "category": "resilience",
+        "targetAgeGroup": "adult",
+        "title": "This Is Not How I Imagined It",
+        "situationText": "You invested a lot of time and effort in an important project, but the result fell below expectations.",
+        "giphySearchTerm": "disappointed adult",
+        "difficultyLevel": 5,
+        "xpPointsValue": 110,
+        "executiveFunction": "emotional_regulation",
+        "socialSkill": "self_reflection",
+        "learningObjective": "coping_with_disappointment",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 3,
+        "choices": {
+            "ideal": {
+                "text": "I acknowledge my frustration and try to identify lessons learned for future attempts.",
+                "immediateConsequence": "The emotion becomes more manageable.",
+                "laterConsequence": "You develop greater resilience."
+            },
+            "intermediary": {
+                "text": "I need some time to process the disappointment before moving on.",
+                "immediateConsequence": "You respect your emotional moment.",
+                "laterConsequence": "Recovery happens gradually."
+            },
+            "impulsive": {
+                "text": "I conclude that it's not worth trying again.",
+                "immediateConsequence": "You stop the effort.",
+                "laterConsequence": "You may lose future opportunities."
+            }
+        }
+    },
+    {
+        "id": "A34",
+        "area": "emotional_regulation",
+        "category": "self_perception",
+        "targetAgeGroup": "adult",
+        "title": "It Seems Like Everyone Else Is Doing Better",
+        "situationText": "When observing other people, you feel that you are falling behind in relation to your goals.",
+        "giphySearchTerm": "social comparison",
+        "difficultyLevel": 5,
+        "xpPointsValue": 105,
+        "executiveFunction": "self_awareness",
+        "socialSkill": "self_compassion",
+        "learningObjective": "healthy_self_evaluation",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 4,
+        "choices": {
+            "ideal": {
+                "text": "I recognize that each person has different circumstances and trajectories.",
+                "immediateConsequence": "The pressure decreases.",
+                "laterConsequence": "You maintain focus on your own development."
+            },
+            "intermediary": {
+                "text": "I use the comparison as motivation, but without pressuring myself excessively.",
+                "immediateConsequence": "You find inspiration.",
+                "laterConsequence": "You maintain some emotional balance."
+            },
+            "impulsive": {
+                "text": "I start believing that my progress has no value.",
+                "immediateConsequence": "Your self-esteem decreases.",
+                "laterConsequence": "It can affect your motivation."
+            }
+        }
+    },
+    {
+        "id": "A35",
+        "area": "emotional_regulation",
+        "category": "feedback_management",
+        "targetAgeGroup": "adult",
+        "title": "That Caught Me by Surprise",
+        "situationText": "You receive unexpected criticism and feel emotionally impacted.",
+        "giphySearchTerm": "surprised reaction",
+        "difficultyLevel": 4,
+        "xpPointsValue": 95,
+        "executiveFunction": "impulse_control",
+        "socialSkill": "receiving_feedback",
+        "learningObjective": "managing_criticism",
+        "sensoryChallenge": false,
+        "emotionalDemand": 4,
+        "uncertaintyLevel": 2,
+        "choices": {
+            "ideal": {
+                "text": "I try to understand the criticism before deciding how to respond.",
+                "immediateConsequence": "You gain more clarity.",
+                "laterConsequence": "You can turn the experience into a learning opportunity."
+            },
+            "intermediary": {
+                "text": "I feel bothered, but I reflect on the matter later.",
+                "immediateConsequence": "The emotion decreases over time.",
+                "laterConsequence": "You are able to analyze the situation better."
+            },
+            "impulsive": {
+                "text": "I react immediately to defend myself.",
+                "immediateConsequence": "Tension increases.",
+                "laterConsequence": "It can make dialogue more difficult."
+            }
+        }
+    },
+    {
+        "id": "A36",
+        "area": "emotional_regulation",
+        "category": "self_compassion",
+        "targetAgeGroup": "adult",
+        "title": "It Never Seems Like Enough",
+        "situationText": "Even after achieving good results, you feel that you should have done more.",
+        "giphySearchTerm": "perfectionism",
+        "difficultyLevel": 5,
+        "xpPointsValue": 105,
+        "executiveFunction": "self_monitoring",
+        "socialSkill": "self_compassion",
+        "learningObjective": "balanced_self_evaluation",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 3,
+        "choices": {
+            "ideal": {
+                "text": "I acknowledge my achievements and identify opportunities for improvement without devaluing my efforts.",
+                "immediateConsequence": "You reduce excessive self-criticism.",
+                "laterConsequence": "You build a healthier relationship with yourself."
+            },
+            "intermediary": {
+                "text": "I allow myself to celebrate for a moment before returning to my goals.",
+                "immediateConsequence": "You acknowledge part of your progress.",
+                "laterConsequence": "You maintain balanced motivation."
+            },
+            "impulsive": {
+                "text": "I completely ignore my achievements.",
+                "immediateConsequence": "Satisfaction disappears quickly.",
+                "laterConsequence": "Burnout may increase."
+            }
+        }
+    },
+    {
+        "id": "A37",
+        "area": "emotional_regulation",
+        "category": "adaptation",
+        "targetAgeGroup": "adult",
+        "title": "Now Everything Is Different",
+        "situationText": "An unexpected change significantly alters your routine and your plans.",
+        "giphySearchTerm": "life change",
+        "difficultyLevel": 5,
+        "xpPointsValue": 110,
+        "executiveFunction": "cognitive_flexibility",
+        "socialSkill": "adaptability",
+        "learningObjective": "coping_with_change",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 5,
+        "choices": {
+            "ideal": {
+                "text": "I accept that the situation has changed and start exploring new possibilities.",
+                "immediateConsequence": "You regain some of the feeling of control.",
+                "laterConsequence": "Adaptation occurs more quickly."
+            },
+            "intermediary": {
+                "text": "I need time to accept the change before acting.",
+                "immediateConsequence": "You process the situation.",
+                "laterConsequence": "Adaptation happens gradually."
+            },
+            "impulsive": {
+                "text": "I refuse to accept the new reality.",
+                "immediateConsequence": "You temporarily preserve the previous expectation.",
+                "laterConsequence": "Adaptation can become more difficult."
+            }
+        }
+    },
+    {
+        "id": "A38",
+        "area": "emotional_regulation",
+        "category": "stress_management",
+        "targetAgeGroup": "adult",
+        "title": "Constant Pressure",
+        "situationText": "You have been facing several important demands at the same time for several weeks.",
+        "giphySearchTerm": "stressed professional",
+        "difficultyLevel": 5,
+        "xpPointsValue": 105,
+        "executiveFunction": "stress_management",
+        "socialSkill": "help_seeking",
+        "learningObjective": "sustainable_coping",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 4,
+        "choices": {
+            "ideal": {
+                "text": "I evaluate my priorities and seek support when necessary.",
+                "immediateConsequence": "The pressure becomes more manageable.",
+                "laterConsequence": "It reduces the risk of burnout."
+            },
+            "intermediary": {
+                "text": "I keep moving forward while making small adjustments.",
+                "immediateConsequence": "You maintain functioning.",
+                "laterConsequence": "The situation may improve gradually."
+            },
+            "impulsive": {
+                "text": "I completely ignore the signs of wear out.",
+                "immediateConsequence": "Nothing changes immediately.",
+                "laterConsequence": "Stress tends to increase."
+            }
+        }
+    },
+    {
+        "id": "A39",
+        "area": "emotional_regulation",
+        "category": "resilience",
+        "targetAgeGroup": "adult",
+        "title": "Everyone Saw It",
+        "situationText": "You make a mistake in front of other people and feel ashamed of the situation.",
+        "giphySearchTerm": "embarrassed adult",
+        "difficultyLevel": 4,
+        "xpPointsValue": 100,
+        "executiveFunction": "emotional_regulation",
+        "socialSkill": "self_acceptance",
+        "learningObjective": "recovering_from_mistakes",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 2,
+        "choices": {
+            "ideal": {
+                "text": "I acknowledge the mistake and move on, learning from the experience.",
+                "immediateConsequence": "The shame decreases gradually.",
+                "laterConsequence": "You strengthen your confidence."
+            },
+            "intermediary": {
+                "text": "I need some time to overcome the embarrassment.",
+                "immediateConsequence": "You process the emotion.",
+                "laterConsequence": "The situation loses importance over time."
+            },
+            "impulsive": {
+                "text": "I start avoiding similar situations for fear of making a mistake again.",
+                "immediateConsequence": "You reduce the immediate discomfort.",
+                "laterConsequence": "It can limit new opportunities."
+            }
+        }
+    },
+    {
+        "id": "A40",
+        "area": "emotional_regulation",
+        "category": "growth_mindset",
+        "targetAgeGroup": "adult",
+        "title": "A New Attempt",
+        "situationText": "After a difficult experience, an opportunity arises to try again.",
+        "giphySearchTerm": "new beginning",
+        "difficultyLevel": 5,
+        "xpPointsValue": 120,
+        "executiveFunction": "resilience",
+        "socialSkill": "optimism",
+        "learningObjective": "growth_mindset",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 5,
+        "choices": {
+            "ideal": {
+                "text": "I use previous learnings to try again in a more prepared way.",
+                "immediateConsequence": "You gradually regain confidence.",
+                "laterConsequence": "It increases your opportunities for growth."
+            },
+            "intermediary": {
+                "text": "I accept the opportunity, but with a lot of caution.",
+                "immediateConsequence": "You advance at a safe pace.",
+                "laterConsequence": "You can rebuild your confidence little by little."
+            },
+            "impulsive": {
+                "text": "I refuse any new attempt to avoid frustrations.",
+                "immediateConsequence": "You avoid emotional risk.",
+                "laterConsequence": "You may miss out on valuable experiences."
             }
         }
     }

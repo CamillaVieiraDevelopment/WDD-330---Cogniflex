@@ -1,70 +1,1362 @@
 [
     {
-        "id": "A001",
-        "area": "academic",
-        "category": "school_life",
-        "targetAgeGroup": "teen",
-        "title": "Unequal Group Work",
-        "situationText": "You notice that two members of your group are barely participating in the assignment that will grade the entire team.",
-        "giphySearchTerm": "group project students",
-        "difficultyLevel": 4,
-        "xpPointsValue": 90,
-        "executiveFunction": "problem_solving",
-        "socialSkill": "assertive_communication",
-        "learningObjective": "group_collaboration",
-        "sensoryChallenge": false,
-        "emotionalDemand": 4,
-        "uncertaintyLevel": 4,
-        "choices": {
-            "ideal": {
-                "text": "I talk to the group about dividing the tasks and look for a fair solution.",
-                "immediateConsequence": "The problem is discussed openly.",
-                "laterConsequence": "The group has a better chance of completing the assignment properly."
-            },
-            "intermediary": {
-                "text": "I do my part and avoid getting into conflict.",
-                "immediateConsequence": "You reduce immediate discomfort.",
-                "laterConsequence": "The inequality may continue."
-            },
-            "impulsive": {
-                "text": "I decide to do everything myself and resent my classmates.",
-                "immediateConsequence": "You take on an excessive workload.",
-                "laterConsequence": "Your stress level tends to increase."
-            }
-        }
-    },
-    {
-        "id": "A002",
-        "area": "academic",
-        "category": "school_life",
-        "targetAgeGroup": "teen",
-        "title": "Lower Grade Than Expected",
-        "situationText": "You studied hard for the exam, but received a lower grade than you thought you deserved.",
-        "giphySearchTerm": "student exam results",
-        "difficultyLevel": 4,
-        "xpPointsValue": 85,
-        "executiveFunction": "emotional_regulation",
-        "socialSkill": "self_advocacy",
-        "learningObjective": "handling_disappointment",
-        "sensoryChallenge": false,
-        "emotionalDemand": 5,
-        "uncertaintyLevel": 2,
-        "choices": {
-            "ideal": {
-                "text": "I analyze my mistakes and try to understand how to improve.",
-                "immediateConsequence": "You gain useful information.",
-                "laterConsequence": "You can improve your future performance."
-            },
-            "intermediary": {
-                "text": "I accept the grade, but remain frustrated for a few days.",
-                "immediateConsequence": "The disappointment lingers.",
-                "laterConsequence": "The emotion tends to diminish naturally."
-            },
-            "impulsive": {
-                "text": "I conclude that studying is not worth it because the effort doesn't pay off.",
-                "immediateConsequence": "Your motivation drops.",
-                "laterConsequence": "Your academic performance may suffer."
-            }
+    "id": "T001",
+    "area": "academic",
+    "category": "school_life",
+    "targetAgeGroup": "teen",
+    "title": "Not Everyone Is Contributing",
+    "situationText": "You notice that two members of the group are barely participating in the assignment that will grade the entire team.",
+    "giphySearchTerm": "group project students",
+    "difficultyLevel": 4,
+    "xpPointsValue": 90,
+    "executiveFunction": "problem_solving",
+    "socialSkill": "assertive_communication",
+    "learningObjective": "group_collaboration",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 4,
+    "choices": {
+        "ideal": {
+            "text": "I talk to the group about dividing the tasks and look for a fair solution.",
+            "immediateConsequence": "The problem is discussed openly.",
+            "laterConsequence": "The group has a better chance of completing the assignment properly."
+        },
+        "intermediary": {
+            "text": "I do my part and avoid getting into conflict.",
+            "immediateConsequence": "You reduce immediate discomfort.",
+            "laterConsequence": "The inequality may continue."
+        },
+        "impulsive": {
+            "text": "I decide to do everything myself and feel resentful towards my classmates.",
+            "immediateConsequence": "You take on an excessive workload.",
+            "laterConsequence": "Your stress level tends to increase."
         }
     }
-]
+},      
+
+{
+    "id": "T002",
+    "area": "academic",
+    "category": "school_life",
+    "targetAgeGroup": "teen",
+    "title": "It Didn't Go As I Expected",
+    "situationText": "You studied hard for the exam, but received a lower grade than you believed you deserved.",
+    "giphySearchTerm": "student exam results",
+    "difficultyLevel": 4,
+    "xpPointsValue": 85,
+    "executiveFunction": "emotional_regulation",
+    "socialSkill": "self_advocacy",
+    "learningObjective": "handling_disappointment",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 2,
+    "choices": {
+        "ideal": {
+            "text": "I analyze the mistakes and try to understand how to improve.",
+            "immediateConsequence": "You gain useful information.",
+            "laterConsequence": "You can improve your future performance."
+        },
+        "intermediary": {
+            "text": "I accept the grade, but remain frustrated for a few days.",
+            "immediateConsequence": "The disappointment lingers.",
+            "laterConsequence": "The emotion tends to diminish naturally."
+        },
+        "impulsive": {
+            "text": "I conclude that studying is not worth it because the effort doesn't pay off.",
+            "immediateConsequence": "Your motivation drops.",
+            "laterConsequence": "Your academic performance may suffer."
+        }
+    }
+},
+{
+    "id": "T003",
+    "area": "academic",
+    "category": "school_life",
+    "targetAgeGroup": "teen",
+    "title": "There Is Still Time",
+    "situationText": "You received an assignment with a two-week deadline, but you feel like leaving everything until the last few days.",
+    "giphySearchTerm": "student procrastination",
+    "difficultyLevel": 3,
+    "xpPointsValue": 80,
+    "executiveFunction": "planning",
+    "socialSkill": "self_management",
+    "learningObjective": "time_management",
+    "sensoryChallenge": false,
+    "emotionalDemand": 3,
+    "uncertaintyLevel": 3,
+    "choices": {
+        "ideal": {
+            "text": "I divide the work into smaller steps over the days.",
+            "immediateConsequence": "The task seems more manageable.",
+            "laterConsequence": "You reduce stress close to the deadline."
+        },
+        "intermediary": {
+            "text": "I do some parts now and leave the rest for later.",
+            "immediateConsequence": "You start the activity.",
+            "laterConsequence": "There is still a risk of rushing."
+        },
+        "impulsive": {
+            "text": "I completely ignore the work until the last moment.",
+            "immediateConsequence": "You feel temporary relief.",
+            "laterConsequence": "The pressure tends to increase."
+        }
+    }
+},
+{
+    "id": "T004",
+    "area": "academic",
+    "category": "school_life",
+    "targetAgeGroup": "teen",
+    "title": "Correction in Front of the Class",
+    "situationText": "During class, the teacher corrects information you presented in front of your classmates.",
+    "giphySearchTerm": "class presentation",
+    "difficultyLevel": 5,
+    "xpPointsValue": 95,
+    "executiveFunction": "emotional_regulation",
+    "socialSkill": "accepting_feedback",
+    "learningObjective": "growth_mindset",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 2,
+    "choices": {
+        "ideal": {
+            "text": "I listen to the correction and try to understand the content.",
+            "immediateConsequence": "You receive useful information.",
+            "laterConsequence": "Your knowledge is expanded."
+        },
+        "intermediary": {
+            "text": "I feel embarrassed, but I keep following the class.",
+            "immediateConsequence": "The embarrassment remains temporarily.",
+            "laterConsequence": "The situation loses importance over time."
+        },
+        "impulsive": {
+            "text": "I interpret the correction as a personal attack.",
+            "immediateConsequence": "You become more defensive.",
+            "laterConsequence": "Learning can be hindered."
+        }
+    }
+},
+{
+    "id": "T005",
+    "area": "academic",
+    "category": "future_planning",
+    "targetAgeGroup": "teen",
+    "title": "What Will I Do Next?",
+    "situationText": "You feel pressure to decide your future profession, but you still have doubts.",
+    "giphySearchTerm": "career choice student",
+    "difficultyLevel": 5,
+    "xpPointsValue": 100,
+    "executiveFunction": "decision_making",
+    "socialSkill": "self_reflection",
+    "learningObjective": "career_exploration",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 5,
+    "choices": {
+        "ideal": {
+            "text": "I research options and accept that I can still explore possibilities.",
+            "immediateConsequence": "The pressure decreases a bit.",
+            "laterConsequence": "You make more informed decisions."
+        },
+        "intermediary": {
+            "text": "I choose to think about it later.",
+            "immediateConsequence": "You reduce your anxiety momentarily.",
+            "laterConsequence": "The doubt continues to exist."
+        },
+        "impulsive": {
+            "text": "I choose any option just to end the pressure.",
+            "immediateConsequence": "You feel temporary relief.",
+            "laterConsequence": "You may need to reconsider the decision later."
+        }
+    }
+},
+{
+    "id": "T006",
+    "area": "academic",
+    "category": "school_life",
+    "targetAgeGroup": "teen",
+    "title": "No One Wants to Present",
+    "situationText": "Your group finished the assignment, but no one wants to give the oral presentation in front of the class.",
+    "giphySearchTerm": "students presentation",
+    "difficultyLevel": 4,
+    "xpPointsValue": 85,
+    "executiveFunction": "decision_making",
+    "socialSkill": "leadership",
+    "learningObjective": "shared_responsibility",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 3,
+    "choices": {
+        "ideal": {
+            "text": "I talk to the group to divide the presentation among everyone.",
+            "immediateConsequence": "The responsibility is more balanced.",
+            "laterConsequence": "The group participates more fairly."
+        },
+        "intermediary": {
+            "text": "I agree to present alone just to resolve the problem quickly.",
+            "immediateConsequence": "The situation is resolved quickly.",
+            "laterConsequence": "You take on more responsibility than the others."
+        },
+        "impulsive": {
+            "text": "I refuse to present and leave it up to the group to decide.",
+            "immediateConsequence": "The stalemate continues.",
+            "laterConsequence": "The group may face difficulties."
+        }
+    }
+},
+{
+    "id": "T007",
+    "area": "academic",
+    "category": "school_life",
+    "targetAgeGroup": "teen",
+    "title": "Everything in the Same Week",
+    "situationText": "Three important exams have been scheduled for the next few days.",
+    "giphySearchTerm": "studying exams",
+    "difficultyLevel": 4,
+    "xpPointsValue": 90,
+    "executiveFunction": "planning",
+    "socialSkill": "self_management",
+    "learningObjective": "prioritization",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 3,
+    "choices": {
+        "ideal": {
+            "text": "I make a plan to distribute my time among the subjects.",
+            "immediateConsequence": "Your tasks become more organized.",
+            "laterConsequence": "You reduce feeling overwhelmed."
+        },
+        "intermediary": {
+            "text": "I study the subject I like the most first.",
+            "immediateConsequence": "You start studying.",
+            "laterConsequence": "Some subjects might receive less attention."
+        },
+        "impulsive": {
+            "text": "I avoid thinking about the exams because I am too worried.",
+            "immediateConsequence": "Your anxiety decreases momentarily.",
+            "laterConsequence": "The pressure tends to increase."
+        }
+    }
+},
+{
+    "id": "T008",
+    "area": "academic",
+    "category": "school_life",
+    "targetAgeGroup": "teen",
+    "title": "First Day",
+    "situationText": "You will start at a new school where you don't know anyone yet.",
+    "giphySearchTerm": "new student school",
+    "difficultyLevel": 5,
+    "xpPointsValue": 95,
+    "executiveFunction": "cognitive_flexibility",
+    "socialSkill": "social_initiation",
+    "learningObjective": "adaptation",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 5,
+    "choices": {
+        "ideal": {
+            "text": "I try to get to know people gradually and observe the environment.",
+            "immediateConsequence": "You gain information about the new context.",
+            "laterConsequence": "Adaptation tends to happen more easily."
+        },
+        "intermediary": {
+            "text": "I remain more reserved until I feel comfortable.",
+            "immediateConsequence": "You reduce your initial exposure.",
+            "laterConsequence": "Adaptation might take more time."
+        },
+        "impulsive": {
+            "text": "I conclude that I won't like the school before even getting to know it.",
+            "immediateConsequence": "You increase your resistance to change.",
+            "laterConsequence": "Adaptation becomes more difficult."
+        }
+    }
+},
+{
+    "id": "T009",
+    "area": "social",
+    "category": "friendships",
+    "targetAgeGroup": "teen",
+    "title": "They Didn't Invite Me",
+    "situationText": "You find out that several friends went out together over the weekend without inviting you.",
+    "giphySearchTerm": "friends group",
+    "difficultyLevel": 5,
+    "xpPointsValue": 100,
+    "executiveFunction": "perspective_shifting",
+    "socialSkill": "perspective_taking",
+    "learningObjective": "avoiding_assumptions",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 5,
+    "choices": {
+        "ideal": {
+            "text": "I try to understand the context before jumping to conclusions.",
+            "immediateConsequence": "You get more information.",
+            "laterConsequence": "You avoid making hasty interpretations."
+        },
+        "intermediary": {
+            "text": "I feel hurt, but I wait a bit before commenting.",
+            "immediateConsequence": "You process your feelings.",
+            "laterConsequence": "You manage to reflect better on the situation."
+        },
+        "impulsive": {
+            "text": "I immediately conclude that no one likes me anymore.",
+            "immediateConsequence": "You suffer emotionally.",
+            "laterConsequence": "You might create unnecessary conflicts."
+        }
+    }
+},
+{
+    "id": "T010",
+    "area": "social",
+    "category": "peer_pressure",
+    "targetAgeGroup": "teen",
+    "title": "Everyone Else Is Doing It",
+    "situationText": "Your friends want you to participate in something you don't feel entirely comfortable with.",
+    "giphySearchTerm": "peer pressure teenagers",
+    "difficultyLevel": 5,
+    "xpPointsValue": 100,
+    "executiveFunction": "decision_making",
+    "socialSkill": "assertiveness",
+    "learningObjective": "personal_boundaries",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 4,
+    "choices": {
+        "ideal": {
+            "text": "I express my opinion and make a decision based on my values.",
+            "immediateConsequence": "You maintain your autonomy.",
+            "laterConsequence": "You develop more confidence in your choices."
+        },
+        "intermediary": {
+            "text": "I participate partially to avoid conflicts.",
+            "immediateConsequence": "You reduce peer pressure.",
+            "laterConsequence": "You might keep reflecting on your decision."
+        },
+        "impulsive": {
+            "text": "I do something just because everyone else is doing it.",
+            "immediateConsequence": "You avoid immediate discomfort.",
+            "laterConsequence": "You might act against your own values."
+        }
+    }
+},
+{
+    "id": "T011",
+    "area": "social",
+    "category": "conflict",
+    "targetAgeGroup": "teen",
+    "title": "I Heard That...",
+    "situationText": "A classmate tells you that someone is spreading negative comments about you.",
+    "giphySearchTerm": "teen conflict",
+    "difficultyLevel": 5,
+    "xpPointsValue": 100,
+    "executiveFunction": "emotional_regulation",
+    "socialSkill": "conflict_resolution",
+    "learningObjective": "fact_checking",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 5,
+    "choices": {
+        "ideal": {
+            "text": "I try to verify the facts before reacting.",
+            "immediateConsequence": "You gather more information.",
+            "laterConsequence": "You avoid acting based purely on rumors."
+        },
+        "intermediary": {
+            "text": "I feel bothered, but I observe the situation before acting.",
+            "immediateConsequence": "You gain time to reflect.",
+            "laterConsequence": "You can make a more conscious decision."
+        },
+        "impulsive": {
+            "text": "I immediately confront the person without confirming the story.",
+            "immediateConsequence": "The conflict may escalate.",
+            "laterConsequence": "You might discover that the information was incomplete."
+        }
+    }
+},
+{
+    "id": "T012",
+    "area": "social",
+    "category": "group_dynamics",
+    "targetAgeGroup": "teen",
+    "title": "Someone New Arrived",
+    "situationText": "A new student started hanging out with your group of friends.",
+    "giphySearchTerm": "new friend group",
+    "difficultyLevel": 3,
+    "xpPointsValue": 75,
+    "executiveFunction": "cognitive_flexibility",
+    "socialSkill": "inclusion",
+    "learningObjective": "welcoming_others",
+    "sensoryChallenge": false,
+    "emotionalDemand": 3,
+    "uncertaintyLevel": 3,
+    "choices": {
+        "ideal": {
+            "text": "I try to get to know the new person better.",
+            "immediateConsequence": "The environment becomes more welcoming.",
+            "laterConsequence": "The group expands its connections."
+        },
+        "intermediary": {
+            "text": "I observe first before approaching them.",
+            "immediateConsequence": "You gain time to understand the situation.",
+            "laterConsequence": "Integration happens gradually."
+        },
+        "impulsive": {
+            "text": "I see the new person as a threat to the group.",
+            "immediateConsequence": "You create resistance to change.",
+            "laterConsequence": "It might make new friendships more difficult."
+        }
+    }
+},
+{
+    "id": "T013",
+    "area": "social",
+    "category": "friendships",
+    "targetAgeGroup": "teen",
+    "title": "Whose Side Am I On?",
+    "situationText": "Two close friends had an argument and each expects you to agree with them.",
+    "giphySearchTerm": "friends argument",
+    "difficultyLevel": 5,
+    "xpPointsValue": 100,
+    "executiveFunction": "perspective_shifting",
+    "socialSkill": "mediation",
+    "learningObjective": "multiple_perspectives",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 5,
+    "choices": {
+        "ideal": {
+            "text": "I listen to both sides before forming an opinion.",
+            "immediateConsequence": "You understand the situation better.",
+            "laterConsequence": "You are able to act in a more balanced way."
+        },
+        "intermediary": {
+            "text": "I avoid getting involved until the situation calms down.",
+            "immediateConsequence": "You reduce your exposure to the conflict.",
+            "laterConsequence": "Your friends might resolve the situation on their own."
+        },
+        "impulsive": {
+            "text": "I immediately pick a side without listening to the other person.",
+            "immediateConsequence": "You reinforce the conflict.",
+            "laterConsequence": "You might damage relationships."
+        }
+    }
+},
+{
+    "id": "T014",
+    "area": "social",
+    "category": "friendships",
+    "targetAgeGroup": "teen",
+    "title": "Two Invitations at the Same Time",
+    "situationText": "Two groups of friends invited you to different activities happening at the same time.",
+    "giphySearchTerm": "teen choosing plans",
+    "difficultyLevel": 4,
+    "xpPointsValue": 85,
+    "executiveFunction": "decision_making",
+    "socialSkill": "relationship_management",
+    "learningObjective": "handling_conflicting_commitments",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 4,
+    "choices": {
+        "ideal": {
+            "text": "I evaluate my priorities and communicate my decision respectfully to both groups.",
+            "immediateConsequence": "Expectations become clearer.",
+            "laterConsequence": "You preserve the relationships."
+        },
+        "intermediary": {
+            "text": "I choose one of the events without explaining my decision much.",
+            "immediateConsequence": "The problem is resolved quickly.",
+            "laterConsequence": "Some people might not understand your choice."
+        },
+        "impulsive": {
+            "text": "I cancel both commitments to avoid making a decision.",
+            "immediateConsequence": "You avoid the discomfort of choosing.",
+            "laterConsequence": "You may lose important opportunities to socialize."
+        }
+    }
+},
+{
+    "id": "T015",
+    "area": "social",
+    "category": "group_dynamics",
+    "targetAgeGroup": "teen",
+    "title": "The Group Is Changing",
+    "situationText": "Over the past few months, your friends have started to develop interests different from yours.",
+    "giphySearchTerm": "teen friends growing apart",
+    "difficultyLevel": 5,
+    "xpPointsValue": 95,
+    "executiveFunction": "cognitive_flexibility",
+    "socialSkill": "adaptation",
+    "learningObjective": "managing_social_change",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 5,
+    "choices": {
+        "ideal": {
+            "text": "I acknowledge the changes and try to maintain connections while also exploring new interests.",
+            "immediateConsequence": "You expand your social possibilities.",
+            "laterConsequence": "You develop more flexible and lasting relationships."
+        },
+        "intermediary": {
+            "text": "I stay close to the group, even though I feel things have changed.",
+            "immediateConsequence": "You preserve your current social circle.",
+            "laterConsequence": "You may need to adapt gradually to the changes."
+        },
+        "impulsive": {
+            "text": "I conclude that no one cares about me anymore and distance myself from everyone.",
+            "immediateConsequence": "You reduce your social interactions.",
+            "laterConsequence": "The feeling of isolation may increase."
+        }
+    }
+},
+{
+    "id": "T016",
+    "area": "social",
+    "category": "trust",
+    "targetAgeGroup": "teen",
+    "title": "Something Was Told to Me in Confidence",
+    "situationText": "A friend shared some personal information and asked you not to tell anyone else.",
+    "giphySearchTerm": "friends talking trust",
+    "difficultyLevel": 5,
+    "xpPointsValue": 100,
+    "executiveFunction": "inhibitory_control",
+    "socialSkill": "trustworthiness",
+    "learningObjective": "respecting_confidentiality",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 4,
+    "choices": {
+        "ideal": {
+            "text": "I respect the trust placed in me, unless there is a serious risk to someone's safety.",
+            "immediateConsequence": "Your friend feels heard and respected.",
+            "laterConsequence": "Trust in the friendship tends to grow stronger."
+        },
+        "intermediary": {
+            "text": "I feel like commenting on it, but I try to be careful about who I talk to.",
+            "immediateConsequence": "You try to balance your curiosity and responsibility.",
+            "laterConsequence": "There is a risk that the information circulates partially."
+        },
+        "impulsive": {
+            "text": "I tell several people because I find the information interesting.",
+            "immediateConsequence": "The secret is no longer private.",
+            "laterConsequence": "The trust between you two could be damaged."
+        }
+    }
+},
+{
+    "id": "T017",
+    "area": "digital",
+    "category": "social_media",
+    "targetAgeGroup": "teen",
+    "title": "Seen but Not Answered",
+    "situationText": "You sent an important message to a friend. Hours later, the message shows as seen, but there is still no reply.",
+    "giphySearchTerm": "texting phone",
+    "difficultyLevel": 4,
+    "xpPointsValue": 85,
+    "executiveFunction": "perspective_shifting",
+    "socialSkill": "emotional_regulation",
+    "learningObjective": "avoiding_assumptions",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 5,
+    "choices": {
+        "ideal": {
+            "text": "I consider different possible explanations before drawing a conclusion.",
+            "immediateConsequence": "You reduce hasty interpretations.",
+            "laterConsequence": "You avoid conflicts based on assumptions."
+        },
+        "intermediary": {
+            "text": "I feel annoyed, but I wait a little longer.",
+            "immediateConsequence": "The doubt remains.",
+            "laterConsequence": "You get more information over time."
+        },
+        "impulsive": {
+            "text": "I conclude that the person is ignoring me on purpose.",
+            "immediateConsequence": "You feel rejected.",
+            "laterConsequence": "You might react without knowing the whole situation."
+        }
+    }
+},
+{
+    "id": "T018",
+    "area": "digital",
+    "category": "social_media",
+    "targetAgeGroup": "teen",
+    "title": "It Didn't Get the Expected Result",
+    "situationText": "You posted something you thought was interesting, but received fewer likes than you imagined.",
+    "giphySearchTerm": "social media phone",
+    "difficultyLevel": 4,
+    "xpPointsValue": 85,
+    "executiveFunction": "emotional_regulation",
+    "socialSkill": "self_awareness",
+    "learningObjective": "self_worth",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 3,
+    "choices": {
+        "ideal": {
+            "text": "I remember that likes do not define my worth or the quality of what I shared.",
+            "immediateConsequence": "You reduce your dependence on external validation.",
+            "laterConsequence": "You develop more stable self-esteem."
+        },
+        "intermediary": {
+            "text": "I feel disappointed, but I keep the post up.",
+            "immediateConsequence": "The frustration lingers for some time.",
+            "laterConsequence": "You continue using the network normally."
+        },
+        "impulsive": {
+            "text": "I delete the post immediately because I consider it a failure.",
+            "immediateConsequence": "You reduce the momentary discomfort.",
+            "laterConsequence": "It may increase your dependence on online approval."
+        }
+    }
+},
+{
+    "id": "T019",
+    "area": "digital",
+    "category": "social_media",
+    "targetAgeGroup": "teen",
+    "title": "Everyone Was There",
+    "situationText": "You see a photo on social media showing several friends gathered at an event you didn't attend.",
+    "giphySearchTerm": "friends selfie",
+    "difficultyLevel": 5,
+    "xpPointsValue": 95,
+    "executiveFunction": "perspective_shifting",
+    "socialSkill": "perspective_taking",
+    "learningObjective": "social_comparison",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 5,
+    "choices": {
+        "ideal": {
+            "text": "I acknowledge that I don't know all the details of the situation and avoid jumping to quick conclusions.",
+            "immediateConsequence": "You reduce negative interpretations.",
+            "laterConsequence": "You maintain a more balanced view of relationships."
+        },
+        "intermediary": {
+            "text": "I feel sad, but I reflect before acting.",
+            "immediateConsequence": "You process the emotion.",
+            "laterConsequence": "You can evaluate the situation more clearly."
+        },
+        "impulsive": {
+            "text": "I immediately conclude that I was intentionally excluded.",
+            "immediateConsequence": "You feel rejected.",
+            "laterConsequence": "You might damage friendships without understanding the context."
+        }
+    }
+},  
+{
+    "id": "T020",
+    "area": "digital",
+    "category": "online_interaction",
+    "targetAgeGroup": "teen",
+    "title": "Unpleasant Comment",
+    "situationText": "Someone posted a critical comment on your post.",
+    "giphySearchTerm": "social media comment",
+    "difficultyLevel": 5,
+    "xpPointsValue": 100,
+    "executiveFunction": "inhibitory_control",
+    "socialSkill": "conflict_management",
+    "learningObjective": "responding_to_criticism",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 4,
+    "choices": {
+        "ideal": {
+            "text": "I analyze the comment before deciding whether it's worth responding to or ignoring.",
+            "immediateConsequence": "You avoid impulsive reactions.",
+            "laterConsequence": "You make a more strategic decision."
+        },
+        "intermediary": {
+            "text": "I ask for the opinion of someone I trust before responding.",
+            "immediateConsequence": "You gain another perspective.",
+            "laterConsequence": "The response tends to be more balanced."
+        },
+        "impulsive": {
+            "text": "I respond immediately while I'm angry.",
+            "immediateConsequence": "The conflict may escalate.",
+            "laterConsequence": "You might regret the reaction."
+        }
+    }
+    },  
+    {
+    "id": "T021",
+    "area": "digital",
+    "category": "privacy",
+    "targetAgeGroup": "teen",
+    "title": "Can I Post This?",
+    "situationText": "You took a fun photo with friends and are thinking about posting it, but you're not sure if everyone would like the exposure.",
+    "giphySearchTerm": "friends photo",
+    "difficultyLevel": 4,
+    "xpPointsValue": 90,
+    "executiveFunction": "ethical_decision_making",
+    "socialSkill": "respect_for_boundaries",
+    "learningObjective": "digital_consent",
+    "sensoryChallenge": false,
+    "emotionalDemand": 3,
+    "uncertaintyLevel": 4,
+    "choices": {
+        "ideal": {
+            "text": "I ask those involved if they are comfortable with the post.",
+            "immediateConsequence": "Expectations become clear.",
+            "laterConsequence": "You strengthen relationships based on respect."
+        },
+        "intermediary": {
+            "text": "I post it only to a more restricted group.",
+            "immediateConsequence": "Exposure is reduced.",
+            "laterConsequence": "There is still a possibility of discomfort."
+        },
+        "impulsive": {
+            "text": "I post it without asking anyone because the photo is mine.",
+            "immediateConsequence": "The post goes up quickly.",
+            "laterConsequence": "Someone might feel their privacy was disrespected."
+        }
+    }
+},
+{
+    "id": "T022",
+    "area": "digital",
+    "category": "cyberbullying",
+    "targetAgeGroup": "teen",
+    "title": "The Conversation Crossed the Line",
+    "situationText": "In an online group chat, some people start making offensive comments about a classmate who is not present.",
+    "giphySearchTerm": "group chat phone",
+    "difficultyLevel": 5,
+    "xpPointsValue": 100,
+    "executiveFunction": "ethical_decision_making",
+    "socialSkill": "social_responsibility",
+    "learningObjective": "responding_to_cyberbullying",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 3,
+    "choices": {
+        "ideal": {
+            "text": "I try not to reinforce the comments and consider respectful ways to interrupt or discourage the situation.",
+            "immediateConsequence": "You avoid contributing to the problem.",
+            "laterConsequence": "It helps promote a healthier environment."
+        },
+        "intermediary": {
+            "text": "I remain silent because I don't know exactly how to act.",
+            "immediateConsequence": "You avoid getting involved directly.",
+            "laterConsequence": "The situation continues without your participation."
+        },
+        "impulsive": {
+            "text": "I join in the teasing to fit in with the group.",
+            "immediateConsequence": "You receive momentary approval from some people.",
+            "laterConsequence": "You might contribute to harming someone."
+        }
+    }
+},
+{
+    "id": "T023",
+    "area": "digital",
+    "category": "information_literacy",
+    "targetAgeGroup": "teen",
+    "title": "I Received Shocking Information",
+    "situationText": "You receive breaking news on social media and feel the urge to share it immediately.",
+    "giphySearchTerm": "social media news",
+    "difficultyLevel": 4,
+    "xpPointsValue": 90,
+    "executiveFunction": "critical_thinking",
+    "socialSkill": "responsible_communication",
+    "learningObjective": "fact_checking",
+    "sensoryChallenge": false,
+    "emotionalDemand": 3,
+    "uncertaintyLevel": 5,
+    "choices": {
+        "ideal": {
+            "text": "I try to verify the reliability of the information before sharing it.",
+            "immediateConsequence": "You get more context.",
+            "laterConsequence": "You reduce the risk of spreading incorrect information."
+        },
+        "intermediary": {
+            "text": "I wait a while to see if other sources talk about the subject.",
+            "immediateConsequence": "You postpone the decision.",
+            "laterConsequence": "You might get more evidence before acting."
+        },
+        "impulsive": {
+            "text": "I share it immediately because the news seems important.",
+            "immediateConsequence": "The information circulates quickly.",
+            "laterConsequence": "It may turn out to be incorrect or incomplete."
+        }
+    }
+},
+{
+    "id": "T024",
+    "area": "digital",
+    "category": "digital_reputation",
+    "targetAgeGroup": "teen",
+    "title": "Is It Worth Posting?",
+    "situationText": "You are about to post something while you are very angry. The post could be seen by many people.",
+    "giphySearchTerm": "angry social media",
+    "difficultyLevel": 5,
+    "xpPointsValue": 100,
+    "executiveFunction": "inhibitory_control",
+    "socialSkill": "self_management",
+    "learningObjective": "digital_reputation",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 4,
+    "choices": {
+        "ideal": {
+            "text": "I wait until I calm down before deciding if I really want to post it.",
+            "immediateConsequence": "You gain time to reflect.",
+            "laterConsequence": "You make a decision more aligned with your goals."
+        },
+        "intermediary": {
+            "text": "I write the post, but save it as a draft before publishing.",
+            "immediateConsequence": "You express your feelings without immediate exposure.",
+            "laterConsequence": "You can review the message later."
+        },
+        "impulsive": {
+            "text": "I post it immediately so everyone knows how I feel.",
+            "immediateConsequence": "You get momentary relief.",
+            "laterConsequence": "The post may generate unforeseen consequences."
+        }
+    }
+},
+{
+    "id": "T025",
+    "area": "autonomy",
+    "category": "responsibility",
+    "targetAgeGroup": "teen",
+    "title": "I Already Had Plans",
+    "situationText": "You receive a very interesting invitation to go out at the exact time of a previously made commitment.",
+    "giphySearchTerm": "calendar planning",
+    "difficultyLevel": 4,
+    "xpPointsValue": 90,
+    "executiveFunction": "planning",
+    "socialSkill": "responsibility",
+    "learningObjective": "commitment_management",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 3,
+    "choices": {
+        "ideal": {
+            "text": "I evaluate my responsibilities and try to honor the commitment I already made.",
+            "immediateConsequence": "You maintain consistency with your agreements.",
+            "laterConsequence": "You build a reputation for reliability."
+        },
+        "intermediary": {
+            "text": "I try to renegotiate the commitment respectfully.",
+            "immediateConsequence": "A viable alternative might arise.",
+            "laterConsequence": "The situation depends on other people's availability."
+        },
+        "impulsive": {
+            "text": "I cancel the commitment immediately to accept the invitation.",
+            "immediateConsequence": "You take advantage of the desired opportunity.",
+            "laterConsequence": "Other people might lose trust in your agreements."
+        }
+    }
+},
+{
+    "id": "T026",
+    "area": "autonomy",
+    "category": "financial_decision",
+    "targetAgeGroup": "teen",
+    "title": "I Want to Buy Everything",
+    "situationText": "You received a limited amount of money and found several things you would like to buy.",
+    "giphySearchTerm": "shopping teenager",
+    "difficultyLevel": 3,
+    "xpPointsValue": 80,
+    "executiveFunction": "prioritization",
+    "socialSkill": "self_management",
+    "learningObjective": "financial_planning",
+    "sensoryChallenge": false,
+    "emotionalDemand": 3,
+    "uncertaintyLevel": 2,
+    "choices": {
+        "ideal": {
+            "text": "I set priorities before spending.",
+            "immediateConsequence": "You make a more conscious decision.",
+            "laterConsequence": "You use your resources better."
+        },
+        "intermediary": {
+            "text": "I buy some of what I want and save the rest.",
+            "immediateConsequence": "You balance desire and prudence.",
+            "laterConsequence": "You keep some financial reserve."
+        },
+        "impulsive": {
+            "text": "I spend everything immediately because the opportunity seems unique.",
+            "immediateConsequence": "You get immediate satisfaction.",
+            "laterConsequence": "You might lack money for other priorities."
+        }
+    }
+},
+{
+    "id": "T027",
+    "area": "autonomy",
+    "category": "self_management",
+    "targetAgeGroup": "teen",
+    "title": "The Alarm Rang",
+    "situationText": "You decided to take responsibility for waking up on your own for an important commitment.",
+    "giphySearchTerm": "alarm clock morning",
+    "difficultyLevel": 3,
+    "xpPointsValue": 75,
+    "executiveFunction": "self_monitoring",
+    "socialSkill": "personal_responsibility",
+    "learningObjective": "independence",
+    "sensoryChallenge": false,
+    "emotionalDemand": 2,
+    "uncertaintyLevel": 2,
+    "choices": {
+        "ideal": {
+            "text": "I get up when the alarm rings and follow my schedule.",
+            "immediateConsequence": "You keep to your schedule.",
+            "laterConsequence": "You strengthen your autonomy."
+        },
+        "intermediary": {
+            "text": "I snooze the alarm a few times, but I manage to arrive on time.",
+            "immediateConsequence": "You feel more rushed.",
+            "laterConsequence": "You fulfill the commitment with some stress."
+        },
+        "impulsive": {
+            "text": "I turn off the alarm and go back to sleep.",
+            "immediateConsequence": "You get more rest time.",
+            "laterConsequence": "You might miss important commitments."
+        }
+    }
+},
+{
+    "id": "T028",
+    "area": "autonomy",
+    "category": "time_management",
+    "targetAgeGroup": "teen",
+    "title": "Everything at the Same Time",
+    "situationText": "You realize that you have several important tasks to complete during the week.",
+    "giphySearchTerm": "busy student",
+    "difficultyLevel": 4,
+    "xpPointsValue": 90,
+    "executiveFunction": "organization",
+    "socialSkill": "self_management",
+    "learningObjective": "task_prioritization",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 3,
+    "choices": {
+        "ideal": {
+            "text": "I organize tasks by priority and deadline.",
+            "immediateConsequence": "The situation seems more manageable.",
+            "laterConsequence": "Your chances of meeting your goals increase."
+        },
+        "intermediary": {
+            "text": "I start with the activities that seem easiest.",
+            "immediateConsequence": "You start working quickly.",
+            "laterConsequence": "Some priorities might be left for later."
+        },
+        "impulsive": {
+            "text": "I avoid thinking about the tasks because there seem to be too many.",
+            "immediateConsequence": "Anxiety decreases temporarily.",
+            "laterConsequence": "Deadlines approach without any planning."
+        }
+    }
+},
+{
+    "id": "T029",
+    "area": "autonomy",
+    "category": "work_readiness",
+    "targetAgeGroup": "teen",
+    "title": "Learning Something New",
+    "situationText": "You received a new task in an internship, volunteer setting, or job, and don't know exactly how to do it.",
+    "giphySearchTerm": "intern learning",
+    "difficultyLevel": 4,
+    "xpPointsValue": 90,
+    "executiveFunction": "problem_solving",
+    "socialSkill": "help_seeking",
+    "learningObjective": "learning_orientation",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 4,
+    "choices": {
+        "ideal": {
+            "text": "I seek guidance and clarify my doubts.",
+            "immediateConsequence": "You understand the task better.",
+            "laterConsequence": "You learn more efficiently."
+        },
+        "intermediary": {
+            "text": "I try to solve it on my own before asking for help.",
+            "immediateConsequence": "You develop initiative.",
+            "laterConsequence": "You might need guidance later."
+        },
+        "impulsive": {
+            "text": "I pretend I understood everything to avoid embarrassment.",
+            "immediateConsequence": "You avoid momentary discomfort.",
+            "laterConsequence": "Errors may arise due to lack of understanding."
+        }
+    }
+},
+{
+    "id": "T030",
+    "area": "autonomy",
+    "category": "adaptability",
+    "targetAgeGroup": "teen",
+    "title": "Transportation Plan Changed",
+    "situationText": "You find out that the transportation you were going to use to get to an appointment is unavailable.",
+    "giphySearchTerm": "missed bus",
+    "difficultyLevel": 5,
+    "xpPointsValue": 95,
+    "executiveFunction": "cognitive_flexibility",
+    "socialSkill": "problem_solving",
+    "learningObjective": "alternative_planning",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 5,
+    "choices": {
+        "ideal": {
+            "text": "I look for alternatives and reorganize my plan.",
+            "immediateConsequence": "You regain some control of the situation.",
+            "laterConsequence": "You increase your ability to adapt."
+        },
+        "intermediary": {
+            "text": "I ask for help to find another solution.",
+            "immediateConsequence": "You expand your options.",
+            "laterConsequence": "You manage to deal with the unforeseen event better."
+        },
+        "impulsive": {
+            "text": "I give up on the appointment immediately.",
+            "immediateConsequence": "The problem seems resolved.",
+            "laterConsequence": "You miss an important opportunity."
+        }
+    }
+},
+{
+    "id": "T031",
+    "area": "autonomy",
+    "category": "accountability",
+    "targetAgeGroup": "teen",
+    "title": "Who Is Going to Do It?",
+    "situationText": "An important task depends on the collaboration of several people, but no one has taken the initiative to start.",
+    "giphySearchTerm": "team responsibility",
+    "difficultyLevel": 4,
+    "xpPointsValue": 90,
+    "executiveFunction": "initiative",
+    "socialSkill": "leadership",
+    "learningObjective": "shared_accountability",
+    "sensoryChallenge": false,
+    "emotionalDemand": 3,
+    "uncertaintyLevel": 4,
+    "choices": {
+        "ideal": {
+            "text": "I propose an initial organization plan to help the group.",
+            "immediateConsequence": "The activity begins to move forward.",
+            "laterConsequence": "The group tends to function better."
+        },
+        "intermediary": {
+            "text": "I wait for someone to take the lead before participating.",
+            "immediateConsequence": "You avoid taking on extra responsibilities.",
+            "laterConsequence": "The task may be delayed."
+        },
+        "impulsive": {
+            "text": "I conclude that it is not my problem and ignore the situation.",
+            "immediateConsequence": "You avoid involvement.",
+            "laterConsequence": "The collective goal may be compromised."
+        }
+    }
+},
+{
+    "id": "T032",
+    "area": "autonomy",
+    "category": "decision_making",
+    "targetAgeGroup": "teen",
+    "title": "I Can Choose",
+    "situationText": "You have been given more freedom to make decisions without direct adult supervision.",
+    "giphySearchTerm": "teen independence",
+    "difficultyLevel": 5,
+    "xpPointsValue": 100,
+    "executiveFunction": "future_thinking",
+    "socialSkill": "responsibility",
+    "learningObjective": "consequence_evaluation",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 5,
+    "choices": {
+        "ideal": {
+            "text": "I consider both the immediate benefits and the future consequences of my choices.",
+            "immediateConsequence": "You make more conscious decisions.",
+            "laterConsequence": "You develop autonomy with responsibility."
+        },
+        "intermediary": {
+            "text": "I focus primarily on the present, but try to avoid major problems.",
+            "immediateConsequence": "You balance freedom and caution.",
+            "laterConsequence": "Some consequences may go unnoticed."
+        },
+        "impulsive": {
+            "text": "I do whatever seems most interesting at the moment without evaluating future impacts.",
+            "immediateConsequence": "You feel greater immediate freedom.",
+            "laterConsequence": "You may face unexpected consequences."
+        }
+    }
+},
+{
+    "id": "T033",
+    "area": "relationships",
+    "category": "emotional_regulation",
+    "targetAgeGroup": "teen",
+    "title": "Not What I Expected",
+    "situationText": "You share something important with a close person and their reaction is very different from what you imagined.",
+    "giphySearchTerm": "confused teenager",
+    "difficultyLevel": 4,
+    "xpPointsValue": 90,
+    "executiveFunction": "emotional_regulation",
+    "socialSkill": "perspective_taking",
+    "learningObjective": "managing_expectations",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 4,
+    "choices": {
+        "ideal": {
+            "text": "I try to better understand the other person's point of view before jumping to conclusions.",
+            "immediateConsequence": "You get more context.",
+            "laterConsequence": "Communication tends to improve."
+        },
+        "intermediary": {
+            "text": "I feel disappointed, but I reflect before reacting.",
+            "immediateConsequence": "You process the emotion.",
+            "laterConsequence": "You can understand the situation better."
+        },
+        "impulsive": {
+            "text": "I immediately conclude that the person does not care about me.",
+            "immediateConsequence": "You feel hurt.",
+            "laterConsequence": "You may interpret the situation incompletely."
+        }
+    }
+},
+{
+    "id": "T034",
+    "area": "relationships",
+    "category": "conflict",
+    "targetAgeGroup": "teen",
+    "title": "We Disagree",
+    "situationText": "You and an important friend had an argument and now there is an uncomfortable atmosphere between you.",
+    "giphySearchTerm": "friends argument",
+    "difficultyLevel": 5,
+    "xpPointsValue": 100,
+    "executiveFunction": "cognitive_flexibility",
+    "socialSkill": "conflict_resolution",
+    "learningObjective": "relationship_repair",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 4,
+    "choices": {
+        "ideal": {
+            "text": "I try to talk when both of us are calmer.",
+            "immediateConsequence": "The tension decreases.",
+            "laterConsequence": "The chances of understanding increase."
+        },
+        "intermediary": {
+            "text": "I wait some time before deciding what to do.",
+            "immediateConsequence": "You gain space to reflect.",
+            "laterConsequence": "The situation may resolve itself or require dialogue later."
+        },
+        "impulsive": {
+            "text": "I decide to end the friendship immediately.",
+            "immediateConsequence": "You cut off contact.",
+            "laterConsequence": "You might regret it after the emotion subsides."
+        }
+    }
+},
+{
+    "id": "T035",
+    "area": "relationships",
+    "category": "self_esteem",
+    "targetAgeGroup": "teen",
+    "title": "It Didn't Work Out",
+    "situationText": "Something you really wanted did not happen as expected.",
+    "giphySearchTerm": "disappointed teenager",
+    "difficultyLevel": 5,
+    "xpPointsValue": 95,
+    "executiveFunction": "resilience",
+    "socialSkill": "self_awareness",
+    "learningObjective": "coping_with_disappointment",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 3,
+    "choices": {
+        "ideal": {
+            "text": "I acknowledge my disappointment and try to move on gradually.",
+            "immediateConsequence": "You accept your feelings.",
+            "laterConsequence": "You develop resilience."
+        },
+        "intermediary": {
+            "text": "I feel very sad for a while before returning to my activities.",
+            "immediateConsequence": "The emotion remains intense.",
+            "laterConsequence": "The tendency is to regain balance."
+        },
+        "impulsive": {
+            "text": "I conclude that I will never be able to achieve my goals.",
+            "immediateConsequence": "Your motivation drops.",
+            "laterConsequence": "You might create exaggerated negative beliefs."
+        }
+    }
+},
+{
+    "id": "T036",
+    "area": "relationships",
+    "category": "social_emotions",
+    "targetAgeGroup": "teen",
+    "title": "My Friend Is Closer to Someone Else",
+    "situationText": "A very close friend has been spending more time with someone else recently.",
+    "giphySearchTerm": "teen friendship",
+    "difficultyLevel": 5,
+    "xpPointsValue": 95,
+    "executiveFunction": "perspective_shifting",
+    "socialSkill": "relationship_management",
+    "learningObjective": "handling_jealousy",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 5,
+    "choices": {
+        "ideal": {
+            "text": "I acknowledge my feelings and avoid assuming intentions without talking to them.",
+            "immediateConsequence": "You reduce hasty interpretations.",
+            "laterConsequence": "You maintain healthier relationships."
+        },
+        "intermediary": {
+            "text": "I feel bothered, but I observe the situation for a while.",
+            "immediateConsequence": "You gain more information.",
+            "laterConsequence": "You may understand the change better."
+        },
+        "impulsive": {
+            "text": "I conclude that I've been replaced and pull away.",
+            "immediateConsequence": "You reduce contact.",
+            "laterConsequence": "You might lose an important friendship."
+        }
+    }
+},
+{
+    "id": "T037",
+    "area": "relationships",
+    "category": "feedback",
+    "targetAgeGroup": "teen",
+    "title": "It Was Hard to Hear",
+    "situationText": "A trusted person pointed out something you could improve about your behavior.",
+    "giphySearchTerm": "serious conversation",
+    "difficultyLevel": 4,
+    "xpPointsValue": 90,
+    "executiveFunction": "emotional_regulation",
+    "socialSkill": "accepting_feedback",
+    "learningObjective": "growth_mindset",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 2,
+    "choices": {
+        "ideal": {
+            "text": "I listen to the observation and reflect on what might be useful.",
+            "immediateConsequence": "You gain new perspectives.",
+            "laterConsequence": "You can grow from the experience."
+        },
+        "intermediary": {
+            "text": "I feel uncomfortable, but I consider part of what I heard.",
+            "immediateConsequence": "The criticism still bothers you.",
+            "laterConsequence": "You utilize part of the guidance."
+        },
+        "impulsive": {
+            "text": "I interpret everything as a personal attack.",
+            "immediateConsequence": "You become defensive.",
+            "laterConsequence": "You miss learning opportunities."
+        }
+    }
+},
+{
+    "id": "T038",
+    "area": "relationships",
+    "category": "self_regulation",
+    "targetAgeGroup": "teen",
+    "title": "I Am Very Angry",
+    "situationText": "You are extremely angry after a conflict and feel the urge to act immediately.",
+    "giphySearchTerm": "angry teenager",
+    "difficultyLevel": 5,
+    "xpPointsValue": 100,
+    "executiveFunction": "inhibitory_control",
+    "socialSkill": "self_management",
+    "learningObjective": "emotion_regulation",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 3,
+    "choices": {
+        "ideal": {
+            "text": "I take some time to calm down before deciding how to act.",
+            "immediateConsequence": "The emotional intensity decreases.",
+            "laterConsequence": "You make more conscious decisions."
+        },
+        "intermediary": {
+            "text": "I talk to someone I trust to organize my thoughts.",
+            "immediateConsequence": "You find emotional support.",
+            "laterConsequence": "You are able to reflect better."
+        },
+        "impulsive": {
+            "text": "I act immediately, driven by anger.",
+            "immediateConsequence": "You feel momentary relief.",
+            "laterConsequence": "It may generate unplanned consequences."
+        }
+    }
+},
+{
+    "id": "T039",
+    "area": "relationships",
+    "category": "adaptation",
+    "targetAgeGroup": "teen",
+    "title": "Things Are Different",
+    "situationText": "You notice significant changes in a relationship you value.",
+    "giphySearchTerm": "thinking teenager",
+    "difficultyLevel": 5,
+    "xpPointsValue": 95,
+    "executiveFunction": "cognitive_flexibility",
+    "socialSkill": "adaptability",
+    "learningObjective": "accepting_change",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 5,
+    "choices": {
+        "ideal": {
+            "text": "I try to understand the changes and adapt my expectations.",
+            "immediateConsequence": "You understand the situation better.",
+            "laterConsequence": "You deal better with natural transformations."
+        },
+        "intermediary": {
+            "text": "I find it hard to accept the changes, but I continue reflecting.",
+            "immediateConsequence": "Adaptation happens slowly.",
+            "laterConsequence": "You may find new ways to relate."
+        },
+        "impulsive": {
+            "text": "I try to make everything go back to exactly the way it was before.",
+            "immediateConsequence": "You resist the changes.",
+            "laterConsequence": "It may increase frustration."
+        }
+    }
+},
+{
+    "id": "T040",
+    "area": "relationships",
+    "category": "self_confidence",
+    "targetAgeGroup": "teen",
+    "title": "I Did It",
+    "situationText": "You achieved a very important goal after a lot of effort.",
+    "giphySearchTerm": "teen success celebration",
+    "difficultyLevel": 3,
+    "xpPointsValue": 80,
+    "executiveFunction": "self_reflection",
+    "socialSkill": "humility",
+    "learningObjective": "balanced_self_confidence",
+    "sensoryChallenge": false,
+    "emotionalDemand": 3,
+    "uncertaintyLevel": 1,
+    "choices": {
+        "ideal": {
+            "text": "I celebrate the achievement, acknowledging my effort and the support I received.",
+            "immediateConsequence": "You feel satisfaction and gratitude.",
+            "laterConsequence": "You develop balanced self-confidence."
+        },
+        "intermediary": {
+            "text": "I feel very proud and share the achievement with close people.",
+            "immediateConsequence": "You celebrate the moment.",
+            "laterConsequence": "You strengthen your motivation."
+        },
+        "impulsive": {
+            "text": "I constantly start comparing myself to other people.",
+            "immediateConsequence": "You seek external validation.",
+            "laterConsequence": "Your satisfaction may depend excessively on comparisons."
+        }
+    }
+}]
