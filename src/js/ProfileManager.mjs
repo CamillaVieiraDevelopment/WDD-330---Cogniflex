@@ -7,8 +7,7 @@ export default class ProfileManager {
     loadProfile() {
         const data = localStorage.getItem(this.storageKey);
         if (data) return JSON.parse(data);
-
-        // Inicialização padrão contendo 5 propriedades distintas [cite: 406]
+        
         return {
             username: "Explorer",
             medalCount: 0,

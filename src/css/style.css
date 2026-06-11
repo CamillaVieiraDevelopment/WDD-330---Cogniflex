@@ -1,16 +1,16 @@
-/* Variáveis de Cores e Identidade Visual */
+/* --- COLOR VARIABLES & VISUAL IDENTITY --- */
 :root {
     --bg-color: #f8f5ff;
-    /* Soft Purple (Fundo) */
+    /* Soft Purple (Background) */
     --main-purple: #684ec1;
-    /* Medium Purple (Botões/Títulos) */
+    /* Medium Purple (Buttons/Titles) */
     --dark-purple: #28136f;
-    /* Dark Purple (Texto) */
+    /* Dark Purple (Text) */
     --white: #ffffff;
     --gray-light: #f3f0fa;
     --border-color: #e2daf5;
 
-    /* Cores das Respostas (Simulação) */
+    /* Response Colors (Simulation) */
     --color-ideal: #2e7d32;
     --bg-ideal: #edf7ed;
     --color-impulsive: #684ec1;
@@ -21,6 +21,7 @@
     --font-family: 'Inter', 'Roboto', sans-serif;
 }
 
+/* --- GLOBAL RESETS & BODY STYLES --- */
 * {
     margin: 0;
     padding: 0;
@@ -37,7 +38,7 @@ body {
     min-height: 100vh;
 }
 
-/* --- COMPONENTES GERAIS: HEADER & FOOTER --- */
+/* --- GENERAL COMPONENTS: HEADER & FOOTER --- */
 .main-header {
     background-color: var(--white);
     padding: 10px 24px;
@@ -126,7 +127,7 @@ body {
     font-size: 14px;
 }
 
-/* Estutura de Layout Base */
+/* --- BASE LAYOUT STRUCTURE --- */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -134,7 +135,7 @@ body {
     width: 100%;
 }
 
-/* --- TELA INDEX (BOAS-VINDAS) --- */
+/* --- INDEX SCREEN (WELCOME) --- */
 .welcome-section {
     text-align: center;
     margin-bottom: 40px;
@@ -174,7 +175,7 @@ body {
     margin-top: 15px;
 }
 
-/* --- TELA DE SIMULAÇÃO (TELA A) --- */
+/* --- SIMULATION SCREEN (SCREEN A) --- */
 .progress-container {
     background: var(--white);
     border-radius: 12px;
@@ -202,7 +203,7 @@ body {
     background: var(--main-purple);
     height: 100%;
     width: 28%;
-    /* Mock de progresso */
+    /* Progress mock */
 }
 
 .simulation-card {
@@ -329,7 +330,7 @@ body {
     gap: 15px;
 }
 
-/* --- TELA DE DASHBOARD (TELA B) --- */
+/* --- DASHBOARD SCREEN (SCREEN B) --- */
 .dashboard-welcome {
     display: flex;
     justify-content: space-between;
@@ -456,7 +457,7 @@ body {
     gap: 15px;
 }
 
-/* --- ADICIONAIS PARA A NOVA PÁGINA DE ENTRADA (INDEX) --- */
+/* --- ADDITIONAL STYLES FOR THE NEW LANDING PAGE (INDEX) --- */
 
 .intro-box {
     background: var(--white);
@@ -505,7 +506,7 @@ body {
     }
 }
 
-/* Botões Avançados Estilo Hero com Efeitos de Transição e Hover */
+/* Advanced Hero Style Buttons with Transition and Hover Effects */
 .btn-hero {
     display: flex;
     align-items: center;
@@ -517,12 +518,11 @@ body {
     max-width: 380px;
     box-shadow: 0 4px 12px rgba(104, 78, 193, 0.1);
 
-    /* Atendendo ao requisito de Transição Avançada CSS */
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
         box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Efeito Hover de Elevação Atendendo aos Requisitos Avançados */
+
 .btn-hero:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 24px rgba(104, 78, 193, 0.2);
@@ -549,7 +549,7 @@ body {
     line-height: 1.4;
 }
 
-/* Variação de Cores entre Botão de Simulação e Dashboard */
+
 .btn-hero.flex-sim {
     background-color: var(--main-purple);
     color: var(--white);
@@ -570,12 +570,11 @@ body {
     opacity: 0.8;
 }
 
-/* --- COMPLEMENTO: MENU LATERAL ESTILO DRAWER (HAMBÚRGUER) --- */
+/* --- HAMBURGER MENU COMPLEMENT --- */
 .side-menu {
     position: fixed;
     top: 0;
     left: -280px;
-    /* Totalmente escondido à esquerda por padrão */
     width: 280px;
     height: 100%;
     background-color: var(--white);
@@ -586,11 +585,10 @@ body {
     flex-direction: column;
     gap: 30px;
 
-    /* Requisito de CSS Avançado: Transição suave de movimento */
     transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Classe ativada via JS que faz o menu deslizar para dentro da tela */
+
 .side-menu.open {
     left: 0;
 }
@@ -623,13 +621,13 @@ body {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Efeito de destaque ao passar o mouse nos links */
+
 .menu-links li a:hover {
     background-color: var(--bg-color);
     color: var(--main-purple);
 }
 
-/* Fundo escurecido atrás do menu lateral */
+
 .menu-overlay {
     position: fixed;
     top: 0;
@@ -637,20 +635,19 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(40, 19, 111, 0.4);
-    /* Usa o roxo escuro com opacidade */
+    /* Uses dark purple with opacity */
     z-index: 999;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
 }
 
-/* Ativado via JS para mostrar o fundo escurecido */
 .menu-overlay.show {
     opacity: 1;
     pointer-events: auto;
 }
 
-/* --- ESTILOS DA SELEÇÃO DE PERFIL (INDEX) --- */
+/* --- STYLES FOR SELECT (INDEX) --- */
 
 .profile-selection-area {
     margin-bottom: 40px;
@@ -681,7 +678,7 @@ body {
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(104, 78, 193, 0.05);
 
-    /* CSS Avançado: Transição de Hover e Transformação */
+    /* Advanced CSS: Hover Transition and Transformation */
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 

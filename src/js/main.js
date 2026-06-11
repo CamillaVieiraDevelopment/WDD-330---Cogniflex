@@ -2,11 +2,11 @@
 import { renderHeaderFooter } from "./utils.mjs";
 
 document.addEventListener('DOMContentLoaded', async () => {
-  // 1. Inicializa o cabeçalho e rodapé modulares
+  // 1. Starting Model Header and FooterInicializa 
   await renderHeaderFooter();
   console.log("Componentes core do Cogniflex carregados com sucesso.");
 
-  // 2. Lógica de Seleção de Perfil (Roda com segurança se os cards existirem na página)
+  // 2. Select Profigle Logic
   setupProfileSelection();
 });
 

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cogniflex - Dashboard</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script type="module" src="js/SimulationManager.mjs"></script>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -16,111 +15,85 @@
     <main class="container">
         <div class="dashboard-welcome">
             <div>
-                <h1>Olá, Usuário!</h1>
-                <p>Veja seu progresso e conquistas até aqui.</p>
+                <h1 id="user-greeting">Hello, Explorer!</h1>
+                <p>View your progress and achievements so far.</p>
             </div>
-            <select class="select-period">
-                <option>Últimos 30 dias</option>
-                <option>Últimos 7 dias</option>
-            </select>
         </div>
 
         <section class="metrics-row">
             <div class="metric-card">
-                <span class="metric-title">📖 Histórias exploradas</span>
-                <span class="metric-value">14</span>
-                <span class="metric-sub">+3 esta semana</span>
+                <span class="metric-title">📖 Stories Explored</span>
+                <span class="metric-value" id="stat-stories">0</span>
+                <span class="metric-sub">Total scenarios completed</span>
             </div>
             <div class="metric-card">
-                <span class="metric-title">🔀 Decisões tomadas</span>
-                <span class="metric-value">42</span>
-                <span class="metric-sub">+9 esta semana</span>
+                <span class="metric-title">⚡ Flexibility XP</span>
+                <span class="metric-value" id="stat-xp">0</span>
+                <span class="metric-sub">Experience points earned</span>
             </div>
             <div class="metric-card">
-                <span class="metric-title">🏅 Medalhas conquistadas</span>
-                <span class="metric-value">8</span>
-                <span class="metric-sub">+2 esta semana</span>
+                <span class="metric-title">🏅 Medals Earned</span>
+                <span class="metric-value" id="stat-medals">0</span>
+                <span class="metric-sub">1 medal every 50 XP</span>
             </div>
             <div class="metric-card">
-                <span class="metric-title">📈 Taxa de flexibilidade</span>
-                <span class="metric-value">72%</span>
-                <span class="metric-sub">Bom progresso!</span>
+                <span class="metric-title">🎯 Top Skill</span>
+                <span class="metric-value" id="stat-top-skill"
+                    style="font-size: 20px; line-height: 1.6; margin-top: 15px;">-</span>
+                <span class="metric-sub">Most trained executive function</span>
             </div>
         </section>
 
         <section class="charts-grid">
             <div class="chart-card">
-                <h3>Seus padrões de decisões</h3>
-                <div class="chart-placeholder">
-                    <span>[ Gráfico de Pizza / Donut Placeholder ]</span>
+                <h3>Executive Functions Trained</h3>
+                <div id="executive-functions-container" style="margin-top: 15px;">
+                    <p style="color: #888; font-size: 14px;">Play scenarios to unlock data.</p>
                 </div>
             </div>
+
             <div class="chart-card">
-                <h3>Evolução da flexibilidade</h3>
-                <div class="chart-placeholder">
-                    <span>[ Gráfico de Linha Placeholder ]</span>
+                <h3>Your Medals</h3>
+                <div class="medals-grid" id="medals-container">
+                    <p style="color: #888; font-size: 14px; grid-column: span 2;">Earn 50 XP to unlock your first medal!
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section class="dashboard-bottom-grid">
+        <section class="dashboard-bottom-grid" style="grid-template-columns: 1fr;">
             <div class="chart-card">
-                <h3>Histórico por área da vida</h3>
+                <h3>History by Life Area</h3>
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th>Área</th>
-                            <th>Histórias</th>
-                            <th>Decisões</th>
-                            <th>Flexibilidade</th>
+                            <th>Life Area</th>
+                            <th>Stories Played</th>
+                            <th>Total XP Earned</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="dashboard-table-body">
                         <tr>
-                            <td>🏫 Escola</td>
-                            <td>6</td>
-                            <td>18</td>
-                            <td>75%</td>
-                        </tr>
-                        <tr>
-                            <td>👥 Comunidade</td>
-                            <td>5</td>
-                            <td>15</td>
-                            <td>68%</td>
-                        </tr>
-                        <tr>
-                            <td>🎮 Lazer</td>
-                            <td>3</td>
-                            <td>9</td>
-                            <td>73%</td>
+                            <td colspan="3" style="text-align: center; color: #888;">No data available yet.</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-
-            <div class="chart-card">
-                <h3>Suas medalhas</h3>
-                <div class="medals-grid">
-                    <div class="medal-item-placeholder">🧭 Explorador</div>
-                    <div class="medal-item-placeholder">⚖️ Equilíbrio</div>
-                    <div class="medal-item-placeholder">🔍 Curioso</div>
-                    <div class="medal-item-placeholder">💙 Empático</div>
-                </div>
-            </div>
         </section>
 
-        <div class="tip-banner">
-            <span style="font-size: 24px;">💡</span>
-            <div>
-                <strong>Dica do dia:</strong>
-                <p>Lembrar que podemos escolher como reagir nos ajuda a lidar melhor com imprevistos!</p>
-            </div>
-        </div>
     </main>
 
     <div id="main-footer"></div>
 
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="/js/main.js"></script>
+    <script type="module">
+        import DashboardManager from '/js/DashboardManager.mjs';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const dashboard = new DashboardManager();
+            dashboard.init();
+        });
+    </script>
 </body>
 
 </html>

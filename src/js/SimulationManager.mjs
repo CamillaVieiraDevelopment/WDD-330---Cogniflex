@@ -1,3 +1,4 @@
+import ProfileManager from './ProfileManager.mjs';
 export default class SimulationManager {
   constructor() {
     this.scenarios = [];
@@ -19,7 +20,7 @@ export default class SimulationManager {
         throw new Error(`Error loading the ${this.userProfile} scenarios file.`);
       }
 
-      // The file already contains only the specific scenarios, so no need to filter!
+      
       this.scenarios = await response.json();
 
       console.log(`${this.scenarios.length} scenarios loaded successfully for ${this.userProfile}.`);
@@ -40,7 +41,7 @@ export default class SimulationManager {
   renderScenario(scenario) {
     this.currentScenario = scenario;
 
-    // RESET VISUAL: Garante que os elementos escondidos no cenário anterior voltem a aparecer
+    
     document.getElementById('options-container').style.display = 'grid'; // É grid porque usamos grid no CSS!
     document.getElementById('question-prompt').style.display = 'block';
 
@@ -82,6 +83,10 @@ export default class SimulationManager {
 
   handleChoice(choiceType, choiceData) {
     console.log(`User selected a/an ${choiceType} response.`);
+
+    const profile = new ProfileManager();
+    const xpGained = this.currentScenario.xpPointsValue || 50;
+    profile.updateProgress(this.currentScenario.id, true, xpGained);
 
     // Hide the options container
     document.getElementById('options-container').style.display = 'none';
