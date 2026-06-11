@@ -1,22 +1,18 @@
 /* --- COLOR VARIABLES & VISUAL IDENTITY --- */
+/* --- COLOR VARIABLES & VISUAL IDENTITY --- */
 :root {
     --bg-color: #f8f5ff;
-    /* Soft Purple (Background) */
     --main-purple: #684ec1;
-    /* Medium Purple (Buttons/Titles) */
     --dark-purple: #28136f;
-    /* Dark Purple (Text) */
     --white: #ffffff;
     --gray-light: #f3f0fa;
     --border-color: #e2daf5;
-
-    /* Response Colors (Simulation) */
     --color-ideal: #2e7d32;
     --bg-ideal: #edf7ed;
-    --color-impulsive: #684ec1;
-    --bg-impulsive: #f3efff;
-    --color-intermed: #1565c0;
-    --bg-intermed: #eef5fc;
+    --color-intermed: #f57f17;
+    --bg-intermed: #fff8e1;
+    --color-impulsive: #c62828;
+    --bg-impulsive: #ffebee;
 
     --font-family: 'Inter', 'Roboto', sans-serif;
 }
@@ -40,12 +36,12 @@ body {
 
 /* --- GENERAL COMPONENTS: HEADER & FOOTER --- */
 .main-header {
-    background-color: var(--white);
+    background-color: var(--dark-purple);
     padding: 10px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--main-purple);
 }
 
 .header-left,
@@ -59,7 +55,7 @@ body {
     background: none;
     border: none;
     font-size: 24px;
-    color: var(--main-purple);
+    color: var(--white);
     cursor: pointer;
 }
 
@@ -77,15 +73,17 @@ body {
 .logo-text {
     font-size: 22px;
     font-weight: 700;
-    color: var(--main-purple);
+    color: var(--white);
 }
 
 .accessibility-btn {
     background: none;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Borda sutil */
     padding: 6px 12px;
     border-radius: 20px;
-    color: var(--dark-purple);
+    color: var(--white);
+    /* Texto branco */
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -93,13 +91,12 @@ body {
     font-size: 14px;
 }
 
-.profile-menu {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
+.profile-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    /* Texto branco */
 }
-
 .profile-badge {
     background-color: var(--main-purple);
     color: var(--white);
@@ -207,12 +204,14 @@ body {
 }
 
 .simulation-card {
-    background: var(--white);
+    background-color: var(--main-purple);
+    color: var(--white);
     border-radius: 16px;
     padding: 30px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--dark-purple);
     margin-bottom: 20px;
     text-align: center;
+    box-shadow: 0 8px 16px rgba(40, 19, 111, 0.15);
 }
 
 .situation-header {
@@ -227,6 +226,11 @@ body {
     font-size: 18px;
     font-weight: 500;
     max-width: 800px;
+    color: var(--white);
+}
+
+#question-prompt {
+    color: var(--white);
 }
 
 .simulation-media-placeholder {
@@ -687,6 +691,18 @@ body {
     border-color: var(--main-purple);
     box-shadow: 0 12px 24px rgba(104, 78, 193, 0.15);
     background-color: var(--bg-color);
+}
+
+.profile-card[data-profile="child"] {
+    border-top: 8px solid #4fc3f7;
+}
+
+.profile-card[data-profile="teen"] {
+    border-top: 8px solid #ffb74d;
+}
+
+.profile-card[data-profile="adult"] {
+    border-top: 8px solid #81c784;
 }
 
 .profile-icon {

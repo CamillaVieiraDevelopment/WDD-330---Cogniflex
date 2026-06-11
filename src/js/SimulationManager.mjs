@@ -1,9 +1,12 @@
 import ProfileManager from './ProfileManager.mjs';
+import ExternalServices from './ExternalServices.mjs'; // Added API integration
+
 export default class SimulationManager {
   constructor() {
     this.scenarios = [];
     this.currentScenario = null;
     this.userProfile = localStorage.getItem('cogniflex_targetAgeGroup') || 'child';
+    this.services = new ExternalServices(); // Instantiate external API services
   }
 
   async init() {
@@ -20,9 +23,7 @@ export default class SimulationManager {
         throw new Error(`Error loading the ${this.userProfile} scenarios file.`);
       }
 
-      
       this.scenarios = await response.json();
-
       console.log(`${this.scenarios.length} scenarios loaded successfully for ${this.userProfile}.`);
 
       if (this.scenarios.length > 0) {
@@ -38,12 +39,15 @@ export default class SimulationManager {
       this.showError("Failed to connect to the Cogniflex database.");
     }
   }
+
   renderScenario(scenario) {
     this.currentScenario = scenario;
 
-    
-    document.getElementById('options-container').style.display = 'grid'; // É grid porque usamos grid no CSS!
+    // Reset displays for a new scenario
+    document.getElementById('options-container').style.display = 'grid';
     document.getElementById('question-prompt').style.display = 'block';
+    document.getElementById('media-container').style.display = 'none'; // Hide GIF container initially
+    document.getElementById('scenario-gif').src = ''; // Clear previous GIF
 
     // Inject texts into the HTML
     document.getElementById('scenario-title').textContent = scenario.title;
@@ -51,6 +55,7 @@ export default class SimulationManager {
 
     this.generateButtons(scenario.choices);
   }
+
   generateButtons(choices) {
     const optionsContainer = document.getElementById('options-container');
     optionsContainer.innerHTML = ''; // Clear previous buttons
@@ -62,11 +67,8 @@ export default class SimulationManager {
       { type: 'impulsive', data: choices.impulsive }
     ];
 
-    // Shuffle the array (Fisher-Yates algorithm)
-    for (let i = optionsArray.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [optionsArray[i], optionsArray[j]] = [optionsArray[j], optionsArray[i]];
-    }
+    // Aggressive Shuffle: Uses time alongside random to force variety and prevent stuck positions
+    optionsArray.sort(() => (Math.random() + Date.now()) % 0.5 - 0.25);
 
     // Render the neutral buttons on the screen
     optionsArray.forEach(option => {
@@ -74,40 +76,71 @@ export default class SimulationManager {
       button.classList.add('btn-choice-neutral');
       button.textContent = option.data.text;
 
-      // Add click event to reveal consequence
+      // Add click event to reveal consequence and trigger asynchronous actions
       button.addEventListener('click', () => this.handleChoice(option.type, option.data));
 
       optionsContainer.appendChild(button);
     });
   }
 
-  handleChoice(choiceType, choiceData) {
+  async handleChoice(choiceType, choiceData) {
     console.log(`User selected a/an ${choiceType} response.`);
 
+    // 1. Save Progress
     const profile = new ProfileManager();
     const xpGained = this.currentScenario.xpPointsValue || 50;
     profile.updateProgress(this.currentScenario.id, true, xpGained);
 
-    // Hide the options container
+    // 2. Hide Options
     document.getElementById('options-container').style.display = 'none';
     document.getElementById('question-prompt').style.display = 'none';
 
-    // Populate and show the feedback container
+    // 3. Configure Visual Feedback Colors (Green, Yellow, Red)
     const feedbackContainer = document.getElementById('feedback-container');
-    document.getElementById('feedback-immediate').querySelector('span').textContent = choiceData.immediateConsequence;
-    document.getElementById('feedback-later').querySelector('span').textContent = choiceData.laterConsequence;
-
-    // Optional: Change feedback title color based on choice type
     const feedbackTitle = document.getElementById('feedback-title');
-    if (choiceType === 'ideal') feedbackTitle.style.color = 'var(--color-ideal)';
-    if (choiceType === 'intermediary') feedbackTitle.style.color = 'var(--color-intermed)';
-    if (choiceType === 'impulsive') feedbackTitle.style.color = 'var(--color-impulsive)';
 
+    const styleMap = {
+      ideal: { bg: 'var(--bg-ideal)', border: 'var(--color-ideal)', text: 'var(--color-ideal)' },
+      intermediary: { bg: 'var(--bg-intermed)', border: 'var(--color-intermed)', text: 'var(--color-intermed)' },
+      impulsive: { bg: 'var(--bg-impulsive)', border: 'var(--color-impulsive)', text: 'var(--color-impulsive)' }
+    };
+
+    feedbackContainer.style.backgroundColor = styleMap[choiceType].bg;
+    feedbackContainer.style.border = `2px solid ${styleMap[choiceType].border}`;
+    feedbackTitle.style.color = styleMap[choiceType].text;
+    feedbackContainer.style.color = 'var(--dark-purple)';
+
+    // 4. Populate Feedback Text
+    document.getElementById('feedback-immediate').innerHTML = `<strong>Immediate:</strong> ${choiceData.immediateConsequence}`;
+    document.getElementById('feedback-later').innerHTML = `<strong>Long-term:</strong> ${choiceData.laterConsequence}`;
     feedbackContainer.style.display = 'block';
 
-    // Add event listener to "Next Scenario" button
+    // 5. Fetch and display dynamic GIF from Giphy API based on scenario and emotion
+    const mediaContainer = document.getElementById('media-container');
+    const gifElement = document.getElementById('scenario-gif');
+
+    try {
+      const baseKeyword = this.currentScenario.giphySearchTerm || 'reaction';
+      const emotionalModifier = choiceType === 'ideal' ? 'happy' : choiceType === 'intermediary' ? 'thinking' : 'frustrated';
+      const finalSearchTerm = `${baseKeyword} ${emotionalModifier}`;
+
+      console.log(`Fetching GIF for: ${finalSearchTerm}`);
+      const gifData = await this.services.getEmotionFeedbackGIF(finalSearchTerm);
+
+      if (gifData && gifData.images && gifData.images.original.url) {
+        gifElement.src = gifData.images.original.url;
+        gifElement.style.display = 'block';
+        mediaContainer.style.display = 'flex';
+      }
+    } catch (error) {
+      console.error("Could not load Giphy feedback:", error);
+      // We don't break the application if the API fails, we just don't show the image
+    }
+
+    // 6. Setup "Next Scenario" button to reload cleanly
     document.getElementById('next-scenario-btn').onclick = () => {
       feedbackContainer.style.display = 'none';
+      mediaContainer.style.display = 'none';
       this.init(); // Reload a new scenario
     };
   }
