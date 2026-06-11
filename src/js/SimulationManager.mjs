@@ -1,84 +1,114 @@
-import ExternalServices from "./ExternalServices.mjs";
-import ProfileManager from "./ProfileManager.mjs";
-import { qs } from "./utils.mjs";
-
-const apiService = new ExternalServices();
-const profile = new ProfileManager();
-
 export default class SimulationManager {
-    constructor(parentElementSelector) {
-        this.parentElement = qs(parentElementSelector);
-        this.currentScenario = null;
+  constructor() {
+    this.scenarios = [];
+    this.currentScenario = null;
+    this.userProfile = localStorage.getItem('cogniflex_targetAgeGroup') || 'child';
+  }
+
+  async init() {
+    console.log(`Initializing simulation for profile: ${this.userProfile}`);
+    await this.loadScenarios();
+  }
+
+  async loadScenarios() {
+    try {
+      const response = await fetch('/data/scenarios.json');
+
+      if (!response.ok) {
+        throw new Error("Error loading the scenarios file.");
+      }
+
+      const allScenarios = await response.json();
+
+      // Filter scenarios based on the user's selected age group
+      this.scenarios = allScenarios.filter(scenario => scenario.targetAgeGroup === this.userProfile);
+
+      console.log(`${this.scenarios.length} scenarios loaded successfully.`);
+
+      if (this.scenarios.length > 0) {
+        // Select a random scenario to start
+        const randomIndex = Math.floor(Math.random() * this.scenarios.length);
+        this.renderScenario(this.scenarios[randomIndex]);
+      } else {
+        this.showError("No scenarios found for this profile.");
+      }
+
+    } catch (error) {
+      console.error("Fetch error: ", error);
+      this.showError("Failed to connect to the Cogniflex database.");
+    }
+  }
+
+  renderScenario(scenario) {
+    this.currentScenario = scenario;
+
+    // Inject texts into the HTML
+    document.getElementById('scenario-title').textContent = scenario.title;
+    document.getElementById('scenario-text').textContent = scenario.situationText;
+    document.getElementById('question-prompt').style.display = 'block';
+
+    this.generateButtons(scenario.choices);
+  }
+
+  generateButtons(choices) {
+    const optionsContainer = document.getElementById('options-container');
+    optionsContainer.innerHTML = ''; // Clear previous buttons
+
+    // Create an array to easily shuffle the options
+    const optionsArray = [
+      { type: 'ideal', data: choices.ideal },
+      { type: 'intermediary', data: choices.intermediary },
+      { type: 'impulsive', data: choices.impulsive }
+    ];
+
+    // Shuffle the array (Fisher-Yates algorithm)
+    for (let i = optionsArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [optionsArray[i], optionsArray[j]] = [optionsArray[j], optionsArray[i]];
     }
 
-    async init(scenarioData) {
-        this.currentScenario = scenarioData;
+    // Render the neutral buttons on the screen
+    optionsArray.forEach(option => {
+      const button = document.createElement('button');
+      button.classList.add('btn-choice-neutral');
+      button.textContent = option.data.text;
 
-        // Busca um NPC dinâmico da API para compor o contexto da simulação [cite: 470, 504]
-        const npc = await apiService.getRandomNPC();
-        this.renderScenario(npc);
-        this.setupInteractionEvents();
-    }
+      // Add click event to reveal consequence
+      button.addEventListener('click', () => this.handleChoice(option.type, option.data));
 
-    renderScenario(npc) {
-        // Implementa o layout de 3 cartões para combater o pensamento rígido/binário 
-        this.parentElement.innerHTML = `
-      <div class="simulation-view">
-        <div class="npc-card">
-          <img src="${npc.picture.large}" alt="${npc.name.first}">
-          <p>Interagindo com: <strong>${npc.name.first} ${npc.name.last}</strong> de ${npc.location.city}</p>
-        </div>
-        
-        <div class="problem-box">
-          <h2>${this.currentScenario.title}</h2>
-          <p>${this.currentScenario.context}</p>
-        </div>
+      optionsContainer.appendChild(button);
+    });
+  }
 
-        <div class="feedback-visual-area" id="api-gif-placeholder">
-          </div>
+  handleChoice(choiceType, choiceData) {
+    console.log(`User selected a/an ${choiceType} response.`);
 
-        <div class="options-grid">
-          ${this.currentScenario.options.map((opt, idx) => `
-            <button class="card-option opacity-trigger" data-feedback="${opt.feedbackType}" data-points="${opt.points}" data-idx="${idx}">
-              ${opt.text}
-            </button>
-          `).join("")}
-        </div>
-      </div>
-    `;
-    }
+    // Hide the options container
+    document.getElementById('options-container').style.display = 'none';
+    document.getElementById('question-prompt').style.display = 'none';
 
-    setupInteractionEvents() {
-        const buttons = this.parentElement.querySelectorAll(".card-option");
+    // Populate and show the feedback container
+    const feedbackContainer = document.getElementById('feedback-container');
+    document.getElementById('feedback-immediate').querySelector('span').textContent = choiceData.immediateConsequence;
+    document.getElementById('feedback-later').querySelector('span').textContent = choiceData.laterConsequence;
 
-        // Critério: Cumpre a exigência de disparar múltiplos eventos interativos (Click, MouseOver) [cite: 406]
-        buttons.forEach(button => {
-            // Evento 1: Clique principal (Avanço lógico da simulação) [cite: 406]
-            button.addEventListener("click", async (e) => {
-                const btn = e.currentTarget;
-                const feedbackType = btn.getAttribute("data-feedback");
-                const points = parseInt(btn.getAttribute("data-points"));
+    // Optional: Change feedback title color based on choice type
+    const feedbackTitle = document.getElementById('feedback-title');
+    if (choiceType === 'ideal') feedbackTitle.style.color = 'var(--color-ideal)';
+    if (choiceType === 'intermediary') feedbackTitle.style.color = 'var(--color-intermed)';
+    if (choiceType === 'impulsive') feedbackTitle.style.color = 'var(--color-impulsive)';
 
-                // Modifica o estado do perfil no LocalStorage [cite: 406]
-                profile.updateProgress(this.currentScenario.id, feedbackType === "flexible", points);
+    feedbackContainer.style.display = 'block';
 
-                // Dispara o feedback dinâmico consumindo o endpoint do Giphy [cite: 469, 501]
-                const gifArea = qs("#api-gif-placeholder");
-                gifArea.innerHTML = "<p>Carregando reação...</p>";
+    // Add event listener to "Next Scenario" button
+    document.getElementById('next-scenario-btn').onclick = () => {
+      feedbackContainer.style.display = 'none';
+      this.init(); // Reload a new scenario
+    };
+  }
 
-                const gifData = await apiService.getEmotionFeedbackGIF(feedbackType);
-                gifArea.innerHTML = `<img src="${gifData.images.original.url}" alt="${gifData.title}" class="fade-in-animation">`;
-            });
-
-            // Evento 2: MouseEnter para microinteração visual avançada de CSS 
-            button.addEventListener("mouseenter", (e) => {
-                e.target.style.transform = "translateY(-5px) scale(1.02)";
-            });
-
-            // Evento 3: MouseLeave para reverter a transformação fluida 
-            button.addEventListener("mouseleave", (e) => {
-                e.target.style.transform = "translateY(0) scale(1)";
-            });
-        });
-    }
+  showError(message) {
+    document.getElementById('scenario-title').textContent = "Oops! Something went wrong.";
+    document.getElementById('scenario-text').textContent = message;
+  }
 }

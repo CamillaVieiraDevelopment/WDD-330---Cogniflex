@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cogniflex - Simulação</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script type="module" src="js/SimulationManager.mjs"></script>
+    <title>Cogniflex - Simulation</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -14,60 +13,58 @@
     <div id="main-header"></div>
 
     <main class="container">
-        <div class="progress-container">
+        <div class="progress-container" id="progress-container" style="display: none;">
             <div class="progress-info">
-                <span>Progresso da história</span>
-                <span>Passo 2 de 7 (28%)</span>
+                <span>Session Progress</span>
+                <span id="progress-text">Scenario 1 of 5</span>
             </div>
             <div class="progress-bar-bg">
-                <div class="progress-bar-fill"></div>
+                <div class="progress-bar-fill" id="progress-bar-fill" style="width: 20%;"></div>
             </div>
         </div>
 
         <section class="simulation-card">
             <div class="situation-header">
-                <h2>Situação</h2>
-                <p class="situation-text">[Texto descritivo da situação/problema simulado aparecerá aqui estruturado]
-                </p>
+                <h2 id="scenario-title">Loading scenario...</h2>
+                <p class="situation-text" id="scenario-text">Please wait while we prepare the story.</p>
             </div>
 
-            <div class="simulation-media-placeholder">
-                <p>Placeholder: Imagem Ilustrativa / GIF Comparativo (Giphy API)</p>
+            <div class="simulation-media-placeholder" id="media-container" style="display: none;">
+                <img id="scenario-gif" src="" alt="Scenario illustration"
+                    style="max-width: 100%; border-radius: 12px; display: none;">
             </div>
 
-            <h3>Escolha como você deseja agir:</h3>
+            <h3 id="question-prompt" style="display: none;">Choose how you would like to respond:</h3>
 
-            <div class="options-container">
-                <div class="option-card ideal">
-                    <div class="option-title"><span>&#9733;</span> Resposta Ideal</div>
-                    <p>[Placeholder para a alternativa de resposta construtiva/ideal]</p>
-                    <button class="btn-choice">Escolher</button>
-                </div>
+            <div class="options-container" id="options-container">
+            </div>
 
-                <div class="option-card impulsive">
-                    <div class="option-title"><span>&#9889;</span> Resposta Impulsiva</div>
-                    <p>[Placeholder para a alternativa de resposta impulsiva/rígida]</p>
-                    <button class="btn-choice">Escolher</button>
-                </div>
-
-                <div class="option-card intermediate">
-                    <div class="option-title"><span>&#9829;</span> Resposta Intermediária</div>
-                    <p>[Placeholder para a alternativa de autorregulação/meio-termo]</p>
-                    <button class="btn-choice">Escolher</button>
-                </div>
+            <div id="feedback-container"
+                style="display: none; margin-top: 20px; padding: 20px; border-radius: 12px; background: var(--gray-light);">
+                <h3 id="feedback-title" style="margin-bottom: 10px;">Consequence</h3>
+                <p id="feedback-immediate"><strong>Immediate:</strong> <span></span></p>
+                <p id="feedback-later"><strong>Long-term:</strong> <span></span></p>
+                <button id="next-scenario-btn" class="btn-primary" style="margin-top: 15px;">Next Scenario</button>
             </div>
         </section>
 
         <div class="bottom-info-bar">
-            <p>💡 <em>Lembre-se: não existe apenas certo ou errado. Cada escolha gera uma consequência diferente!</em>
-            </p>
-            <button class="accessibility-btn" style="border-radius: 8px;">Ver histórico desta história</button>
+            <p>💡 <em>Remember: there is not always a single right or wrong answer. Every choice leads to a different
+                    consequence!</em></p>
         </div>
     </main>
 
     <div id="main-footer"></div>
 
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="/js/main.js"></script>
+    <script type="module">
+        import SimulationManager from '/js/SimulationManager.mjs';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const simulation = new SimulationManager();
+            simulation.init();
+        });
+    </script>
 </body>
 
 </html>
