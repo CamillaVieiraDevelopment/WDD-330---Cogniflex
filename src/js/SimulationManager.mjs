@@ -12,18 +12,17 @@ export default class SimulationManager {
 
   async loadScenarios() {
     try {
-      const response = await fetch('/data/scenarios.json');
+      // Dynamically fetches the correct file based on the user profile (child, teen, or adult)
+      const response = await fetch(`/data/${this.userProfile}.json`);
 
       if (!response.ok) {
-        throw new Error("Error loading the scenarios file.");
+        throw new Error(`Error loading the ${this.userProfile} scenarios file.`);
       }
 
-      const allScenarios = await response.json();
+      // The file already contains only the specific scenarios, so no need to filter!
+      this.scenarios = await response.json();
 
-      // Filter scenarios based on the user's selected age group
-      this.scenarios = allScenarios.filter(scenario => scenario.targetAgeGroup === this.userProfile);
-
-      console.log(`${this.scenarios.length} scenarios loaded successfully.`);
+      console.log(`${this.scenarios.length} scenarios loaded successfully for ${this.userProfile}.`);
 
       if (this.scenarios.length > 0) {
         // Select a random scenario to start
@@ -38,18 +37,19 @@ export default class SimulationManager {
       this.showError("Failed to connect to the Cogniflex database.");
     }
   }
-
   renderScenario(scenario) {
     this.currentScenario = scenario;
+
+    // RESET VISUAL: Garante que os elementos escondidos no cenário anterior voltem a aparecer
+    document.getElementById('options-container').style.display = 'grid'; // É grid porque usamos grid no CSS!
+    document.getElementById('question-prompt').style.display = 'block';
 
     // Inject texts into the HTML
     document.getElementById('scenario-title').textContent = scenario.title;
     document.getElementById('scenario-text').textContent = scenario.situationText;
-    document.getElementById('question-prompt').style.display = 'block';
 
     this.generateButtons(scenario.choices);
   }
-
   generateButtons(choices) {
     const optionsContainer = document.getElementById('options-container');
     optionsContainer.innerHTML = ''; // Clear previous buttons

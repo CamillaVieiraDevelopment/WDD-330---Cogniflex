@@ -1,0 +1,70 @@
+[
+    {
+        "id": "AD041",
+        "area": "work",
+        "category": "career",
+        "targetAgeGroup": "adult",
+        "title": "An Unexpected Conversation",
+        "situationText": "During a performance review, your manager points out aspects of your work that need improvement.",
+        "giphySearchTerm": "office meeting",
+        "difficultyLevel": 5,
+        "xpPointsValue": 100,
+        "executiveFunction": "emotional_regulation",
+        "socialSkill": "accepting_feedback",
+        "learningObjective": "professional_growth",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 3,
+        "choices": {
+            "ideal": {
+                "text": "I listen carefully and try to understand what practical actions I can take.",
+                "immediateConsequence": "You gain useful insights.",
+                "laterConsequence": "You increase your development opportunities."
+            },
+            "intermediary": {
+                "text": "I feel uncomfortable, but I reflect on the feedback later.",
+                "immediateConsequence": "The criticism still bothers you.",
+                "laterConsequence": "Some of the suggestions can still be utilized."
+            },
+            "impulsive": {
+                "text": "I interpret the feedback as a personal devaluation.",
+                "immediateConsequence": "You become defensive.",
+                "laterConsequence": "You may lose out on growth opportunities."
+            }
+        }
+    },
+    {
+        "id": "AD042",
+        "area": "work",
+        "category": "career",
+        "targetAgeGroup": "adult",
+        "title": "Changing Priorities",
+        "situationText": "After weeks of working on a project, leadership changes the organization's priorities.",
+        "giphySearchTerm": "business meeting",
+        "difficultyLevel": 5,
+        "xpPointsValue": 100,
+        "executiveFunction": "cognitive_flexibility",
+        "socialSkill": "adaptability",
+        "learningObjective": "organizational_change",
+        "sensoryChallenge": false,
+        "emotionalDemand": 4,
+        "uncertaintyLevel": 5,
+        "choices": {
+            "ideal": {
+                "text": "I try to understand the new objectives and reorganize my plan.",
+                "immediateConsequence": "You regain clarity about the work.",
+                "laterConsequence": "You adapt better to changes."
+            },
+            "intermediary": {
+                "text": "I feel frustrated, but I follow the new guidelines.",
+                "immediateConsequence": "The discomfort remains temporarily.",
+                "laterConsequence": "You continue to contribute to the project."
+            },
+            "impulsive": {
+                "text": "I conclude that my previous work was completely useless.",
+                "immediateConsequence": "Your motivation drops.",
+                "laterConsequence": "It may increase your resistance to future changes."
+            }
+        }
+    }
+]

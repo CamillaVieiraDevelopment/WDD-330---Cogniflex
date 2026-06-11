@@ -1,0 +1,70 @@
+[
+    {
+        "id": "C001",
+        "area": "school",
+        "category": "routine_change",
+        "targetAgeGroup": "child",
+        "title": "Absent Teacher",
+        "situationText": "When you arrive at school, you find out that your teacher is sick and a substitute teacher will be taking the class today.",
+        "giphySearchTerm": "new teacher classroom",
+        "difficultyLevel": 2,
+        "xpPointsValue": 50,
+        "executiveFunction": "cognitive_flexibility",
+        "socialSkill": "adaptation",
+        "learningObjective": "coping_with_change",
+        "sensoryChallenge": false,
+        "emotionalDemand": 3,
+        "uncertaintyLevel": 4,
+        "choices": {
+            "ideal": {
+                "text": "I ask what the class will be like and try to get to know the new teacher.",
+                "immediateConsequence": "You have a better understanding of what to expect.",
+                "laterConsequence": "The day goes by more smoothly."
+            },
+            "intermediary": {
+                "text": "I feel uncomfortable, but I participate in the activities normally.",
+                "immediateConsequence": "It takes you a little while to adapt.",
+                "laterConsequence": "You manage to keep up with most of the class."
+            },
+            "impulsive": {
+                "text": "I spend the class complaining because I don't like the change.",
+                "immediateConsequence": "You become more irritated during the morning.",
+                "laterConsequence": "You enjoy the proposed activities less."
+            }
+        }
+    },
+    {
+        "id": "C002",
+        "area": "school",
+        "category": "routine_change",
+        "targetAgeGroup": "child",
+        "title": "Canceled Recess",
+        "situationText": "It is raining heavily and outdoor recess has been canceled.",
+        "giphySearchTerm": "rainy school day",
+        "difficultyLevel": 2,
+        "xpPointsValue": 50,
+        "executiveFunction": "cognitive_flexibility",
+        "socialSkill": "adaptation",
+        "learningObjective": "coping_with_change",
+        "sensoryChallenge": false,
+        "emotionalDemand": 3,
+        "uncertaintyLevel": 3,
+        "choices": {
+            "ideal": {
+                "text": "I look for another fun activity to do inside the school.",
+                "immediateConsequence": "You find something interesting to do.",
+                "laterConsequence": "The break remains enjoyable."
+            },
+            "intermediary": {
+                "text": "I feel sad, but I wait for recess to end.",
+                "immediateConsequence": "Time seems to pass more slowly.",
+                "laterConsequence": "You manage to get through the rest of the day."
+            },
+            "impulsive": {
+                "text": "I say it's unfair and refuse to participate in any activities.",
+                "immediateConsequence": "You become increasingly frustrated.",
+                "laterConsequence": "The rest of the period becomes more difficult."
+            }
+        }
+    }
+]

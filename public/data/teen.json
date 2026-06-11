@@ -1,0 +1,70 @@
+[
+    {
+        "id": "A001",
+        "area": "academic",
+        "category": "school_life",
+        "targetAgeGroup": "teen",
+        "title": "Unequal Group Work",
+        "situationText": "You notice that two members of your group are barely participating in the assignment that will grade the entire team.",
+        "giphySearchTerm": "group project students",
+        "difficultyLevel": 4,
+        "xpPointsValue": 90,
+        "executiveFunction": "problem_solving",
+        "socialSkill": "assertive_communication",
+        "learningObjective": "group_collaboration",
+        "sensoryChallenge": false,
+        "emotionalDemand": 4,
+        "uncertaintyLevel": 4,
+        "choices": {
+            "ideal": {
+                "text": "I talk to the group about dividing the tasks and look for a fair solution.",
+                "immediateConsequence": "The problem is discussed openly.",
+                "laterConsequence": "The group has a better chance of completing the assignment properly."
+            },
+            "intermediary": {
+                "text": "I do my part and avoid getting into conflict.",
+                "immediateConsequence": "You reduce immediate discomfort.",
+                "laterConsequence": "The inequality may continue."
+            },
+            "impulsive": {
+                "text": "I decide to do everything myself and resent my classmates.",
+                "immediateConsequence": "You take on an excessive workload.",
+                "laterConsequence": "Your stress level tends to increase."
+            }
+        }
+    },
+    {
+        "id": "A002",
+        "area": "academic",
+        "category": "school_life",
+        "targetAgeGroup": "teen",
+        "title": "Lower Grade Than Expected",
+        "situationText": "You studied hard for the exam, but received a lower grade than you thought you deserved.",
+        "giphySearchTerm": "student exam results",
+        "difficultyLevel": 4,
+        "xpPointsValue": 85,
+        "executiveFunction": "emotional_regulation",
+        "socialSkill": "self_advocacy",
+        "learningObjective": "handling_disappointment",
+        "sensoryChallenge": false,
+        "emotionalDemand": 5,
+        "uncertaintyLevel": 2,
+        "choices": {
+            "ideal": {
+                "text": "I analyze my mistakes and try to understand how to improve.",
+                "immediateConsequence": "You gain useful information.",
+                "laterConsequence": "You can improve your future performance."
+            },
+            "intermediary": {
+                "text": "I accept the grade, but remain frustrated for a few days.",
+                "immediateConsequence": "The disappointment lingers.",
+                "laterConsequence": "The emotion tends to diminish naturally."
+            },
+            "impulsive": {
+                "text": "I conclude that studying is not worth it because the effort doesn't pay off.",
+                "immediateConsequence": "Your motivation drops.",
+                "laterConsequence": "Your academic performance may suffer."
+            }
+        }
+    }
+]
