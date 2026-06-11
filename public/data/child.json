@@ -5,7 +5,7 @@
         "category": "routine_change",
         "targetAgeGroup": "child",
         "title": "Absent Teacher",
-        "situationText": "When you arrive at school, you find out that your teacher is sick and a substitute teacher will be taking the class today.",
+        "situationText": "When you arrive at school, you find out that your teacher is sick and another teacher will give the class today.",
         "giphySearchTerm": "new teacher classroom",
         "difficultyLevel": 2,
         "xpPointsValue": 50,
@@ -18,13 +18,13 @@
         "choices": {
             "ideal": {
                 "text": "I ask what the class will be like and try to get to know the new teacher.",
-                "immediateConsequence": "You have a better understanding of what to expect.",
+                "immediateConsequence": "You better understand what will happen.",
                 "laterConsequence": "The day goes by more smoothly."
             },
             "intermediary": {
                 "text": "I feel uncomfortable, but I participate in the activities normally.",
                 "immediateConsequence": "It takes you a little while to adapt.",
-                "laterConsequence": "You manage to keep up with most of the class."
+                "laterConsequence": "You manage to follow most of the class."
             },
             "impulsive": {
                 "text": "I spend the class complaining because I don't like the change.",
@@ -61,10 +61,1304 @@
                 "laterConsequence": "You manage to get through the rest of the day."
             },
             "impulsive": {
-                "text": "I say it's unfair and refuse to participate in any activities.",
+                "text": "I say it's unfair and refuse to participate in the activities.",
                 "immediateConsequence": "You become increasingly frustrated.",
                 "laterConsequence": "The rest of the period becomes more difficult."
             }
         }
+    },
+    {
+        "id": "C003",
+        "area": "school",
+        "category": "routine_change",
+        "targetAgeGroup": "child",
+        "title": "Postponed Trip",
+        "situationText": "The school trip that was supposed to happen today has been rescheduled to another date.",
+        "giphySearchTerm": "school trip canceled",
+        "difficultyLevel": 3,
+        "xpPointsValue": 60,
+        "executiveFunction": "emotional_regulation",
+        "socialSkill": "adaptation",
+        "learningObjective": "dealing_with_uncertainty",
+        "sensoryChallenge": false,
+        "emotionalDemand": 4,
+        "uncertaintyLevel": 5,
+        "choices": {
+            "ideal": {
+                "text": "I ask when the new date will be and look for something positive to do today.",
+                "immediateConsequence": "You understand the situation better.",
+                "laterConsequence": "Your anxiety decreases."
+            },
+            "intermediary": {
+                "text": "I feel disappointed, but I continue with the day's activities.",
+                "immediateConsequence": "You remain a little upset.",
+                "laterConsequence": "The frustration passes gradually."
+            },
+            "impulsive": {
+                "text": "I say that I don't want to participate in the trip anymore.",
+                "immediateConsequence": "You react in the heat of the moment.",
+                "laterConsequence": "You might regret it when you calm down."
+            }
+        }
+    },
+    {
+        "id": "C004",
+        "area": "school",
+        "category": "routine_change",
+        "targetAgeGroup": "child",
+        "title": "Changed Classroom",
+        "situationText": "Your class was moved to another room because of maintenance.",
+        "giphySearchTerm": "new classroom",
+        "difficultyLevel": 2,
+        "xpPointsValue": 50,
+        "executiveFunction": "cognitive_flexibility",
+        "socialSkill": "adaptation",
+        "learningObjective": "coping_with_change",
+        "sensoryChallenge": false,
+        "emotionalDemand": 2,
+        "uncertaintyLevel": 3,
+        "choices": {
+            "ideal": {
+                "text": "I explore the new space and try to organize myself.",
+                "immediateConsequence": "You understand the environment better.",
+                "laterConsequence": "Adaptation happens faster."
+            },
+            "intermediary": {
+                "text": "I miss the old room, but I follow the class.",
+                "immediateConsequence": "You feel a bit uncomfortable.",
+                "laterConsequence": "You eventually get used to it."
+            },
+            "impulsive": {
+                "text": "I complain all the time about the new room.",
+                "immediateConsequence": "You keep focusing on the change.",
+                "laterConsequence": "Adaptation takes longer."
+            }
+        }
+    },
+    {
+        "id": "C005",
+        "area": "school",
+        "category": "routine_change",
+        "targetAgeGroup": "child",
+        "title": "Different Schedule",
+        "situationText": "A special activity changed the normal class schedule.",
+        "giphySearchTerm": "school schedule change",
+        "difficultyLevel": 2,
+        "xpPointsValue": 55,
+        "executiveFunction": "planning",
+        "socialSkill": "adaptation",
+        "learningObjective": "flexible_thinking",
+        "sensoryChallenge": false,
+        "emotionalDemand": 2,
+        "uncertaintyLevel": 3,
+        "choices": {
+            "ideal": {
+                "text": "I ask what the new schedule will be.",
+                "immediateConsequence": "You know what to expect.",
+                "laterConsequence": "You are better prepared for the day."
+            },
+            "intermediary": {
+                "text": "I accept the change, but I feel confused for a while.",
+                "immediateConsequence": "It takes longer to understand the plan.",
+                "laterConsequence": "You manage to follow along later."
+            },
+            "impulsive": {
+                "text": "I say the day is ruined because of the change.",
+                "immediateConsequence": "Your frustration increases.",
+                "laterConsequence": "You enjoy the activities less."
+            }
+        }
+    },
+    {
+        "id": "C006",
+        "area": "school",
+        "category": "routine_change",
+        "targetAgeGroup": "child",
+        "title": "Surprise Activity",
+        "situationText": "The teacher announces an activity that was not planned.",
+        "giphySearchTerm": "surprise classroom activity",
+        "difficultyLevel": 3,
+        "xpPointsValue": 60,
+        "executiveFunction": "cognitive_flexibility",
+        "socialSkill": "adaptation",
+        "learningObjective": "dealing_with_uncertainty",
+        "sensoryChallenge": false,
+        "emotionalDemand": 3,
+        "uncertaintyLevel": 4,
+        "choices": {
+            "ideal": {
+                "text": "I listen to the instructions and try to figure out how to participate.",
+                "immediateConsequence": "You understand the proposal better.",
+                "laterConsequence": "You might end up enjoying the experience."
+            },
+            "intermediary": {
+                "text": "I participate, but I still prefer the original plan.",
+                "immediateConsequence": "You remain cautious.",
+                "laterConsequence": "You manage to complete the activity."
+            },
+            "impulsive": {
+                "text": "I refuse to participate because it wasn't agreed upon.",
+                "immediateConsequence": "You miss out on important information.",
+                "laterConsequence": "You might feel left out."
+            }
+        }
+    },
+    {
+        "id": "C007",
+        "area": "school",
+        "category": "routine_change",
+        "targetAgeGroup": "child",
+        "title": "New Spot in Line",
+        "situationText": "Today the teacher asked everyone to change their position in the line.",
+        "giphySearchTerm": "school line kids",
+        "difficultyLevel": 1,
+        "xpPointsValue": 40,
+        "executiveFunction": "cognitive_flexibility",
+        "socialSkill": "cooperation",
+        "learningObjective": "accepting_change",
+        "sensoryChallenge": false,
+        "emotionalDemand": 2,
+        "uncertaintyLevel": 2,
+        "choices": {
+            "ideal": {
+                "text": "I accept the new position and follow the class.",
+                "immediateConsequence": "The line gets organized quickly.",
+                "laterConsequence": "The activity continues normally."
+            },
+            "intermediary": {
+                "text": "I ask why it changed, but I accept the decision.",
+                "immediateConsequence": "You better understand the reason.",
+                "laterConsequence": "You are able to move forward."
+            },
+            "impulsive": {
+                "text": "I insist on going back to my old spot.",
+                "immediateConsequence": "Organization takes longer.",
+                "laterConsequence": "You stay focused on the change."
+            }
+        }
+    },
+    {
+        "id": "C008",
+        "area": "school",
+        "category": "routine_change",
+        "targetAgeGroup": "child",
+        "title": "Team Change",
+        "situationText": "You found out that you will be in a different team than you expected for an activity.",
+        "giphySearchTerm": "kids teamwork",
+        "difficultyLevel": 3,
+        "xpPointsValue": 65,
+        "executiveFunction": "cognitive_flexibility",
+        "socialSkill": "cooperation",
+        "learningObjective": "social_problem_solving",
+        "sensoryChallenge": false,
+        "emotionalDemand": 3,
+        "uncertaintyLevel": 4,
+        "choices": {
+            "ideal": {
+                "text": "I get to know the new classmates and try to collaborate.",
+                "immediateConsequence": "The team starts working together.",
+                "laterConsequence": "You can make new friends."
+            },
+            "intermediary": {
+                "text": "I participate, but I still prefer my previous team.",
+                "immediateConsequence": "It takes you some time to blend in.",
+                "laterConsequence": "You manage to finish the activity."
+            },
+            "impulsive": {
+                "text": "I say that I don't want to participate with different people.",
+                "immediateConsequence": "The activity becomes harder.",
+                "laterConsequence": "You lose interaction opportunities."
+            }
+        }
+    },
+    {
+        "id": "C009",
+        "area": "school",
+        "category": "academic",
+        "targetAgeGroup": "child",
+        "title": "Pair Work",
+        "situationText": "The teacher drew pairs and you got a different partner than you expected.",
+        "giphySearchTerm": "kids teamwork school",
+        "difficultyLevel": 3,
+        "xpPointsValue": 70,
+        "executiveFunction": "cognitive_flexibility",
+        "socialSkill": "cooperation",
+        "learningObjective": "working_with_others",
+        "sensoryChallenge": false,
+        "emotionalDemand": 3,
+        "uncertaintyLevel": 3,
+        "choices": {
+            "ideal": {
+                "text": "I talk to my partner and we try to divide the tasks.",
+                "immediateConsequence": "The activity starts in an organized way.",
+                "laterConsequence": "You manage to work together."
+            },
+            "intermediary": {
+                "text": "I do my part, but I hardly talk to him/her.",
+                "immediateConsequence": "The work progresses slowly.",
+                "laterConsequence": "The activity is completed."
+            },
+            "impulsive": {
+                "text": "I say that I don't want to pair up with this person.",
+                "immediateConsequence": "The atmosphere becomes uncomfortable.",
+                "laterConsequence": "The activity becomes more difficult."
+            }
+        }
+    },
+    {
+        "id": "C010",
+        "area": "school",
+        "category": "academic",
+        "targetAgeGroup": "child",
+        "title": "Unexpected Grade",
+        "situationText": "You studied a lot, but your grade was lower than you expected.",
+        "giphySearchTerm": "student disappointed",
+        "difficultyLevel": 4,
+        "xpPointsValue": 80,
+        "executiveFunction": "emotional_regulation",
+        "socialSkill": "self_advocacy",
+        "learningObjective": "handling_frustration",
+        "sensoryChallenge": false,
+        "emotionalDemand": 4,
+        "uncertaintyLevel": 2,
+        "choices": {
+            "ideal": {
+                "text": "I ask the teacher how I can improve.",
+                "immediateConsequence": "You receive useful guidance.",
+                "laterConsequence": "You can evolve in future activities."
+            },
+            "intermediary": {
+                "text": "I feel sad, but I put the test away and move on with the day.",
+                "immediateConsequence": "You remain disappointed for a while.",
+                "laterConsequence": "The emotion fades away little by little."
+            },
+            "impulsive": {
+                "text": "I say the test was unfair and refuse to look at the mistakes.",
+                "immediateConsequence": "You stay frustrated.",
+                "laterConsequence": "You miss an opportunity to learn."
+            }
+        }
     }
+    ,
+     {  
+    "id": "C011",
+    "area": "school",
+    "category": "academic",
+    "targetAgeGroup": "child",
+    "title": "Oral Presentation",
+    "situationText": "Today you need to present an assignment to the class.",
+    "giphySearchTerm": "school presentation",
+    "difficultyLevel": 4,
+    "xpPointsValue": 80,
+    "executiveFunction": "emotional_regulation",
+    "socialSkill": "communication",
+    "learningObjective": "coping_with_anxiety",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 3,
+    "choices": {
+        "ideal": {
+            "text": "I take a deep breath and try to present even though I feel nervous.",
+            "immediateConsequence": "You realize that you can start.",
+            "laterConsequence": "Your confidence increases."
+        },
+        "intermediary": {
+            "text": "I present quickly to get it over with.",
+            "immediateConsequence": "You fulfill the activity.",
+            "laterConsequence": "You still feel insecure about your performance."
+        },
+        "impulsive": {
+            "text": "I refuse to present because I'm nervous.",
+            "immediateConsequence": "The situation becomes more tense.",
+            "laterConsequence": "The worry may continue."
+        }
+    }
+},
+{
+    "id": "C012",
+    "area": "school",
+    "category": "academic",
+    "targetAgeGroup": "child",
+    "title": "Forgotten Material",
+    "situationText": "You realize that you forgot the notebook needed for the activity.",
+    "giphySearchTerm": "forgot school supplies",
+    "difficultyLevel": 2,
+    "xpPointsValue": 55,
+    "executiveFunction": "problem_solving",
+    "socialSkill": "communication",
+    "learningObjective": "seeking_help",
+    "sensoryChallenge": false,
+    "emotionalDemand": 2,
+    "uncertaintyLevel": 2,
+    "choices": {
+        "ideal": {
+            "text": "I ask the teacher for help to find a solution.",
+            "immediateConsequence": "You receive guidance.",
+            "laterConsequence": "You are able to participate in the activity."
+        },
+        "intermediary": {
+            "text": "I try to follow along just by observing.",
+            "immediateConsequence": "You understand part of the activity.",
+            "laterConsequence": "You learn less than you could."
+        },
+        "impulsive": {
+            "text": "I give up on the activity because I forgot the material.",
+            "immediateConsequence": "You stop participating.",
+            "laterConsequence": "You miss a learning opportunity."
+        }
+    }
+},
+{
+    "id": "C013",
+    "area": "school",
+    "category": "academic",
+    "targetAgeGroup": "child",
+    "title": "Difficult Question",
+    "situationText": "The teacher asks a question and you don't know the answer.",
+    "giphySearchTerm": "thinking student",
+    "difficultyLevel": 3,
+    "xpPointsValue": 65,
+    "executiveFunction": "self_monitoring",
+    "socialSkill": "communication",
+    "learningObjective": "accepting_uncertainty",
+    "sensoryChallenge": false,
+    "emotionalDemand": 3,
+    "uncertaintyLevel": 4,
+    "choices": {
+        "ideal": {
+            "text": "I say I don't know and try to learn the answer.",
+            "immediateConsequence": "The teacher explains the content.",
+            "laterConsequence": "You learn something new."
+        },
+        "intermediary": {
+            "text": "I take a guess even without being sure.",
+            "immediateConsequence": "You participate in the class.",
+            "laterConsequence": "You might discover what you got right or wrong."
+        },
+        "impulsive": {
+            "text": "I get annoyed for not knowing and shut myself off from the class.",
+            "immediateConsequence": "You stop paying attention.",
+            "laterConsequence": "You miss out on important explanations."
+        }
+    }
+},
+{
+    "id": "C014",
+    "area": "school",
+    "category": "academic",
+    "targetAgeGroup": "child",
+    "title": "Closed Library",
+    "situationText": "You planned to use the library, but it is closed today.",
+    "giphySearchTerm": "library closed",
+    "difficultyLevel": 2,
+    "xpPointsValue": 50,
+    "executiveFunction": "planning",
+    "socialSkill": "adaptation",
+    "learningObjective": "finding_alternatives",
+    "sensoryChallenge": false,
+    "emotionalDemand": 2,
+    "uncertaintyLevel": 3,
+    "choices": {
+        "ideal": {
+            "text": "I look for another place to study or read.",
+            "immediateConsequence": "You find an alternative.",
+            "laterConsequence": "You manage to carry out your plan."
+        },
+        "intermediary": {
+            "text": "I wait without doing anything until I find another option.",
+            "immediateConsequence": "You waste some time.",
+            "laterConsequence": "You still manage to reorganize."
+        },
+        "impulsive": {
+            "text": "I completely give up on the activity.",
+            "immediateConsequence": "Your plan is interrupted.",
+            "laterConsequence": "You fail to achieve your goal."
+        }
+    }
+},
+{
+    "id": "C015",
+    "area": "school",
+    "category": "academic",
+    "targetAgeGroup": "child",
+    "title": "Redone Activity",
+    "situationText": "The teacher asked you to redo the activity because some parts were missing.",
+    "giphySearchTerm": "school homework",
+    "difficultyLevel": 4,
+    "xpPointsValue": 85,
+    "executiveFunction": "emotional_regulation",
+    "socialSkill": "accepting_feedback",
+    "learningObjective": "accepting_feedback",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 2,
+    "choices": {
+        "ideal": {
+            "text": "I use the guidelines to improve my work.",
+            "immediateConsequence": "You understand what needs to be fixed.",
+            "laterConsequence": "Your work becomes more complete."
+        },
+        "intermediary": {
+            "text": "I redo the activity, but I feel disappointed.",
+            "immediateConsequence": "You complete the task.",
+            "laterConsequence": "You still learn from the experience."
+        },
+        "impulsive": {
+            "text": "I say I won't redo it because I already finished it once.",
+            "immediateConsequence": "The problem remains unsolved.",
+            "laterConsequence": "You miss an opportunity to improve."
+        }
+    }
+},
+{
+    "id": "C016",
+    "area": "school",
+    "category": "academic",
+    "targetAgeGroup": "child",
+    "title": "New Teacher",
+    "situationText": "A new teacher will start teaching your class.",
+    "giphySearchTerm": "new teacher",
+    "difficultyLevel": 3,
+    "xpPointsValue": 65,
+    "executiveFunction": "cognitive_flexibility",
+    "socialSkill": "social_initiation",
+    "learningObjective": "adapting_to_new_people",
+    "sensoryChallenge": false,
+    "emotionalDemand": 3,
+    "uncertaintyLevel": 4,
+    "choices": {
+        "ideal": {
+            "text": "I try to get to know the new teacher and their way of teaching.",
+            "immediateConsequence": "You better understand their expectations.",
+            "laterConsequence": "Adaptation happens more easily."
+        },
+        "intermediary": {
+            "text": "I observe first before getting used to it.",
+            "immediateConsequence": "It takes you some time to adapt.",
+            "laterConsequence": "You gradually feel more comfortable."
+        },
+        "impulsive": {
+            "text": "I immediately decide that I won't like the new teacher.",
+            "immediateConsequence": "You create resistance to change.",
+            "laterConsequence": "Adaptation becomes more difficult."
+        }
+    }
+},
+{
+    "id": "C017",
+    "area": "friendship",
+    "category": "friendships",
+    "targetAgeGroup": "child",
+    "title": "My Friend is Playing with Someone Else",
+    "situationText": "You arrive at recess and see your best friend playing with another child.",
+    "giphySearchTerm": "kids playground friends",
+    "difficultyLevel": 3,
+    "xpPointsValue": 70,
+    "executiveFunction": "emotional_regulation",
+    "socialSkill": "perspective_taking",
+    "learningObjective": "sharing_friendships",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 3,
+    "choices": {
+        "ideal": {
+            "text": "I ask if I can join the game.",
+            "immediateConsequence": "Your friend is happy to see you.",
+            "laterConsequence": "You expand your friendship group."
+        },
+        "intermediary": {
+            "text": "I decide to play another game at that moment.",
+            "immediateConsequence": "You avoid initial discomfort.",
+            "laterConsequence": "You can still talk to your friend later."
+        },
+        "impulsive": {
+            "text": "I conclude that they no longer want to be my friend.",
+            "immediateConsequence": "You feel hurt.",
+            "laterConsequence": "You may create a problem without understanding the situation."
+        }
+    }
+},
+{
+    "id": "C018",
+    "area": "friendship",
+    "category": "friendships",
+    "targetAgeGroup": "child",
+    "title": "I Wasn't Picked First",
+    "situationText": "When forming teams, you were picked last.",
+    "giphySearchTerm": "kids sports team",
+    "difficultyLevel": 4,
+    "xpPointsValue": 80,
+    "executiveFunction": "emotional_regulation",
+    "socialSkill": "self_awareness",
+    "learningObjective": "handling_rejection",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 2,
+    "choices": {
+        "ideal": {
+            "text": "I join the team and try to have fun during the game.",
+            "immediateConsequence": "You participate normally.",
+            "laterConsequence": "You discover that you can still contribute to the team."
+        },
+        "intermediary": {
+            "text": "I feel upset, but I continue participating.",
+            "immediateConsequence": "The sadness remains for some time.",
+            "laterConsequence": "The emotion fades as the game progresses."
+        },
+        "impulsive": {
+            "text": "I decide that I'm not going to play.",
+            "immediateConsequence": "You are left out of the activity.",
+            "laterConsequence": "You miss an opportunity to have fun."
+        }
+    }
+},
+{
+    "id": "C019",
+    "area": "friendship",
+    "category": "conflict",
+    "targetAgeGroup": "child",
+    "title": "Who Is Right?",
+    "situationText": "You and a friend disagree on a rule of the game.",
+    "giphySearchTerm": "kids arguing game",
+    "difficultyLevel": 4,
+    "xpPointsValue": 85,
+    "executiveFunction": "cognitive_flexibility",
+    "socialSkill": "conflict_resolution",
+    "learningObjective": "negotiation",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 4,
+    "choices": {
+        "ideal": {
+            "text": "We talk to decide together which rule to use.",
+            "immediateConsequence": "The argument decreases.",
+            "laterConsequence": "The game continues."
+        },
+        "intermediary": {
+            "text": "I accept their rule even without fully agreeing.",
+            "immediateConsequence": "The conflict ends quickly.",
+            "laterConsequence": "You keep thinking about the issue."
+        },
+        "impulsive": {
+            "text": "I insist that only my rule is correct.",
+            "immediateConsequence": "The argument escalates.",
+            "laterConsequence": "The game might end."
+        }
+    }
+},
+{
+    "id": "C020",
+    "area": "friendship",
+    "category": "friendships",
+    "targetAgeGroup": "child",
+    "title": "Declined Invitation",
+    "situationText": "You invited a classmate to play, but they said they couldn't at that moment.",
+    "giphySearchTerm": "kids talking",
+    "difficultyLevel": 3,
+    "xpPointsValue": 75,
+    "executiveFunction": "emotional_regulation",
+    "socialSkill": "perspective_taking",
+    "learningObjective": "accepting_no",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 3,
+    "choices": {
+        "ideal": {
+            "text": "I ask if we can play some other time.",
+            "immediateConsequence": "The conversation remains friendly.",
+            "laterConsequence": "You guys can play later."
+        },
+        "intermediary": {
+            "text": "I accept the answer and look for another activity.",
+            "immediateConsequence": "You move on with your day.",
+            "laterConsequence": "The situation passes naturally."
+        },
+        "impulsive": {
+            "text": "I believe they don't like me anymore.",
+            "immediateConsequence": "You feel hurt.",
+            "laterConsequence": "You may misinterpret the situation."
+        }
+    }
+},
+{
+    "id": "C021",
+    "area": "friendship",
+    "category": "friendships",
+    "targetAgeGroup": "child",
+    "title": "Change of Plans",
+    "situationText": "You and your friend agreed on a game, but they want to do something else.",
+    "giphySearchTerm": "kids choosing game",
+    "difficultyLevel": 4,
+    "xpPointsValue": 80,
+    "executiveFunction": "cognitive_flexibility",
+    "socialSkill": "negotiation",
+    "learningObjective": "coping_with_change",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 4,
+    "choices": {
+      "ideal": {
+        "text": "I suggest playing a little bit of each activity.",
+        "immediateConsequence": "Both feel heard.",
+        "laterConsequence": "You find a balanced solution."
+      },
+      "intermediary": {
+        "text": "I accept their idea, even though I prefer mine.",
+        "immediateConsequence": "The game happens.",
+        "laterConsequence": "You would still have liked to express your opinion."
+      },
+      "impulsive": {
+        "text": "I decide not to play anymore.",
+        "immediateConsequence": "The activity ends before it begins.",
+        "laterConsequence": "You miss an opportunity for fun."
+      }
+    }
+  },
+  {
+    "id": "C022",
+    "area": "friendship",
+    "category": "group_interaction",
+    "targetAgeGroup": "child",
+    "title": "Another Idea Was Chosen",
+    "situationText": "Your group chose a different game than the one you suggested.",
+    "giphySearchTerm": "group decision kids",
+    "difficultyLevel": 3,
+    "xpPointsValue": 75,
+    "executiveFunction": "cognitive_flexibility",
+    "socialSkill": "cooperation",
+    "learningObjective": "group_participation",
+    "sensoryChallenge": false,
+    "emotionalDemand": 3,
+    "uncertaintyLevel": 3,
+    "choices": {
+      "ideal": {
+        "text": "I participate in the group's choice and observe how the game will be.",
+        "immediateConsequence": "The group stays united.",
+        "laterConsequence": "You might end up liking the activity."
+      },
+      "intermediary": {
+        "text": "I participate, but I still prefer my idea.",
+        "immediateConsequence": "You follow along with the activity.",
+        "laterConsequence": "You still enjoy part of the experience."
+      },
+      "impulsive": {
+        "text": "I say the game is bad and leave the group.",
+        "immediateConsequence": "You distance yourself from your classmates.",
+        "laterConsequence": "You miss the opportunity to participate."
+      }
+    }
+  },
+  {
+    "id": "C023",
+    "area": "friendship",
+    "category": "waiting",
+    "targetAgeGroup": "child",
+    "title": "Waiting for a Friend",
+    "situationText": "Your friend took longer than expected to arrive.",
+    "giphySearchTerm": "waiting friend",
+    "difficultyLevel": 2,
+    "xpPointsValue": 60,
+    "executiveFunction": "inhibitory_control",
+    "socialSkill": "patience",
+    "learningObjective": "waiting",
+    "sensoryChallenge": false,
+    "emotionalDemand": 2,
+    "uncertaintyLevel": 3,
+    "choices": {
+      "ideal": {
+        "text": "I wait a little and try to understand what happened.",
+        "immediateConsequence": "You remain calm.",
+        "laterConsequence": "You discover there was a reason for the delay."
+      },
+      "intermediary": {
+        "text": "I feel annoyed, but I keep waiting.",
+        "immediateConsequence": "The wait seems longer.",
+        "laterConsequence": "The situation is resolved when they arrive."
+      },
+      "impulsive": {
+        "text": "I leave immediately without asking for the reason.",
+        "immediateConsequence": "You fail to meet.",
+        "laterConsequence": "A misunderstanding may arise."
+      }
+    }
+  },
+  {
+    "id": "C024",
+    "area": "friendship",
+    "category": "social_exploration",
+    "targetAgeGroup": "child",
+    "title": "A New Game",
+    "situationText": "Your classmates want to play something you have never tried.",
+    "giphySearchTerm": "kids new game",
+    "difficultyLevel": 3,
+    "xpPointsValue": 70,
+    "executiveFunction": "cognitive_flexibility",
+    "socialSkill": "social_initiation",
+    "learningObjective": "trying_new_experiences",
+    "sensoryChallenge": false,
+    "emotionalDemand": 3,
+    "uncertaintyLevel": 5,
+    "choices": {
+      "ideal": {
+        "text": "I ask them to explain the rules and try to participate.",
+        "immediateConsequence": "You understand the game better.",
+        "laterConsequence": "You discover a new activity."
+      },
+      "intermediary": {
+        "text": "I observe first before deciding to participate.",
+        "immediateConsequence": "You gain more information.",
+        "laterConsequence": "You can decide later with more confidence."
+      },
+      "impulsive": {
+        "text": "I say I don't want to because it's something unknown.",
+        "immediateConsequence": "You avoid the novelty.",
+        "laterConsequence": "You miss the opportunity to try something new."
+      }
+    }
+  },
+  {
+    "id": "C025",
+    "area": "play",
+    "category": "competition",
+    "targetAgeGroup": "child",
+    "title": "I Lost the Match",
+    "situationText": "You were very excited to win the game, but ended up losing.",
+    "giphySearchTerm": "kids board game",
+    "difficultyLevel": 3,
+    "xpPointsValue": 75,
+    "executiveFunction": "emotional_regulation",
+    "socialSkill": "sportsmanship",
+    "learningObjective": "handling_loss",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 1,
+    "choices": {
+      "ideal": {
+        "text": "I congratulate whoever won and think about what I learned during the game.",
+        "immediateConsequence": "The atmosphere remains positive.",
+        "laterConsequence": "You continue to enjoy the activity."
+      },
+      "intermediary": {
+        "text": "I feel disappointed, but I continue participating.",
+        "immediateConsequence": "You need some time to accept the result.",
+        "laterConsequence": "The frustration diminishes."
+      },
+      "impulsive": {
+        "text": "I say the game was unfair because I lost.",
+        "immediateConsequence": "Others become uncomfortable.",
+        "laterConsequence": "The fun decreases for everyone."
+      }
+    }
+  },
+  {
+    "id": "C026",
+    "area": "play",
+    "category": "rules",
+    "targetAgeGroup": "child",
+    "title": "New Rule",
+    "situationText": "Before the match started, the group decided to use a different rule than usual.",
+    "giphySearchTerm": "kids game rules",
+    "difficultyLevel": 4,
+    "xpPointsValue": 80,
+    "executiveFunction": "cognitive_flexibility",
+    "socialSkill": "adaptation",
+    "learningObjective": "accepting_change",
+    "sensoryChallenge": false,
+    "emotionalDemand": 3,
+    "uncertaintyLevel": 4,
+    "choices": {
+      "ideal": {
+        "text": "I ask them to explain the rule and try to play that way.",
+        "immediateConsequence": "You understand the dynamics better.",
+        "laterConsequence": "You may discover new ways to play."
+      },
+      "intermediary": {
+        "text": "I accept the rule, but I still prefer the old one.",
+        "immediateConsequence": "You participate normally.",
+        "laterConsequence": "You manage to follow the game."
+      },
+      "impulsive": {
+        "text": "I refuse to play because I don't like the change.",
+        "immediateConsequence": "You are left out of the activity.",
+        "laterConsequence": "You miss an interaction opportunity."
+      }
+    }
+  },
+  {
+    "id": "C027",
+    "area": "play",
+    "category": "competition",
+    "targetAgeGroup": "child",
+    "title": "Picked Last",
+    "situationText": "During team formation, you were picked last.",
+    "giphySearchTerm": "kids sports team",
+    "difficultyLevel": 4,
+    "xpPointsValue": 85,
+    "executiveFunction": "emotional_regulation",
+    "socialSkill": "self_awareness",
+    "learningObjective": "handling_rejection",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 2,
+    "choices": {
+      "ideal": {
+        "text": "I join the team and try to do my best.",
+        "immediateConsequence": "You participate in the activity.",
+        "laterConsequence": "You discover that you can contribute to the group."
+      },
+      "intermediary": {
+        "text": "I feel upset, but I keep playing.",
+        "immediateConsequence": "The emotion remains for some time.",
+        "laterConsequence": "You still enjoy part of the activity."
+      },
+      "impulsive": {
+        "text": "I decide not to participate anymore.",
+        "immediateConsequence": "You become isolated.",
+        "laterConsequence": "You miss the opportunity to play."
+      }
+    }
+  },
+  {
+    "id": "C028",
+    "area": "play",
+    "category": "social_play",
+    "targetAgeGroup": "child",
+    "title": "On Another Team",
+    "situationText": "You were put on a different team than your friends.",
+    "giphySearchTerm": "sports teams kids",
+    "difficultyLevel": 3,
+    "xpPointsValue": 70,
+    "executiveFunction": "cognitive_flexibility",
+    "socialSkill": "cooperation",
+    "learningObjective": "meeting_new_people",
+    "sensoryChallenge": false,
+    "emotionalDemand": 3,
+    "uncertaintyLevel": 3,
+    "choices": {
+      "ideal": {
+        "text": "I get to know the classmates on my new team and participate in the game.",
+        "immediateConsequence": "You create new interactions.",
+        "laterConsequence": "You can make new friendships."
+      },
+      "intermediary": {
+        "text": "I play normally, but I miss my friends.",
+        "immediateConsequence": "You continue participating.",
+        "laterConsequence": "You manage to enjoy the activity."
+      },
+      "impulsive": {
+        "text": "I ask to switch teams or I don't play.",
+        "immediateConsequence": "Organization becomes more difficult.",
+        "laterConsequence": "You miss part of the experience."
+      }
+    }
+  },
+  {
+    "id": "C029",
+    "area": "play",
+    "category": "routine_change",
+    "targetAgeGroup": "child",
+    "title": "Interrupted Game",
+    "situationText": "The game was fun, but it had to end earlier than expected.",
+    "giphySearchTerm": "game over kids",
+    "difficultyLevel": 3,
+    "xpPointsValue": 75,
+    "executiveFunction": "cognitive_flexibility",
+    "socialSkill": "adaptation",
+    "learningObjective": "coping_with_change",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 4,
+    "choices": {
+      "ideal": {
+        "text": "I ask when we can continue the game.",
+        "immediateConsequence": "You have a new expectation.",
+        "laterConsequence": "The interruption becomes easier to accept."
+      },
+      "intermediary": {
+        "text": "I feel disappointed, but I accept the ending.",
+        "immediateConsequence": "You feel temporary frustration.",
+        "laterConsequence": "You manage to move on to the next activity."
+      },
+      "impulsive": {
+        "text": "I insist that no one should stop now.",
+        "immediateConsequence": "A conflict arises with the group.",
+        "laterConsequence": "The situation becomes more difficult."
+      }
+    }
+  },
+  {
+    "id": "C030",
+    "area": "play",
+    "category": "waiting",
+    "targetAgeGroup": "child",
+    "title": "Occupied Toy",
+    "situationText": "You want to use a very popular toy, but another child is using it.",
+    "giphySearchTerm": "playground kids",
+    "difficultyLevel": 2,
+    "xpPointsValue": 60,
+    "executiveFunction": "inhibitory_control",
+    "socialSkill": "patience",
+    "learningObjective": "waiting_turn",
+    "sensoryChallenge": false,
+    "emotionalDemand": 2,
+    "uncertaintyLevel": 2,
+    "choices": {
+      "ideal": {
+        "text": "I wait my turn or look for another activity in the meantime.",
+        "immediateConsequence": "The situation remains calm.",
+        "laterConsequence": "You will have the opportunity to play later."
+      },
+      "intermediary": {
+        "text": "I ask how much time is left.",
+        "immediateConsequence": "You receive an estimate.",
+        "laterConsequence": "The wait becomes more predictable."
+      },
+      "impulsive": {
+        "text": "I demand that the child leave immediately.",
+        "immediateConsequence": "A conflict may arise.",
+        "laterConsequence": "The playtime becomes unpleasant."
+      }
+    }
+},  {       
+    "id": "C031",
+    "area": "play",
+    "category": "waiting",
+    "targetAgeGroup": "child",
+    "title": "Long Line",
+    "situationText": "There are many children waiting for the same activity.",
+    "giphySearchTerm": "kids waiting line",
+    "difficultyLevel": 2,
+    "xpPointsValue": 60,
+    "executiveFunction": "inhibitory_control",
+    "socialSkill": "patience",
+    "learningObjective": "waiting",
+    "sensoryChallenge": false,
+    "emotionalDemand": 2,
+    "uncertaintyLevel": 2,
+    "choices": {
+        "ideal": {
+            "text": "I wait my turn or temporarily choose another activity.",
+            "immediateConsequence": "You remain calm.",
+            "laterConsequence": "The experience remains pleasant."
+        },
+        "intermediary": {
+            "text": "I wait, but I feel impatient.",
+            "immediateConsequence": "The wait seems long.",
+            "laterConsequence": "You still manage to participate."
+        },
+        "impulsive": {
+            "text": "I try to cut in front of the other children.",
+            "immediateConsequence": "The other people get annoyed.",
+            "laterConsequence": "A conflict may arise."
+        }
+    }
+},
+{
+    "id": "C032",
+    "area": "play",
+    "category": "conflict",
+    "targetAgeGroup": "child",
+    "title": "That Wasn't Fair",
+    "situationText": "During the game, you notice that a classmate did not follow the agreed-upon rules.",
+    "giphySearchTerm": "kids board game",
+    "difficultyLevel": 5,
+    "xpPointsValue": 95,
+    "executiveFunction": "conflict_management",
+    "socialSkill": "assertive_communication",
+    "learningObjective": "resolving_conflict",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 4,
+    "choices": {
+        "ideal": {
+            "text": "I calmly talk about what happened and try to clarify the rules.",
+            "immediateConsequence": "The group is able to discuss the situation.",
+            "laterConsequence": "The game is more likely to continue."
+        },
+        "intermediary": {
+            "text": "I keep playing, even though I think it's unfair.",
+            "immediateConsequence": "You avoid conflict.",
+            "laterConsequence": "You might remain bothered by what happened."
+        },
+        "impulsive": {
+            "text": "I accuse the classmate aggressively and abandon the game.",
+            "immediateConsequence": "The conflict escalates.",
+            "laterConsequence": "The activity may end for everyone."
+        }
+    }
+},
+{
+    "id": "C033",
+    "area": "self_regulation",
+    "category": "emotional_regulation",
+    "targetAgeGroup": "child",
+    "title": "I Made a Mistake",
+    "situationText": "You answered a question in class and realized that your answer was wrong.",
+    "giphySearchTerm": "student classroom",
+    "difficultyLevel": 4,
+    "xpPointsValue": 85,
+    "executiveFunction": "emotional_regulation",
+    "socialSkill": "self_awareness",
+    "learningObjective": "accepting_mistakes",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 2,
+    "choices": {
+        "ideal": {
+            "text": "I accept the mistake and pay attention to learn the correct answer.",
+            "immediateConsequence": "The situation passes quickly.",
+            "laterConsequence": "You learn something new."
+        },
+        "intermediary": {
+            "text": "I feel embarrassed, but I continue following the class.",
+            "immediateConsequence": "The discomfort lingers for some time.",
+            "laterConsequence": "The emotion fades naturally."
+        },
+        "impulsive": {
+            "text": "I decide not to participate in class anymore that day.",
+            "immediateConsequence": "You distance yourself from the activity.",
+            "laterConsequence": "You miss learning opportunities."
+        }
+    }
+},
+{
+    "id": "C034",
+    "area": "self_regulation",
+    "category": "sensory_management",
+    "targetAgeGroup": "child",
+    "title": "Too Much Noise",
+    "situationText": "The environment is noisier than usual and it is bothering you.",
+    "giphySearchTerm": "noisy classroom",
+    "difficultyLevel": 4,
+    "xpPointsValue": 90,
+    "executiveFunction": "self_monitoring",
+    "socialSkill": "self_advocacy",
+    "learningObjective": "managing_discomfort",
+    "sensoryChallenge": true,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 3,
+    "choices": {
+        "ideal": {
+            "text": "I look for a strategy to calm down or ask an adult for help.",
+            "immediateConsequence": "The discomfort decreases.",
+            "laterConsequence": "You are able to continue participating."
+        },
+        "intermediary": {
+            "text": "I try to ignore the noise and continue the activity.",
+            "immediateConsequence": "You remain uncomfortable.",
+            "laterConsequence": "You might manage to finish the task."
+        },
+        "impulsive": {
+            "text": "I start complaining or yelling for everyone to stop.",
+            "immediateConsequence": "The environment becomes more tense.",
+            "laterConsequence": "The problem may escalate."
+        }
+    }
+},
+{
+    "id": "C035",
+    "area": "self_regulation",
+    "category": "impulse_control",
+    "targetAgeGroup": "child",
+    "title": "It's Not My Turn Yet",
+    "situationText": "You want to participate in the activity, but you have to wait for other children to finish first.",
+    "giphySearchTerm": "waiting patiently",
+    "difficultyLevel": 2,
+    "xpPointsValue": 60,
+    "executiveFunction": "inhibitory_control",
+    "socialSkill": "patience",
+    "learningObjective": "waiting_turn",
+    "sensoryChallenge": false,
+    "emotionalDemand": 2,
+    "uncertaintyLevel": 2,
+    "choices": {
+        "ideal": {
+            "text": "I find something to do while I wait.",
+            "immediateConsequence": "The wait seems shorter.",
+            "laterConsequence": "You approach the activity feeling calmer."
+        },
+        "intermediary": {
+            "text": "I wait, but I get quite impatient.",
+            "immediateConsequence": "Time seems to pass slowly.",
+            "laterConsequence": "You still manage to participate."
+        },
+        "impulsive": {
+            "text": "I try to interrupt those who are participating.",
+            "immediateConsequence": "The others get annoyed.",
+            "laterConsequence": "A conflict may arise."
+        }
+    }
+},
+{
+    "id": "C036",
+    "area": "self_regulation",
+    "category": "frustration_tolerance",
+    "targetAgeGroup": "child",
+    "title": "Different Plan",
+    "situationText": "You had an idea for an activity, but it didn't work out as you imagined.",
+    "giphySearchTerm": "problem solving kids",
+    "difficultyLevel": 4,
+    "xpPointsValue": 85,
+    "executiveFunction": "cognitive_flexibility",
+    "socialSkill": "problem_solving",
+    "learningObjective": "adjusting_expectations",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 4,
+    "choices": {
+        "ideal": {
+            "text": "I think of another way to solve the problem.",
+            "immediateConsequence": "You find new possibilities.",
+            "laterConsequence": "You learn to adapt."
+        },
+        "intermediary": {
+            "text": "I feel frustrated, but I keep trying.",
+            "immediateConsequence": "The challenge seems harder.",
+            "laterConsequence": "There is still a chance for success."
+        },
+        "impulsive": {
+            "text": "I immediately give up on the activity.",
+            "immediateConsequence": "The problem remains.",
+            "laterConsequence": "You miss a learning opportunity."
+        }
+    }
+},
+{
+    "id": "C037",
+    "area": "self_regulation",
+    "category": "feedback",
+    "targetAgeGroup": "child",
+    "title": "A Suggestion for Improvement",
+    "situationText": "An adult explained how you could improve something you did.",
+    "giphySearchTerm": "teacher helping student",
+    "difficultyLevel": 4,
+    "xpPointsValue": 90,
+    "executiveFunction": "emotional_regulation",
+    "socialSkill": "accepting_feedback",
+    "learningObjective": "growth_mindset",
+    "sensoryChallenge": false,
+    "emotionalDemand": 4,
+    "uncertaintyLevel": 2,
+    "choices": {
+        "ideal": {
+            "text": "I listen to the guidance and think about what I can learn.",
+            "immediateConsequence": "You understand the suggestion better.",
+            "laterConsequence": "Your performance may improve."
+        },
+        "intermediary": {
+            "text": "I feel bothered, but I agree to listen.",
+            "immediateConsequence": "The criticism still bothers you.",
+            "laterConsequence": "You utilize part of the guidance."
+        },
+        "impulsive": {
+            "text": "I interpret the correction as a personal insult.",
+            "immediateConsequence": "You become more defensive.",
+            "laterConsequence": "You lose an opportunity for growth."
+        }
+    }
+},
+{
+    "id": "C038",
+    "area": "self_regulation",
+    "category": "unexpected_change",
+    "targetAgeGroup": "child",
+    "title": "Everything Changed",
+    "situationText": "A highly anticipated activity had to be changed at the last minute.",
+    "giphySearchTerm": "surprised kids",
+    "difficultyLevel": 5,
+    "xpPointsValue": 95,
+    "executiveFunction": "cognitive_flexibility",
+    "socialSkill": "adaptation",
+    "learningObjective": "coping_with_change",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 5,
+    "choices": {
+        "ideal": {
+            "text": "I ask what the new available options are.",
+            "immediateConsequence": "You understand the situation better.",
+            "laterConsequence": "You manage to reorganize."
+        },
+        "intermediary": {
+            "text": "I am quite disappointed, but I go along with the new plan.",
+            "immediateConsequence": "The frustration lingers for some time.",
+            "laterConsequence": "You are able to participate in the activity."
+        },
+        "impulsive": {
+            "text": "I decide that nothing else is worth it that day.",
+            "immediateConsequence": "Your mood worsens.",
+            "laterConsequence": "You enjoy the available opportunities less."
+        }
+    }
+},
+{
+    "id": "C039",
+    "area": "self_regulation",
+    "category": "social_emotions",
+    "targetAgeGroup": "child",
+    "title": "I Was Left Out",
+    "situationText": "You find out that some classmates did an activity together and you didn't participate.",
+    "giphySearchTerm": "sad child thinking",
+    "difficultyLevel": 5,
+    "xpPointsValue": 100,
+    "executiveFunction": "perspective_shifting",
+    "socialSkill": "perspective_taking",
+    "learningObjective": "avoiding_assumptions",
+    "sensoryChallenge": false,
+    "emotionalDemand": 5,
+    "uncertaintyLevel": 5,
+    "choices": {
+        "ideal": {
+            "text": "I try to better understand the situation before drawing conclusions.",
+            "immediateConsequence": "You gather more information.",
+            "laterConsequence": "You might discover explanations you hadn't imagined."
+        },
+        "intermediary": {
+            "text": "I feel sad, but I wait before talking about it.",
+            "immediateConsequence": "You process your feelings.",
+            "laterConsequence": "You are able to reflect more calmly."
+        },
+        "impulsive": {
+            "text": "I immediately conclude that no one likes me.",
+            "immediateConsequence": "You suffer more emotionally.",
+            "laterConsequence": "You may misinterpret the situation."
+        }
+    }
+},
+{
+    "id": "C040",
+    "area": "self_regulation",
+    "category": "success_management",
+    "targetAgeGroup": "child",
+    "title": "I Did It!",
+    "situationText": "You achieved a very good result in an important activity.",
+    "giphySearchTerm": "happy successful kid",
+    "difficultyLevel": 3,
+    "xpPointsValue": 75,
+    "executiveFunction": "self_reflection",
+    "socialSkill": "humility",
+    "learningObjective": "balanced_self_confidence",
+    "sensoryChallenge": false,
+    "emotionalDemand": 3,
+    "uncertaintyLevel": 1,
+    "choices": {
+        "ideal": {
+            "text": "I celebrate my achievement and acknowledge the effort I put in.",
+            "immediateConsequence": "You feel satisfied.",
+            "laterConsequence": "Your confidence grows in a healthy way."
+        },
+        "intermediary": {
+            "text": "I am very happy and want to tell everyone immediately.",
+            "immediateConsequence": "You share your joy.",
+            "laterConsequence": "You remain proud of the achievement."
+        },
+        "impulsive": {
+            "text": "I start belittling classmates who had a harder time.",
+            "immediateConsequence": "Some people feel upset.",
+            "laterConsequence": "Your success may generate unnecessary conflicts."
+        }
+
+    }
+} 
 ]
+    
