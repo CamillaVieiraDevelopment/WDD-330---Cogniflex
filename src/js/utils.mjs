@@ -1,24 +1,19 @@
-import { renderHeaderFooter } from "./utils.mjs";
+export async function renderHeaderFooter() {
+    try {
+        const headerContainer = document.getElementById("main-header");
+        const footerContainer = document.getElementById("main-footer");
 
-// Removido o DOMContentLoaded: Em type="module", o DOM já está pronto quando este script roda.
-async function init() {
-    await renderHeaderFooter();
-    console.log("Componentes core do Cogniflex carregados com sucesso.");
-    setupProfileSelection();
-}
+        if (headerContainer) {
+            const headerResponse = await fetch("/partials/header.html");
+            headerContainer.innerHTML = await headerResponse.text();
+        }
 
-// Inicia a execução imediatamente
-init();
+        if (footerContainer) {
+            const footerResponse = await fetch("/partials/footer.html");
+            footerContainer.innerHTML = await footerResponse.text();
+        }
 
-function setupProfileSelection() {
-    const profileButtons = document.querySelectorAll('.profile-card');
-    if (profileButtons.length === 0) return;
-
-    profileButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            const selectedProfile = event.currentTarget.getAttribute('data-profile');
-            localStorage.setItem('cogniflex_targetAgeGroup', selectedProfile);
-            window.location.href = 'simulation.html';
-        });
-    });
+    } catch (error) {
+        console.error("Erro ao carregar header/footer:", error);
+    }
 }
