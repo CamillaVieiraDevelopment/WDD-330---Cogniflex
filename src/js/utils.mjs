@@ -1,54 +1,24 @@
-// src/js/utils.mjs
+import { renderHeaderFooter } from "./utils.mjs";
 
-export async function renderHeaderFooter() {
-    try {
-        
-        const headerResponse = await fetch('/partials/header.html');
-        const footerResponse = await fetch('/partials/footer.html');
-
-        if (!headerResponse.ok || !footerResponse.ok) {
-            throw new Error('Erro ao carregar os componentes de cabeçalho ou rodapé.');
-        }
-
-        const headerHtml = await headerResponse.text();
-        const footerHtml = await footerResponse.text();
-
-        
-        const headerContainer = document.getElementById('main-header');
-        const footerContainer = document.getElementById('main-footer');
-
-        if (headerContainer) {
-            headerContainer.innerHTML = headerHtml;
-            
-            setupMenuEvents();
-        }
-        if (footerContainer) {
-            footerContainer.innerHTML = footerHtml;
-        }
-
-    } catch (error) {
-        console.error('Falha na renderização modular:', error);
-    }
+// Removido o DOMContentLoaded: Em type="module", o DOM já está pronto quando este script roda.
+async function init() {
+    await renderHeaderFooter();
+    console.log("Componentes core do Cogniflex carregados com sucesso.");
+    setupProfileSelection();
 }
 
-function setupMenuEvents() {
-    const menuBtn = document.querySelector('.menu-btn');
-    const closeBtn = document.getElementById('close-menu-btn');
-    const sideMenu = document.getElementById('side-menu');
-    const overlay = document.getElementById('menu-overlay');
+// Inicia a execução imediatamente
+init();
 
-    if (menuBtn && sideMenu && overlay) {
-        menuBtn.addEventListener('click', () => {
-            sideMenu.classList.add('open');
-            overlay.classList.add('show');
+function setupProfileSelection() {
+    const profileButtons = document.querySelectorAll('.profile-card');
+    if (profileButtons.length === 0) return;
+
+    profileButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const selectedProfile = event.currentTarget.getAttribute('data-profile');
+            localStorage.setItem('cogniflex_targetAgeGroup', selectedProfile);
+            window.location.href = 'simulation.html';
         });
-
-        const closeMenu = () => {
-            sideMenu.classList.remove('open');
-            overlay.classList.remove('show');
-        };
-
-        if (closeBtn) closeBtn.addEventListener('click', closeMenu);
-        overlay.addEventListener('click', closeMenu);
-    }
+    });
 }

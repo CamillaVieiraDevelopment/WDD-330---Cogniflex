@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cogniflex - Dashboard</title>
-    <link rel="stylesheet" href="src/css/style.css">
-    <script type="module" src="src/js/main.js"></script>
+    <!-- Usando barra na raiz para o Vite resolver o caminho -->
+    <link rel="stylesheet" href="/src/css/style.css">
+    <script type="module" src="/src/js/main.js"></script>
 
 </head>
 
@@ -15,6 +16,7 @@
     <div id="main-header"></div>
 
     <main class="container">
+        <!-- Seu conteúdo HTML foi mantido intacto para não poluir o código -->
         <div class="dashboard-welcome">
             <div>
                 <h1 id="user-greeting">Hello, Explorer!</h1>
@@ -24,22 +26,22 @@
 
         <section class="metrics-row">
             <div class="metric-card">
-                <span class="metric-title">🎰 Stories Explored</span>
+                <span class="metric-title">📚 Stories Explored</span>
                 <span class="metric-value" id="stat-stories">0</span>
                 <span class="metric-sub">Total scenarios completed</span>
             </div>
             <div class="metric-card">
-                <span class="metric-title">🎯 Flexibility XP</span>
+                <span class="metric-title">🧠 Flexibility XP</span>
                 <span class="metric-value" id="stat-xp">0</span>
                 <span class="metric-sub">Experience points earned</span>
             </div>
             <div class="metric-card">
-                <span class="metric-title">🥇 Medals Earned</span>
+                <span class="metric-title">🏅 Medals Earned</span>
                 <span class="metric-value" id="stat-medals">0</span>
                 <span class="metric-sub">1 medal every 50 XP</span>
             </div>
             <div class="metric-card">
-                <span class="metric-title">🧠 Top Skill</span>
+                <span class="metric-title">🎯 Top Skill</span>
                 <span class="metric-value" id="stat-top-skill"
                     style="font-size: 20px; line-height: 1.6; margin-top: 15px;">-</span>
                 <span class="metric-sub">Most trained executive function</span>
@@ -82,18 +84,16 @@
                 </table>
             </div>
         </section>
-
     </main>
 
     <div id="main-footer"></div>
 
     <script type="module">
-        import DashboardManager from './src/js/DashboardManager.mjs';
+        import DashboardManager from '/src/js/DashboardManager.mjs';
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const dashboard = new DashboardManager();
-            dashboard.init();
-        });
+        // Removido o event listener do DOMContentLoaded
+        const dashboard = new DashboardManager();
+        dashboard.init();
     </script>
 </body>
 
