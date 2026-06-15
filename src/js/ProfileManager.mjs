@@ -5,11 +5,59 @@ export default class ProfileManager {
     }
 
     loadProfile() {
-        const data = localStorage.getItem(this.storageKey);
 
-        if (data) return JSON.parse(data);
+        const data =
+            localStorage.getItem(
+                this.storageKey
+            );
+
+        if (data) {
+
+            const profile =
+                JSON.parse(data);
+
+            profile.completedScenarios =
+                profile.completedScenarios || [];
+
+            profile.flexibilityPoints =
+                profile.flexibilityPoints || 0;
+
+            profile.medalCount =
+                profile.medalCount || 0;
+
+            profile.statistics =
+                profile.statistics || {
+
+                    idealChoices: 0,
+                    intermediaryChoices: 0,
+                    impulsiveChoices: 0
+                };
+
+            profile.executiveFunctions =
+                profile.executiveFunctions || {};
+
+            profile.areas =
+                profile.areas || {};
+
+            profile.metrics =
+                profile.metrics || {
+
+                    cognitiveFlexibility: 0,
+                    socialInterpretation: 0,
+                    empathy: 0,
+                    frustrationTolerance: 0,
+                    conflictResolution: 0,
+                    decisionMaking: 0
+                };
+
+            profile.achievements =
+                profile.achievements || [];
+
+            return profile;
+        }
 
         return {
+
             username: "Explorer",
 
             medalCount: 0,
@@ -21,6 +69,7 @@ export default class ProfileManager {
             flexibilityPoints: 0,
 
             statistics: {
+
                 idealChoices: 0,
                 intermediaryChoices: 0,
                 impulsiveChoices: 0
@@ -28,12 +77,20 @@ export default class ProfileManager {
 
             executiveFunctions: {},
 
-            socialSkills: {},
-
             areas: {},
 
+            metrics: {
+
+                cognitiveFlexibility: 0,
+                socialInterpretation: 0,
+                empathy: 0,
+                frustrationTolerance: 0,
+                conflictResolution: 0,
+                decisionMaking: 0
+            },
+
             achievements: []
-        };
+        };        
     }
 
     saveProfile() {

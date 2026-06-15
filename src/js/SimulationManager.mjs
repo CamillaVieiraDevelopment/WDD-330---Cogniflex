@@ -13,31 +13,89 @@ export default class SimulationManager {
     console.log(`Initializing simulation for profile: ${this.userProfile}`);
     await this.loadScenarios();
   }
-
   async loadScenarios() {
     try {
-      // Dynamically fetches the correct file based on the user profile (child, teen, or adult)
-      const response = await fetch(`/data/${this.userProfile}.json`);
+
+      const response =
+        await fetch(
+          `/data/${this.userProfile}.json`
+        );
 
       if (!response.ok) {
-        throw new Error(`Error loading the ${this.userProfile} scenarios file.`);
+        throw new Error(
+          `Error loading the ${this.userProfile} scenarios file.`
+        );
       }
 
-      this.scenarios = await response.json();
-      console.log(`${this.scenarios.length} scenarios loaded successfully for ${this.userProfile}.`);
+      this.scenarios =
+        await response.json();
+
+      this.trainingFocus =
+        localStorage.getItem(
+          'cogniflex_training_focus'
+        ) || 'all';
+
+      console.log(
+        "Training focus:",
+        this.trainingFocus
+      );
+
+      // ==========================================
+      // FILTER BY EXECUTIVE FUNCTION
+      // ==========================================
+
+      if (
+        this.trainingFocus !== 'all'
+      ) {
+
+        this.scenarios =
+          this.scenarios.filter(
+            scenario =>
+              scenario.executiveFunction ===
+              this.trainingFocus
+          );
+
+        console.log(
+          "Filtered scenarios:",
+          this.scenarios.length
+        );
+      }
+
+      console.log(
+        `${this.scenarios.length} scenarios loaded successfully for ${this.userProfile}.`
+      );
 
       if (this.scenarios.length > 0) {
-        // Select a random scenario to start
-        const randomIndex = Math.floor(Math.random() * this.scenarios.length);
-        this.renderScenario(this.scenarios[randomIndex]);
+
+        const randomIndex =
+          Math.floor(
+            Math.random() *
+            this.scenarios.length
+          );
+
+        this.renderScenario(
+          this.scenarios[randomIndex]
+        );
+
       } else {
-        this.showError("No scenarios found for this profile.");
+
+        this.showError(
+          "No scenarios found for the selected training focus."
+        );
       }
 
     } catch (error) {
-      console.error("Fetch error: ", error);
-      this.showError("Failed to connect to the Cogniflex database.");
+
+      console.error(
+        "Fetch error:",
+        error
+      );
+
+      this.showError(
+        "Failed to connect to the Cogniflex database."
+      );
     }
+
   }
 
   renderScenario(scenario) {
@@ -178,4 +236,7 @@ export default class SimulationManager {
     document.getElementById('scenario-title').textContent = "Oops! Something went wrong.";
     document.getElementById('scenario-text').textContent = message;
   }
+
+
 }
+
