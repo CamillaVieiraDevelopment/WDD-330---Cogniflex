@@ -10,10 +10,25 @@ export default class ProfileManager {
         
         return {
             username: "Explorer",
+
             medalCount: 0,
+
             completedScenarios: [],
+
             accessibilityMode: false,
-            flexibilityPoints: 0
+
+            flexibilityPoints: 0,
+
+            metrics: {
+                cognitiveFlexibility: 0,
+                socialInterpretation: 0,
+                empathy: 0,
+                frustrationTolerance: 0,
+                conflictResolution: 0,
+                decisionMaking: 0
+            },
+
+            achievements: []
         };
     }
 

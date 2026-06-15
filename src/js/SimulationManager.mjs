@@ -88,9 +88,33 @@ export default class SimulationManager {
 
     // 1. Save Progress
     const profile = new ProfileManager();
-    const xpGained = this.currentScenario.xpPointsValue || 50;
-    profile.updateProgress(this.currentScenario.id, true, xpGained);
 
+    let xpGained = 0;
+
+    switch (choiceType) {
+
+      case "ideal":
+        xpGained = this.currentScenario.xpPointsValue || 50;
+        break;
+
+      case "intermediary":
+        xpGained = Math.floor(
+          (this.currentScenario.xpPointsValue || 50) * 0.5
+        );
+        break;
+
+      case "impulsive":
+        xpGained = 0;
+        break;
+    }
+
+    const isFlexibleChoice = choiceType === "ideal";
+
+    profile.updateProgress(
+      this.currentScenario.id,
+      isFlexibleChoice,
+      xpGained
+    );
     // 2. Hide Options
     document.getElementById('options-container').style.display = 'none';
     document.getElementById('question-prompt').style.display = 'none';
