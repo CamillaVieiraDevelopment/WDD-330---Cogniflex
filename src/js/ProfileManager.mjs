@@ -98,17 +98,28 @@ export default class ProfileManager {
     }
 
     // Atualiza propriedades específicas e persiste de forma reativa
-    updateProgress(scenarioId, isFlexibleChoice, pointsGained) {
+    updateProgress(
+        scenarioId,
+        isFlexibleChoice,
+        pointsGained
+    ) {
 
-        if (!this.profileData.completedScenarios.includes(scenarioId)) {
-            this.profileData.completedScenarios.push(scenarioId);
+        if (
+            !this.profileData.completedScenarios.includes(
+                scenarioId
+            )
+        ) {
+
+            this.profileData.completedScenarios.push(
+                scenarioId
+            );
         }
 
-        this.profileData.flexibilityPoints += pointsGained;
-
-        this.checkAchievements();
+        this.profileData.flexibilityPoints +=
+            pointsGained;
 
         this.saveProfile();
+    
     }
 
     recordChoice(choiceType, scenario) {
