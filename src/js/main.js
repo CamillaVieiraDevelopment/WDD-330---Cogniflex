@@ -16,9 +16,30 @@ function setupProfileSelection() {
 
   profileButtons.forEach(button => {
     button.addEventListener('click', (event) => {
-      const selectedProfile = event.currentTarget.getAttribute('data-profile');
-      localStorage.setItem('cogniflex_targetAgeGroup', selectedProfile);
-      window.location.href = 'simulation.html';
+
+      const selectedProfile =
+        event.currentTarget.getAttribute(
+          'data-profile'
+        );
+
+      const selectedTraining =
+        document.getElementById(
+          'training-focus'
+        ).value;
+
+      localStorage.setItem(
+        'cogniflex_targetAgeGroup',
+        selectedProfile
+      );
+
+      localStorage.setItem(
+        'cogniflex_training_focus',
+        selectedTraining
+      );
+
+      window.location.href =
+        'simulation.html';
+
     });
   });
 }
