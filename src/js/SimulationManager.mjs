@@ -115,6 +115,11 @@ export default class SimulationManager {
       isFlexibleChoice,
       xpGained
     );
+
+    profile.recordChoice(
+      choiceType,
+      this.currentScenario
+    );
     // 2. Hide Options
     document.getElementById('options-container').style.display = 'none';
     document.getElementById('question-prompt').style.display = 'none';

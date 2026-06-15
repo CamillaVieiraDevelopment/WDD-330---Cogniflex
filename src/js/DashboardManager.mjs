@@ -16,6 +16,7 @@ export default class DashboardManager {
         this.renderExecutiveFunctions();
         this.renderLifeAreasTable();
         this.renderMedals();
+        this.renderInsights();
     }
 
     // Fetches the JSON database to cross-reference with the saved IDs
@@ -45,6 +46,14 @@ export default class DashboardManager {
         document.getElementById('stat-stories').textContent = data.completedScenarios.length;
         document.getElementById('stat-xp').textContent = data.flexibilityPoints;
         document.getElementById('stat-medals').textContent = data.medalCount;
+
+        const profileStats =
+            this.calculateDecisionProfile();
+
+        document.getElementById(
+            'stat-flexibility-rate'
+        ).textContent =
+            `${profileStats.ideal}%`;
     }
 
     renderExecutiveFunctions() {
@@ -144,5 +153,96 @@ export default class DashboardManager {
             `;
             container.innerHTML += medalHtml;
         }
+    };
+    calculateDecisionProfile() {
+
+        const stats =
+            this.profile.profileData.statistics || {
+                idealChoices: 0,
+                intermediaryChoices: 0,
+                impulsiveChoices: 0
+            };
+
+        const total =
+            stats.idealChoices +
+            stats.intermediaryChoices +
+            stats.impulsiveChoices;
+
+        if (total === 0) {
+            return {
+                ideal: 0,
+                intermediary: 0,
+                impulsive: 0
+            };
+        }
+
+        return {
+            ideal: Math.round((stats.idealChoices / total) * 100),
+            intermediary: Math.round((stats.intermediaryChoices / total) * 100),
+            impulsive: Math.round((stats.impulsiveChoices / total) * 100)
+        };
     }
+
+
+    renderInsights() {
+
+
+            const container =
+                document.getElementById(
+                    'insights-container'
+                );
+
+            const stats =
+                this.calculateDecisionProfile();
+
+            let insights = [];
+
+            // Alta flexibilidade
+            if (stats.ideal >= 70) {
+                insights.push(
+                    "🟢 Demonstrated strong consideration of consequences before acting."
+                );
+            }
+
+            // Muitas respostas intermediárias
+            if (stats.intermediary >= 50) {
+                insights.push(
+                    "🟡 Frequently evaluated multiple alternatives before deciding."
+                );
+            }
+
+            // Muitas respostas impulsivas
+            if (stats.impulsive >= 30) {
+                insights.push(
+                    "🔴 Several decisions prioritized immediate reactions. Explore more scenarios to compare different outcomes."
+                );
+            }
+
+            // Perfil equilibrado
+            if (
+                stats.ideal < 70 &&
+                stats.intermediary < 50 &&
+                stats.impulsive < 30
+            ) {
+                insights.push(
+                    "⚪ Your decision patterns are currently balanced across different response styles."
+                );
+            }
+
+            // Sem histórico suficiente
+            if (
+                stats.ideal === 0 &&
+                stats.intermediary === 0 &&
+                stats.impulsive === 0
+            ) {
+                insights.push(
+                    "📚 Complete additional scenarios to generate personalized insights."
+                );
+            }
+
+            container.innerHTML =
+                insights
+                    .map(item => `<p>${item}</p>`)
+                    .join('');
+        }
 }
