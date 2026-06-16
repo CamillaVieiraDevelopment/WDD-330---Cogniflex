@@ -1,4 +1,3 @@
-// src/js/DashboardManager.mjs
 import ProfileManager from './ProfileManager.mjs';
 
 export default class DashboardManager {
@@ -17,6 +16,8 @@ export default class DashboardManager {
         this.renderLifeAreasTable();
         this.renderMedals();
         this.renderInsights();
+        this.renderDecisionProfileBars();
+        this.renderRadarChart();
     }
 
     // Fetches the JSON database to cross-reference with the saved IDs
@@ -47,13 +48,9 @@ export default class DashboardManager {
         document.getElementById('stat-xp').textContent = data.flexibilityPoints;
         document.getElementById('stat-medals').textContent = data.medalCount;
 
-        const profileStats =
-            this.calculateDecisionProfile();
+        const profileStats = this.calculateDecisionProfile();
 
-        document.getElementById(
-            'stat-flexibility-rate'
-        ).textContent =
-            `${profileStats.ideal}%`;
+        document.getElementById('stat-flexibility-rate').textContent = `${profileStats.ideal}%`;
     }
 
     renderExecutiveFunctions() {
@@ -78,8 +75,8 @@ export default class DashboardManager {
             }
 
             // Formatting the string (e.g., "cognitive_flexibility" -> "Cognitive Flexibility")
-            const formattedName = funcName.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase());
-            const percentage = Math.min((count / this.playedScenariosData.length) * 100, 100);
+            const formattedName = funcName.replaceAll('_', ' ').replace(/\b\w/g, l => l.toUpperCase());
+            const percentage = Math.round((count / this.playedScenariosData.length) * 100);
 
             const barHtml = `
                 <div style="margin-bottom: 12px;">
@@ -97,7 +94,7 @@ export default class DashboardManager {
 
         // Update Top Skill Card
         if (topSkill.name !== '-') {
-            const formattedTopSkill = topSkill.name.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase());
+            const formattedTopSkill = topSkill.name.replaceAll('_', ' ').replace(/\b\w/g, l => l.toUpperCase());
             document.getElementById('stat-top-skill').textContent = formattedTopSkill;
         }
     }
@@ -131,118 +128,4 @@ export default class DashboardManager {
             tbody.appendChild(tr);
         });
     }
-
-    renderMedals() {
-        const container = document.getElementById('medals-container');
-        const medalCount = this.profile.profileData.medalCount;
-
-        if (medalCount === 0) return;
-
-        container.innerHTML = ''; // Clear placeholder
-
-        const medalNames = ["🏆 Explorer", "🧠 Thinker", "⚖️ Balancer", "💙 Empathetic", "🌟 Master"];
-
-        for (let i = 0; i < medalCount; i++) {
-            // Cycle through medal names
-            const medalTitle = medalNames[i % medalNames.length];
-
-            const medalHtml = `
-                <div class="medal-item-placeholder" style="background: var(--bg-ideal); border: 1px solid var(--color-ideal); color: var(--color-ideal); font-weight: bold;">
-                    ${medalTitle}
-                </div>
-            `;
-            container.innerHTML += medalHtml;
-        }
-    };
-    calculateDecisionProfile() {
-
-        const stats =
-            this.profile.profileData.statistics || {
-                idealChoices: 0,
-                intermediaryChoices: 0,
-                impulsiveChoices: 0
-            };
-
-        const total =
-            stats.idealChoices +
-            stats.intermediaryChoices +
-            stats.impulsiveChoices;
-
-        if (total === 0) {
-            return {
-                ideal: 0,
-                intermediary: 0,
-                impulsive: 0
-            };
-        }
-
-        return {
-            ideal: Math.round((stats.idealChoices / total) * 100),
-            intermediary: Math.round((stats.intermediaryChoices / total) * 100),
-            impulsive: Math.round((stats.impulsiveChoices / total) * 100)
-        };
-    }
-
-
-    renderInsights() {
-
-
-            const container =
-                document.getElementById(
-                    'insights-container'
-                );
-
-            const stats =
-                this.calculateDecisionProfile();
-
-            let insights = [];
-
-            // Alta flexibilidade
-            if (stats.ideal >= 70) {
-                insights.push(
-                    "🟢 Demonstrated strong consideration of consequences before acting."
-                );
-            }
-
-            // Muitas respostas intermediárias
-            if (stats.intermediary >= 50) {
-                insights.push(
-                    "🟡 Frequently evaluated multiple alternatives before deciding."
-                );
-            }
-
-            // Muitas respostas impulsivas
-            if (stats.impulsive >= 30) {
-                insights.push(
-                    "🔴 Several decisions prioritized immediate reactions. Explore more scenarios to compare different outcomes."
-                );
-            }
-
-            // Perfil equilibrado
-            if (
-                stats.ideal < 70 &&
-                stats.intermediary < 50 &&
-                stats.impulsive < 30
-            ) {
-                insights.push(
-                    "⚪ Your decision patterns are currently balanced across different response styles."
-                );
-            }
-
-            // Sem histórico suficiente
-            if (
-                stats.ideal === 0 &&
-                stats.intermediary === 0 &&
-                stats.impulsive === 0
-            ) {
-                insights.push(
-                    "📚 Complete additional scenarios to generate personalized insights."
-                );
-            }
-
-            container.innerHTML =
-                insights
-                    .map(item => `<p>${item}</p>`)
-                    .join('');
-        }
 }

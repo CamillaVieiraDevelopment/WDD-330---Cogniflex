@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cogniflex - Dashboard</title>
-    <!-- Usando barra na raiz para o Vite resolver o caminho -->
-    <link rel="stylesheet" href="/css/style.css">
-    <script type="module" src="/js/main.js"></script>
 
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Preparação para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script type="module" src="/js/main.js"></script>
 </head>
 
 <body>
@@ -16,7 +19,7 @@
     <div id="main-header"></div>
 
     <main class="container">
-        <!-- Seu conteúdo HTML foi mantido intacto para não poluir o código -->
+
         <div class="dashboard-welcome">
             <div>
                 <h1 id="user-greeting">Hello, Explorer!</h1>
@@ -24,101 +27,268 @@
             </div>
         </div>
 
+        <!-- MÉTRICAS PRINCIPAIS -->
+
         <section class="metrics-row">
+
             <div class="metric-card">
-                <span class="metric-title">📚 Stories Explored</span>
-                <div class="metric-card">
-                    <span class="metric-title">🧩 Flexibility Rate</span>
-                
-                    <span class="metric-value" id="stat-flexibility-rate" style="font-size:28px;">
-                        0%
-                    </span>
-                
-                    <span class="metric-sub">
-                        Ideal decision percentage
-                    </span>
-                </div>
-                <span class="metric-value" id="stat-stories">0</span>
-                <span class="metric-sub">Total scenarios completed</span>
+                <span class="metric-title">
+                    📚 Stories Explored
+                </span>
+
+                <span class="metric-value"
+                    id="stat-stories">
+                    0
+                </span>
+
+                <span class="metric-sub">
+                    Total scenarios completed
+                </span>
             </div>
+
             <div class="metric-card">
-                <span class="metric-title">🧠 Flexibility XP</span>
-                <span class="metric-value" id="stat-xp">0</span>
-                <span class="metric-sub">Experience points earned</span>
+                <span class="metric-title">
+                    🧩 Flexibility Rate
+                </span>
+
+                <span class="metric-value"
+                    id="stat-flexibility-rate"
+                    style="font-size:28px;">
+                    0%
+                </span>
+
+                <span class="metric-sub">
+                    Ideal decision percentage
+                </span>
             </div>
+
             <div class="metric-card">
-                <span class="metric-title">🏅 Medals Earned</span>
-                <span class="metric-value" id="stat-medals">0</span>
-                <span class="metric-sub">1 medal every 50 XP</span>
+                <span class="metric-title">
+                    🧠 Flexibility XP
+                </span>
+
+                <span class="metric-value"
+                    id="stat-xp">
+                    0
+                </span>
+
+                <span class="metric-sub">
+                    Experience points earned
+                </span>
             </div>
+
             <div class="metric-card">
-                <span class="metric-title">🎯 Top Skill</span>
-                <span class="metric-value" id="stat-top-skill"
-                    style="font-size: 20px; line-height: 1.6; margin-top: 15px;">-</span>
-                <span class="metric-sub">Most trained executive function</span>
+                <span class="metric-title">
+                    🏅 Medals Earned
+                </span>
+
+                <span class="metric-value"
+                    id="stat-medals">
+                    0
+                </span>
+
+                <span class="metric-sub">
+                    Achievements unlocked
+                </span>
             </div>
+
+            <div class="metric-card">
+                <span class="metric-title">
+                    🎯 Top Skill
+                </span>
+
+                <span class="metric-value"
+                    id="stat-top-skill"
+                    style="
+                    font-size:20px;
+                    line-height:1.6;
+                    margin-top:15px;">
+                    -
+                </span>
+
+                <span class="metric-sub">
+                    Most trained executive function
+                </span>
+            </div>
+
         </section>
+
+        <!-- RADAR CHART -->
+
+        <section class="dashboard-bottom-grid"
+            style="grid-template-columns:1fr;">
+
+            <div class="chart-card">
+
+                <h3>
+                    Cognitive Skills Profile
+                </h3>
+
+                <canvas
+                    id="executive-radar-chart"
+                    height="120">
+                </canvas>
+
+                <p style="
+                    text-align:center;
+                    color:#777;
+                    margin-top:10px;
+                    font-size:14px;">
+
+                    Visual representation of your
+                    executive function development.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- BLOCOS ANALÍTICOS -->
 
         <section class="charts-grid">
-            <div class="chart-card">
-                <h3>Executive Functions Trained</h3>
-                <div id="executive-functions-container" style="margin-top: 15px;">
-                    <p style="color: #888; font-size: 14px;">Play scenarios to unlock data.</p>
-                </div>
-            </div>
 
             <div class="chart-card">
-                <h3>Your Medals</h3>
-                <div class="medals-grid" id="medals-container">
-                    <p style="color: #888; font-size: 14px; grid-column: span 2;">Earn 50 XP to unlock your first medal!
-                    </p>                    
-                </div>
-                <div class="chart-card">
-                    <h3>Personal Insights</h3>
-                
-                    <div id="insights-container">
-                
-                        <p>
-                            Play more scenarios to generate
-                            personalized insights.
-                        </p>
-                
-                    </div>
+
+                <h3>
+                    Executive Functions Trained
+                </h3>
+
+                <div
+                    id="executive-functions-container"
+                    style="margin-top:15px;">
+
+                    <p
+                        style="
+                        color:#888;
+                        font-size:14px;">
+
+                        Play scenarios to unlock data.
+
+                    </p>
+
                 </div>
 
             </div>
+
+            <div class="chart-card">
+
+                <h3>
+                    Your Medals
+                </h3>
+
+                <div
+                    class="medals-grid"
+                    id="medals-container">
+
+                    <p
+                        style="
+                        color:#888;
+                        font-size:14px;
+                        grid-column:span 2;">
+
+                        Earn achievements to unlock medals!
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="chart-card">
+
+                <h3>
+                    Personal Insights
+                </h3>
+
+                <div id="insights-container">
+
+                    <p>
+
+                        Complete additional scenarios
+                        to generate personalized insights.
+
+                    </p>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <section class="dashboard-bottom-grid" style="grid-template-columns: 1fr;">
+        <!-- HISTÓRICO -->
+
+        <section class="dashboard-bottom-grid"
+            style="grid-template-columns:1fr;">
+
             <div class="chart-card">
-                <h3>History by Life Area</h3>
+
+                <h3>
+                    History by Life Area
+                </h3>
+
                 <table class="data-table">
+
                     <thead>
+
                         <tr>
-                            <th>Life Area</th>
-                            <th>Stories Played</th>
-                            <th>Total XP Earned</th>
+
+                            <th>
+                                Life Area
+                            </th>
+
+                            <th>
+                                Stories Played
+                            </th>
+
+                            <th>
+                                Total XP Earned
+                            </th>
+
                         </tr>
+
                     </thead>
+
                     <tbody id="dashboard-table-body">
+
                         <tr>
-                            <td colspan="3" style="text-align: center; color: #888;">No data available yet.</td>
+
+                            <td
+                                colspan="3"
+                                style="
+                                text-align:center;
+                                color:#888;">
+
+                                No data available yet.
+
+                            </td>
+
                         </tr>
+
                     </tbody>
+
                 </table>
+
             </div>
+
         </section>
+
     </main>
 
     <div id="main-footer"></div>
 
     <script type="module">
-        import DashboardManager from '/js/DashboardManager.mjs';
 
-        // Removido o event listener do DOMContentLoaded
-        const dashboard = new DashboardManager();
+        import DashboardManager
+            from '/js/DashboardManager.mjs';
+
+        const dashboard =
+            new DashboardManager();
+
         dashboard.init();
+
     </script>
+
 </body>
 
 </html>
