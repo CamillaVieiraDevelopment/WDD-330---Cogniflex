@@ -790,3 +790,52 @@ body {
     font-size: 16px;
     cursor: pointer;
 }
+
+.reflection-advice {
+
+    margin-top: 15px;
+
+    padding: 18px;
+
+    background: #ffffff;
+
+    border-left: 5px solid #6c63ff;
+
+    border-radius: 8px;
+
+    color: #333333;
+
+    font-size: 1rem;
+
+    line-height: 1.5;
+
+    text-align: left;
+}
+
+.reflection-advice strong {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #4b3bbd;
+}
+
+.reflection-advice {
+
+    display: none;
+
+    margin-top: 15px;
+
+    padding: 18px;
+
+    background: white;
+
+    border-left: 5px solid #6c63ff;
+
+    border-radius: 8px;
+
+    color: #333;
+
+    line-height: 1.5;
+}

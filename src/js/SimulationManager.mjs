@@ -203,40 +203,124 @@ export default class SimulationManager {
     feedbackContainer.style.display = 'block';
 
     // 5. Fetch and display dynamic GIF from Giphy API based on scenario and emotion
-    const mediaContainer = document.getElementById('media-container');
-    const gifElement = document.getElementById('scenario-gif');
+    // 5. Fetch and display dynamic GIF from Giphy API
+
+    const mediaContainer =
+      document.getElementById(
+        'media-container'
+      );
+
+    const gifElement =
+      document.getElementById(
+        'scenario-gif'
+      );
 
     try {
-      const baseKeyword = this.currentScenario.giphySearchTerm || 'reaction';
-      const emotionalModifier = choiceType === 'ideal' ? 'happy' : choiceType === 'intermediary' ? 'thinking' : 'frustrated';
-      const finalSearchTerm = `${baseKeyword} ${emotionalModifier}`;
 
-      console.log(`Fetching GIF for: ${finalSearchTerm}`);
-      const gifData = await this.services.getEmotionFeedbackGIF(finalSearchTerm);
+      const gifMap = {
 
-      if (gifData && gifData.images && gifData.images.original.url) {
-        gifElement.src = gifData.images.original.url;
-        gifElement.style.display = 'block';
-        mediaContainer.style.display = 'flex';
+        ideal:
+          "success celebration",
+
+        intermediary:
+          "thinking person",
+
+        impulsive:
+          "oops reaction"
+      };
+
+      const finalSearchTerm =
+        gifMap[choiceType];
+
+      console.log(
+        `Fetching GIF for: ${finalSearchTerm}`
+      );
+
+      const gifData =
+        await this.services.getEmotionFeedbackGIF(
+          finalSearchTerm
+        );
+
+      if (
+        gifData &&
+        gifData.images &&
+        gifData.images.original &&
+        gifData.images.original.url
+      ) {
+
+        gifElement.src =
+          gifData.images.original.url;
+
+        gifElement.style.display =
+          'block';
+
+        mediaContainer.style.display =
+          'flex';
       }
-    } catch (error) {
-      console.error("Could not load Giphy feedback:", error);
-      // We don't break the application if the API fails, we just don't show the image
-    }
 
-    // 6. Setup "Next Scenario" button to reload cleanly
-    document.getElementById('next-scenario-btn').onclick = () => {
-      feedbackContainer.style.display = 'none';
-      mediaContainer.style.display = 'none';
-      this.init(); // Reload a new scenario
+    } catch (error) {
+
+      console.error(
+        "Could not load Giphy feedback:",
+        error
+      );
+    }
+    // 5.1 Fetch Reflection Advice
+
+    try {
+
+      const advice =
+        await this.services.getReflectionAdvice();
+
+      const adviceContainer =
+        document.getElementById(
+          'reflection-advice'
+        );
+
+      if (
+        advice &&
+        advice.advice &&
+        adviceContainer
+      ) {
+        adviceContainer.style.display =
+          'block';
+
+        adviceContainer.innerHTML = `
+  <strong>💡 Reflection Tip</strong>
+  <p>${advice.advice}</p>
+`;
+        
+      }
+
+    } catch (error) {
+
+      console.error(
+        "Advice API Error:",
+        error
+      );
+    }
+    // 6. Setup "Next Scenario" button
+
+    document.getElementById(
+      'next-scenario-btn'
+    ).onclick = () => {
+
+      feedbackContainer.style.display =
+        'none';
+
+      mediaContainer.style.display =
+        'none';
+
+      const adviceContainer =
+        document.getElementById(
+          'reflection-advice'
+        );
+
+      if (adviceContainer) {
+        adviceContainer.innerHTML = '';
+      }
+
+      this.init();
     };
   }
-
-  showError(message) {
-    document.getElementById('scenario-title').textContent = "Oops! Something went wrong.";
-    document.getElementById('scenario-text').textContent = message;
-  }
-
-
 }
-

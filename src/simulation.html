@@ -41,13 +41,36 @@
             <div class="options-container" id="options-container">
             </div>
 
-            <div id="feedback-container"
-                style="display: none; margin-top: 20px; padding: 20px; border-radius: 12px; background: var(--gray-light);">
-                <h3 id="feedback-title" style="margin-bottom: 10px;">Consequence</h3>
-                <p id="feedback-immediate"><strong>Immediate:</strong> <span></span></p>
-                <p id="feedback-later"><strong>Long-term:</strong> <span></span></p>
-                <button id="next-scenario-btn" class="btn-primary" style="margin-top: 15px;">Next Scenario</button>
+            <div id="feedback-container" style="
+                display:none;
+                margin-top:20px;
+                padding:20px;
+                border-radius:12px;
+                background:var(--gray-light);">
+            
+                <h3 id="feedback-title" style="margin-bottom:10px;">
+                    Consequence
+                </h3>
+            
+                <p id="feedback-immediate">
+                    <strong>Immediate:</strong>
+                </p>
+            
+                <p id="feedback-later">
+                    <strong>Long-term:</strong>
+                </p>
+            
+                <button id="next-scenario-btn" class="btn-primary" style="margin-top:15px;">
+            
+                    Next Scenario
+            
+                </button>
+            
             </div>
+            
+            <div id="reflection-advice" class="reflection-advice">
+            </div>
+
         </section>
 
         <div class="bottom-info-bar">
@@ -61,7 +84,6 @@
     <script type="module">
         import SimulationManager from '/js/SimulationManager.mjs';
 
-        // Removido o event listener do DOMContentLoaded
         const simulation = new SimulationManager();
         simulation.init();
     </script>
