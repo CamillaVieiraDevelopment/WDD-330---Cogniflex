@@ -5,82 +5,52 @@ export default class ProfileManager {
     }
 
     loadProfile() {
-
-        const data =
-            localStorage.getItem(
-                this.storageKey
-            );
+        const data = localStorage.getItem(this.storageKey);
 
         if (data) {
+            const profile = JSON.parse(data);
 
-            const profile =
-                JSON.parse(data);
+            profile.completedScenarios = profile.completedScenarios || [];
+            profile.flexibilityPoints = profile.flexibilityPoints || 0;
+            profile.medalCount = profile.medalCount || 0;
 
-            profile.completedScenarios =
-                profile.completedScenarios || [];
+            profile.statistics = profile.statistics || {
+                idealChoices: 0,
+                intermediaryChoices: 0,
+                impulsiveChoices: 0
+            };
 
-            profile.flexibilityPoints =
-                profile.flexibilityPoints || 0;
+            profile.executiveFunctions = profile.executiveFunctions || {};
+            profile.areas = profile.areas || {};
 
-            profile.medalCount =
-                profile.medalCount || 0;
+            profile.metrics = profile.metrics || {
+                cognitiveFlexibility: 0,
+                socialInterpretation: 0,
+                empathy: 0,
+                frustrationTolerance: 0,
+                conflictResolution: 0,
+                decisionMaking: 0
+            };
 
-            profile.statistics =
-                profile.statistics || {
-
-                    idealChoices: 0,
-                    intermediaryChoices: 0,
-                    impulsiveChoices: 0
-                };
-
-            profile.executiveFunctions =
-                profile.executiveFunctions || {};
-
-            profile.areas =
-                profile.areas || {};
-
-            profile.metrics =
-                profile.metrics || {
-
-                    cognitiveFlexibility: 0,
-                    socialInterpretation: 0,
-                    empathy: 0,
-                    frustrationTolerance: 0,
-                    conflictResolution: 0,
-                    decisionMaking: 0
-                };
-
-            profile.achievements =
-                profile.achievements || [];
+            profile.achievements = profile.achievements || [];
 
             return profile;
         }
 
         return {
-
             username: "Explorer",
-
             medalCount: 0,
-
             completedScenarios: [],
-
             accessibilityMode: false,
-
             flexibilityPoints: 0,
-
             statistics: {
-
                 idealChoices: 0,
                 intermediaryChoices: 0,
                 impulsiveChoices: 0
             },
-
             executiveFunctions: {},
-
             areas: {},
-
             metrics: {
-
                 cognitiveFlexibility: 0,
                 socialInterpretation: 0,
                 empathy: 0,
@@ -88,9 +58,8 @@ export default class ProfileManager {
                 conflictResolution: 0,
                 decisionMaking: 0
             },
-
             achievements: []
-        };        
+        };
     }
 
     saveProfile() {
@@ -98,32 +67,17 @@ export default class ProfileManager {
     }
 
     // Atualiza propriedades específicas e persiste de forma reativa
-    updateProgress(
-        scenarioId,
-        isFlexibleChoice,
-        pointsGained
-    ) {
-
-        if (
-            !this.profileData.completedScenarios.includes(
-                scenarioId
-            )
-        ) {
-
-            this.profileData.completedScenarios.push(
-                scenarioId
-            );
+    updateProgress(scenarioId, isFlexibleChoice, pointsGained) {
+        if (!this.profileData.completedScenarios.includes(scenarioId)) {
+            this.profileData.completedScenarios.push(scenarioId);
         }
 
-        this.profileData.flexibilityPoints +=
-            pointsGained;
+        this.profileData.flexibilityPoints += pointsGained;
 
         this.saveProfile();
-    
     }
 
     recordChoice(choiceType, scenario) {
-
         if (choiceType === "ideal") {
             this.profileData.statistics.idealChoices++;
         }
@@ -160,19 +114,13 @@ export default class ProfileManager {
         this.profileData.areas[area]++;
 
         this.checkAchievements();
-
         this.saveProfile();
     }
 
     checkAchievements() {
-
         const achievements = [];
-
-        const totalScenarios =
-            this.profileData.completedScenarios.length;
-
-        const idealChoices =
-            this.profileData.statistics.idealChoices;
+        const totalScenarios = this.profileData.completedScenarios.length;
+        const idealChoices = this.profileData.statistics.idealChoices;
 
         if (totalScenarios >= 1) {
             achievements.push("🏅 Explorer");
@@ -195,9 +143,7 @@ export default class ProfileManager {
         }
 
         this.profileData.achievements = achievements;
-
-        this.profileData.medalCount =
-            achievements.length;
+        this.profileData.medalCount = achievements.length;
     }
 
     toggleAccessibility(status) {
