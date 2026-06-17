@@ -301,9 +301,7 @@ export default class SimulationManager {
     }
     // 6. Setup "Next Scenario" button
 
-    document.getElementById(
-      'next-scenario-btn'
-    ).onclick = () => {
+    document.getElementById('next-scenario-btn').onclick = () => {
 
       feedbackContainer.style.display =
         'none';
@@ -317,10 +315,14 @@ export default class SimulationManager {
         );
 
       if (adviceContainer) {
+
         adviceContainer.innerHTML = '';
+
+        adviceContainer.style.display =
+          'none';
       }
 
       this.init();
-    };
+    }
   }
 }

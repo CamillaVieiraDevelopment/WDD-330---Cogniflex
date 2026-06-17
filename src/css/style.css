@@ -839,3 +839,40 @@ body {
 
     line-height: 1.5;
 }
+
+/* ==========================================
+   GIF FEEDBACK AREA
+========================================== */
+
+#media-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 25px auto;
+
+    width: 100%;
+}
+
+#scenario-gif {
+
+    display: block;
+
+    max-width: 450px;
+
+    max-height: 280px;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.15);
+}
