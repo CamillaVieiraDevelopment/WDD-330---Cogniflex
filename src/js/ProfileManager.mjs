@@ -1,9 +1,19 @@
+// ==========================================
+// PROFILE MANAGER - MODULE
+// ==========================================
+
 export default class ProfileManager {
+    // ==========================================
+    // INITIALIZATION & CONSTRUCTOR
+    // ==========================================
     constructor(storageKey = "cogniflex-profile") {
         this.storageKey = storageKey;
         this.profileData = this.loadProfile();
     }
 
+    // ==========================================
+    // DATA PERSISTENCE & LOADING
+    // ==========================================
     loadProfile() {
         const data = localStorage.getItem(this.storageKey);
 
@@ -66,7 +76,9 @@ export default class ProfileManager {
         localStorage.setItem(this.storageKey, JSON.stringify(this.profileData));
     }
 
-    // Atualiza propriedades específicas e persiste de forma reativa
+    // ==========================================
+    // PROGRESS TRACKING
+    // ==========================================
     updateProgress(scenarioId, isFlexibleChoice, pointsGained) {
         if (!this.profileData.completedScenarios.includes(scenarioId)) {
             this.profileData.completedScenarios.push(scenarioId);
@@ -77,6 +89,9 @@ export default class ProfileManager {
         this.saveProfile();
     }
 
+    // ==========================================
+    // CHOICE & PERFORMANCE METRICS
+    // ==========================================
     recordChoice(choiceType, scenario) {
         if (choiceType === "ideal") {
             this.profileData.statistics.idealChoices++;
@@ -117,6 +132,9 @@ export default class ProfileManager {
         this.saveProfile();
     }
 
+    // ==========================================
+    // ACHIEVEMENTS SYSTEM
+    // ==========================================
     checkAchievements() {
         const achievements = [];
         const totalScenarios = this.profileData.completedScenarios.length;
@@ -146,6 +164,9 @@ export default class ProfileManager {
         this.profileData.medalCount = achievements.length;
     }
 
+    // ==========================================
+    // SETTINGS
+    // ==========================================
     toggleAccessibility(status) {
         this.profileData.accessibilityMode = status;
         this.saveProfile();
