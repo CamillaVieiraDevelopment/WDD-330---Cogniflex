@@ -1,5 +1,4 @@
 /* --- COLOR VARIABLES & VISUAL IDENTITY --- */
-/* --- COLOR VARIABLES & VISUAL IDENTITY --- */
 :root {
     --bg-color: #f8f5ff;
     --main-purple: #684ec1;
@@ -865,10 +864,7 @@ body {
     line-height: 1.5;
 }
 
-/* ==========================================
-   GIF FEEDBACK AREA
-========================================== */
-
+/* --- GIF FEEDBACK AREA --- */
 #media-container {
 
     display: flex;
@@ -902,10 +898,7 @@ body {
         0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* ==========================================
-   RADAR CHART
-========================================== */
-
+/* --- RADAR CHART --- */
 .chart-card canvas {
 
     max-height: 420px;
@@ -926,4 +919,65 @@ body {
     object-fit: cover;
     border: 3px solid var(--main-purple);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* SMALL DEVICES (MOBILE) */
+@media (max-width: 480px) {
+    .intro-box {
+        padding: 20px;
+    }
+
+    .intro-box h1 {
+        font-size: 22px;
+    }
+
+    .profile-card {
+        width: 100%;
+    }
+
+    /* CARDS OCCUPY FULL WIDTH */
+
+    .main-header {
+        padding: 10px 15px;
+    }
+
+    .logo-text {
+        display: none;
+    }
+
+    /* HIDE LOGO TEXT ON VERY NARROW SCREENS */
+}
+
+/* TABLETS AND MEDIUM DEVICES */
+@media (max-width: 768px) {
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* IMPROVE SIDE MENU LEGIBILITY ON TABLETS */
+    .side-menu {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* LARGE SCREENS (DESKTOP) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1100px;
+    }
+}
+
+/* GLOBAL MEDIA OPTIMIZATION */
+img,
+video,
+canvas {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
