@@ -1,18 +1,29 @@
+// ==========================================
+// SIMULATION MANAGER - MODULE
+// ==========================================
+
 import ProfileManager from './ProfileManager.mjs';
-import ExternalServices from './ExternalServices.mjs'; // Added API integration
+import ExternalServices from './ExternalServices.mjs'; 
 
 export default class SimulationManager {
+  // ==========================================
+  // INITIALIZATION & CONSTRUCTOR
+  // ==========================================
   constructor() {
     this.scenarios = [];
     this.currentScenario = null;
     this.userProfile = localStorage.getItem('cogniflex_targetAgeGroup') || 'child';
-    this.services = new ExternalServices(); // Instantiate external API services
+    this.services = new ExternalServices(); 
   }
 
   async init() {
     console.log(`Initializing simulation for profile: ${this.userProfile}`);
     await this.loadScenarios();
   }
+
+  // ==========================================
+  // SCENARIO LOADING & FILTERING
+  // ==========================================
   async loadScenarios() {
     try {
 
@@ -98,6 +109,9 @@ export default class SimulationManager {
 
   }
 
+  // ==========================================
+  // UI RENDERING
+  // ==========================================
   renderScenario(scenario) {
     this.currentScenario = scenario;
 
@@ -141,6 +155,9 @@ export default class SimulationManager {
     });
   }
 
+  // ==========================================
+  // CHOICE HANDLING & FEEDBACK
+  // ==========================================
   async handleChoice(choiceType, choiceData) {
     console.log(`User selected a/an ${choiceType} response.`);
 
@@ -202,9 +219,7 @@ export default class SimulationManager {
     document.getElementById('feedback-later').innerHTML = `<strong>Long-term:</strong> ${choiceData.laterConsequence}`;
     feedbackContainer.style.display = 'block';
 
-    // 5. Fetch and display dynamic GIF from Giphy API based on scenario and emotion
     // 5. Fetch and display dynamic GIF from Giphy API
-
     const mediaContainer =
       document.getElementById(
         'media-container'
@@ -265,8 +280,8 @@ export default class SimulationManager {
         error
       );
     }
-    // 5.1 Fetch Reflection Advice
 
+    // 5.1 Fetch Reflection Advice
     try {
 
       const advice =
@@ -289,7 +304,7 @@ export default class SimulationManager {
   <strong>💡 Reflection Tip</strong>
   <p>${advice.advice}</p>
 `;
-        
+
       }
 
     } catch (error) {
@@ -299,8 +314,8 @@ export default class SimulationManager {
         error
       );
     }
-    // 6. Setup "Next Scenario" button
 
+    // 6. Setup "Next Scenario" button
     document.getElementById('next-scenario-btn').onclick = () => {
 
       feedbackContainer.style.display =
