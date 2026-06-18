@@ -469,8 +469,16 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 16px;
     padding: 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
     text-align: left;
-    max-width: 800px;
+    width: 100%;
+    max-width: 100%;
+
     margin: 0 auto 40px auto;
     box-shadow: 0 4px 6px rgba(104, 78, 193, 0.02);
 }
@@ -494,6 +502,23 @@ body {
     color: var(--dark-purple);
     line-height: 1.8;
     margin-bottom: 15px;
+}
+
+.intro-content {
+    flex: 1;
+}
+
+.intro-logo {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-logo img {
+    width: 220px;
+    height: auto;
 }
 
 .action-menu-container {
