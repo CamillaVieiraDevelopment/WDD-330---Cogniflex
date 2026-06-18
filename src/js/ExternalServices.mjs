@@ -1,3 +1,6 @@
+// =====================================================
+// EXTERNAL SERVICES MODULE
+// =====================================================
 async function convertToJson(res) {
 
     const jsonResponse = await res.json();

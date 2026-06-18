@@ -1,3 +1,6 @@
+// =====================================================
+// DASHBOARD MANAGER - MODULE
+// =====================================================
 import ProfileManager from './ProfileManager.mjs';
 import ExternalServices from './ExternalServices.mjs';
 
