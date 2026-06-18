@@ -1,6 +1,9 @@
 import ProfileManager from './ProfileManager.mjs';
 import ExternalServices from './ExternalServices.mjs';
 
+// ==========================================
+// CHART.JS DEPENDENCY CONFIGURATION
+// ==========================================
 import {
     Chart,
     RadarController,
@@ -23,6 +26,9 @@ Chart.register(
 );
 
 export default class DashboardManager {
+    // ==========================================
+    // INITIALIZATION & CONSTRUCTOR
+    // ==========================================
     constructor() {
         this.profile = new ProfileManager();
         this.services = new ExternalServices();
@@ -47,6 +53,9 @@ export default class DashboardManager {
         await this.loadAvatar();
     }
 
+    // ==========================================
+    // AVATAR HANDLING
+    // ==========================================
     async loadAvatar() {
         try {
             const cachedAvatar = localStorage.getItem('cogniflex_avatar');
@@ -54,9 +63,7 @@ export default class DashboardManager {
             const avatar = document.getElementById('dashboard-avatar');
             const username = document.getElementById('user-greeting');
 
-            // ====================================
-            // AVATAR JÁ SALVO
-            // ====================================
+            // Handle pre-existing cached avatar
             if (cachedAvatar && avatar) {
                 avatar.src = cachedAvatar;
                 if (cachedName && username && this.profile.profileData.username === "Explorer") {
@@ -65,9 +72,7 @@ export default class DashboardManager {
                 return;
             }
 
-            // ====================================
-            // PRIMEIRO ACESSO
-            // ====================================
+            // Fetch and set new avatar for first-time access
             const npc = await this.services.getRandomNPC();
             if (!npc) return;
 
@@ -88,7 +93,9 @@ export default class DashboardManager {
         }
     }
 
-    // ... (restante dos métodos: loadDatabase, matchPlayedScenarios, etc., permanecem iguais)
+    // ==========================================
+    // DATA LOADING & PREPARATION
+    // ==========================================
     async loadDatabase() {
         try {
             const response = await fetch(`/data/${this.userProfileGroup}.json`);
@@ -107,6 +114,9 @@ export default class DashboardManager {
         );
     }
 
+    // ==========================================
+    // UI RENDERING METHODS
+    // ==========================================
     renderBasicStats() {
         const data = this.profile.profileData;
         document.getElementById('user-greeting').textContent = `Hello, ${data.username}!`;
@@ -146,17 +156,6 @@ export default class DashboardManager {
             const formattedTopSkill = topSkill.name.replaceAll('_', ' ').replace(/\b\w/g, l => l.toUpperCase());
             document.getElementById('stat-top-skill').textContent = formattedTopSkill;
         }
-    }
-
-    calculateDecisionProfile() {
-        const stats = this.profile.profileData.statistics || { idealChoices: 0, intermediaryChoices: 0, impulsiveChoices: 0 };
-        const total = stats.idealChoices + stats.intermediaryChoices + stats.impulsiveChoices;
-        if (total === 0) return { ideal: 0, intermediary: 0, impulsive: 0 };
-        return {
-            ideal: Math.round((stats.idealChoices / total) * 100),
-            intermediary: Math.round((stats.intermediaryChoices / total) * 100),
-            impulsive: Math.round((stats.impulsiveChoices / total) * 100)
-        };
     }
 
     renderLifeAreasTable() {
@@ -235,5 +234,19 @@ export default class DashboardManager {
             data: { labels: formattedLabels, datasets: [{ label: 'Executive Function Performance', data: values, fill: true }] },
             options: { responsive: true, scales: { r: { beginAtZero: true, min: 0, max: 100 } } }
         });
+    }
+
+    // ==========================================
+    // UTILITY METHODS
+    // ==========================================
+    calculateDecisionProfile() {
+        const stats = this.profile.profileData.statistics || { idealChoices: 0, intermediaryChoices: 0, impulsiveChoices: 0 };
+        const total = stats.idealChoices + stats.intermediaryChoices + stats.impulsiveChoices;
+        if (total === 0) return { ideal: 0, intermediary: 0, impulsive: 0 };
+        return {
+            ideal: Math.round((stats.idealChoices / total) * 100),
+            intermediary: Math.round((stats.intermediaryChoices / total) * 100),
+            impulsive: Math.round((stats.impulsiveChoices / total) * 100)
+        };
     }
 }
