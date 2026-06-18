@@ -1,3 +1,10 @@
+// ==========================================
+// UTILITIES MODULE
+// ==========================================
+
+// ==========================================
+// COMPONENT RENDERING
+// ==========================================
 export async function renderHeaderFooter() {
     try {
         const headerContainer = document.getElementById("main-header");
@@ -20,6 +27,9 @@ export async function renderHeaderFooter() {
     }
 }
 
+// ==========================================
+// MENU INITIALIZATION & EVENT HANDLING
+// ==========================================
 function initializeMenu() {
     const menuBtn = document.querySelector(".menu-btn");
     const closeBtn = document.querySelector("#close-menu-btn");
