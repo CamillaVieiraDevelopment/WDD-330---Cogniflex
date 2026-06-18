@@ -1,6 +1,11 @@
-// src/js/main.js
+// ==========================================
+// MAIN.JS - ENTRY POINT
+// ==========================================
 import { renderHeaderFooter } from "./utils.mjs";
 
+// ==========================================
+// INITIALIZATION
+// ==========================================
 document.addEventListener('DOMContentLoaded', async () => {
   // 1. Starting Model Header and FooterInicializa 
   await renderHeaderFooter();
@@ -10,6 +15,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   setupProfileSelection();
 });
 
+// ==========================================
+// PROFILE SELECTION LOGIC
+// ==========================================
 function setupProfileSelection() {
   const profileButtons = document.querySelectorAll('.profile-card');
   if (profileButtons.length === 0) return;
